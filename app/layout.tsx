@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${barlowCondensed.variable} ${inter.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
