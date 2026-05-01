@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer style={{
@@ -40,21 +41,13 @@ export default function Footer() {
             (e.currentTarget as HTMLElement).style.borderColor = "#E5E7EB";
             (e.currentTarget as HTMLElement).style.background = "#F9FAFB";
           }}>
-          {/* DH monogram */}
-          <span style={{
-            width: "22px",
-            height: "22px",
-            borderRadius: "50%",
-            background: "#F36E22",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "10px",
-            fontWeight: 800,
-            color: "#fff",
-            letterSpacing: "-0.02em",
-            flexShrink: 0,
-          }}>DH</span>
+          <Image
+            src="/mentor_logo.png"
+            alt="Duncan Hendy"
+            width={24}
+            height={24}
+            style={{ borderRadius: "50%", flexShrink: 0 }}
+          />
           <span style={{
             fontSize: "13px",
             fontWeight: 600,
