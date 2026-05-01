@@ -12,7 +12,6 @@ export default function FlashcardDeck({ cards, category }: Props) {
   const [flipped, setFlipped] = useState(false);
   const [done, setDone]       = useState(false);
   const [xpToast, setXpToast] = useState<string | null>(null);
-  const [direction, setDirection] = useState<"left"|"right"|null>(null);
 
   const card = cards[index];
 
@@ -28,16 +27,13 @@ export default function FlashcardDeck({ cards, category }: Props) {
       saveProgress(addXP(markKnown(p, card.id), 10));
       showXP("+10 XP");
     }
-    setDirection(knew ? "right" : "left");
     setTimeout(() => {
       setFlipped(false);
-      setDirection(null);
       if (index + 1 >= cards.length) setDone(true);
       else setIndex((i) => i + 1);
-    }, 250);
+    }, 180);
   }, [card, index, cards.length]);
 
-  // Keyboard
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
@@ -49,12 +45,15 @@ export default function FlashcardDeck({ cards, category }: Props) {
   }, [advance]);
 
   if (done) return (
-    <div className="flex flex-col items-center gap-6 py-20 animate-slide-up">
-      <div className="text-6xl">✅</div>
-      <h2 className="font-[family-name:var(--font-barlow)] text-3xl font-bold uppercase tracking-wide">Deck Complete</h2>
-      <p className="text-[#8A8A8A]">You reviewed all {cards.length} cards in this deck.</p>
-      <button onClick={() => { setIndex(0); setDone(false); setFlipped(false); }}
-        className="mt-2 px-6 py-2.5 bg-[#F36E22] hover:bg-[#C45A18] text-white font-semibold rounded-lg transition-colors">
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", padding: "80px 0" }} className="animate-slide-up">
+      <div style={{ fontSize: "64px" }}>✅</div>
+      <h2 style={{ fontFamily: "var(--font-barlow, 'Barlow Condensed', sans-serif)", fontSize: "28px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", color: "#111827", margin: 0 }}>
+        Deck Complete
+      </h2>
+      <p style={{ color: "#6B7280", margin: 0 }}>You reviewed all {cards.length} cards in this deck.</p>
+      <button
+        onClick={() => { setIndex(0); setDone(false); setFlipped(false); }}
+        style={{ marginTop: "8px", padding: "10px 28px", background: "#F36E22", color: "#fff", fontWeight: 600, borderRadius: "8px", border: "none", cursor: "pointer", fontSize: "15px" }}>
         Start Again
       </button>
     </div>
@@ -62,83 +61,93 @@ export default function FlashcardDeck({ cards, category }: Props) {
 
   if (!card) return null;
 
-  const progress = Math.round(((index) / cards.length) * 100);
+  const progress = Math.round((index / cards.length) * 100);
 
   return (
-    <div className="flex flex-col items-center gap-6 w-full max-w-2xl mx-auto">
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", width: "100%", maxWidth: "640px", margin: "0 auto" }}>
+
       {/* Progress bar */}
-      <div className="w-full">
-        <div className="flex justify-between text-xs text-[#8A8A8A] mb-1.5">
+      <div style={{ width: "100%" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: "#6B7280", marginBottom: "6px" }}>
           <span>{index + 1} of {cards.length}</span>
           <span>{progress}% complete</span>
         </div>
-        <div className="h-1.5 bg-[#2E2E2E] rounded-full overflow-hidden">
-          <div className="h-full bg-[#F36E22] rounded-full transition-all duration-500"
-            style={{ width: `${progress}%` }} />
+        <div style={{ height: "6px", background: "#E5E7EB", borderRadius: "999px", overflow: "hidden" }}>
+          <div style={{ height: "100%", background: "#F36E22", borderRadius: "999px", width: `${progress}%`, transition: "width 0.5s ease" }} />
         </div>
       </div>
 
-      {/* Card */}
-      <div className="card-scene w-full" style={{ height: "360px" }}>
+      {/* Card flip */}
+      <div className="card-scene" style={{ width: "100%", height: "340px" }} onClick={() => setFlipped((f) => !f)}>
         <div className={`card-inner ${flipped ? "flipped" : ""}`}>
+
           {/* Front */}
-          <div className="card-face bg-[#242424] rounded-2xl border border-[#3A3A3A] p-8 flex flex-col shadow-xl">
-            <div className="flex items-center justify-between mb-auto">
-              <span className="text-xs text-[#8A8A8A] bg-[#2E2E2E] px-3 py-1 rounded-full">
+          <div className="card-face" style={{ background: "#fff", border: "1px solid #E5E7EB", borderRadius: "20px", padding: "28px", display: "flex", flexDirection: "column", boxShadow: "0 4px 24px rgba(0,0,0,0.07)", cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "auto" }}>
+              <span style={{ fontSize: "12px", color: "#6B7280", background: "#F3F4F6", padding: "4px 12px", borderRadius: "999px" }}>
                 {CATEGORY_ICONS[card.category] ?? "📌"} {card.category}
               </span>
               <DifficultyBadge difficulty={card.difficulty} />
             </div>
-            <div className="flex-1 flex flex-col items-center justify-center gap-4 py-4">
-              <p className="font-[family-name:var(--font-barlow)] text-3xl font-bold uppercase tracking-wide text-center text-[#F0F0F0]">
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "16px", padding: "20px 0" }}>
+              <p style={{ fontFamily: "var(--font-barlow, 'Barlow Condensed', sans-serif)", fontSize: "32px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", textAlign: "center", color: "#111827", margin: 0 }}>
                 {card.term}
               </p>
             </div>
-            <p className="text-center text-xs text-[#555555] mt-auto">
-              Press <kbd className="px-1.5 py-0.5 bg-[#2E2E2E] rounded text-[#8A8A8A]">Space</kbd> or click to reveal definition
+            <p style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
+              Click or press <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>Space</kbd> to reveal
             </p>
           </div>
 
           {/* Back */}
-          <div className="card-face card-face-back bg-[#2E2E2E] rounded-2xl border border-[#F36E22]/30 p-8 flex flex-col shadow-xl">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-[family-name:var(--font-barlow)] font-semibold uppercase tracking-wider text-[#F36E22]">
+          <div className="card-face card-face-back" style={{ background: "#FFFBF7", border: "2px solid #F36E22", borderRadius: "20px", padding: "28px", display: "flex", flexDirection: "column", boxShadow: "0 4px 24px rgba(243,110,34,0.1)", cursor: "pointer" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "16px" }}>
+              <span style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "#F36E22", fontFamily: "var(--font-barlow, 'Barlow Condensed', sans-serif)" }}>
                 {card.term}
               </span>
               <DifficultyBadge difficulty={card.difficulty} />
             </div>
-            <div className="flex-1 flex items-center justify-center">
-              <p className="text-[#F0F0F0] text-base leading-relaxed text-center">
+            <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <p style={{ color: "#1F2937", fontSize: "15px", lineHeight: "1.7", textAlign: "center", margin: 0 }}>
                 {card.definition}
               </p>
             </div>
-            <p className="text-center text-xs text-[#555555] mt-auto">
-              Press <kbd className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-[#8A8A8A]">→</kbd> Got It &nbsp;·&nbsp;
-              <kbd className="px-1.5 py-0.5 bg-[#1A1A1A] rounded text-[#8A8A8A]">←</kbd> Review Again
+            <p style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
+              <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>→</kbd> Got It &nbsp;·&nbsp;
+              <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>←</kbd> Review Again
             </p>
           </div>
         </div>
       </div>
 
       {/* Action buttons */}
-      <div className="flex gap-4 w-full">
-        <button onClick={() => advance(false)}
-          className="flex-1 py-3 rounded-xl bg-[#242424] hover:bg-[#2E2E2E] border border-[#3A3A3A] text-[#8A8A8A] hover:text-[#F0F0F0] font-medium transition-all">
+      <div style={{ display: "flex", gap: "12px", width: "100%" }}>
+        <button
+          onClick={() => advance(false)}
+          style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#fff", border: "1px solid #E5E7EB", color: "#6B7280", fontWeight: 500, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}
+          onMouseEnter={e => { (e.target as HTMLElement).style.background = "#F3F4F6"; }}
+          onMouseLeave={e => { (e.target as HTMLElement).style.background = "#fff"; }}>
           ← Review Again
         </button>
-        <button onClick={() => setFlipped((f) => !f)}
-          className="flex-1 py-3 rounded-xl bg-[#2E2E2E] hover:bg-[#3A3A3A] border border-[#3A3A3A] text-[#F0F0F0] font-medium transition-all">
-          Flip
+        <button
+          onClick={() => setFlipped((f) => !f)}
+          style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#F3F4F6", border: "1px solid #E5E7EB", color: "#374151", fontWeight: 500, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}
+          onMouseEnter={e => { (e.target as HTMLElement).style.background = "#E5E7EB"; }}
+          onMouseLeave={e => { (e.target as HTMLElement).style.background = "#F3F4F6"; }}>
+          Flip Card
         </button>
-        <button onClick={() => advance(true)}
-          className="flex-1 py-3 rounded-xl bg-[#F36E22] hover:bg-[#C45A18] text-white font-semibold transition-all">
+        <button
+          onClick={() => advance(true)}
+          style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#F36E22", border: "none", color: "#fff", fontWeight: 600, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}
+          onMouseEnter={e => { (e.target as HTMLElement).style.background = "#C45A18"; }}
+          onMouseLeave={e => { (e.target as HTMLElement).style.background = "#F36E22"; }}>
           Got It →
         </button>
       </div>
 
       {/* XP Toast */}
       {xpToast && (
-        <div className="fixed top-20 right-6 animate-xp bg-[#F36E22] text-white font-bold px-4 py-2 rounded-full shadow-lg text-sm pointer-events-none z-50">
+        <div className="animate-xp" style={{ position: "fixed", top: "80px", right: "24px", background: "#F36E22", color: "#fff", fontWeight: 700, padding: "8px 18px", borderRadius: "999px", boxShadow: "0 4px 16px rgba(0,0,0,0.15)", fontSize: "14px", pointerEvents: "none", zIndex: 50 }}>
           {xpToast} 🔥
         </div>
       )}

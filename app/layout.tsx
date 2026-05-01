@@ -8,10 +8,7 @@ const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "IDEA StatiCa Term Trainer",
@@ -20,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${barlowCondensed.variable} ${inter.variable} bg-[#1A1A1A] text-[#F0F0F0] min-h-screen`}>
+    <html lang="en">
+      <body className={`${barlowCondensed.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>
