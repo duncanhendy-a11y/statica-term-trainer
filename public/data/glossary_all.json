@@ -18,7 +18,7 @@
   {
     "id": "fa5df977-9b5e-42d4-906f-09d16b768f11",
     "term": "Moment Connection",
-    "definition": "A connection designed to transfer bending moment from one member to another, as well as shear and axial forces. It keeps the angle between members fixed — the members behave as if continuous.",
+    "definition": "A connection designed to transfer bending moment from one member to another, as well as shear and axial forces. It keeps the angle between members fixed - the members behave as if continuous.",
     "category": "Connections",
     "difficulty": "intermediate",
     "source": "extended"
@@ -26,7 +26,7 @@
   {
     "id": "354add10-e221-4b90-9c1f-8174bb5f2952",
     "term": "Pinned Connection",
-    "definition": "A connection that transfers shear and axial forces but deliberately allows rotation. Think of it as a hinge — the members can rotate relative to each other, so no bending moment is transferred.",
+    "definition": "A connection that transfers shear and axial forces but deliberately allows rotation. Think of it as a hinge - the members can rotate relative to each other, so no bending moment is transferred.",
     "category": "Connections",
     "difficulty": "beginner",
     "source": "extended"
@@ -42,7 +42,7 @@
   {
     "id": "b2db943a-7aa0-4480-954f-ce74be7f16bb",
     "term": "Semi-Rigid Connection",
-    "definition": "A connection between a pinned and rigid connection — it transfers some bending moment but also allows some rotation. Most real connections behave semi-rigidly, though they are often simplified in design.",
+    "definition": "A connection between a pinned and rigid connection - it transfers some bending moment but also allows some rotation. Most real connections behave semi-rigidly, though they are often simplified in design.",
     "category": "Connections",
     "difficulty": "advanced",
     "source": "extended"
@@ -58,7 +58,7 @@
   {
     "id": "35d790fc-14a3-4ec7-ac9e-700781bfd2a4",
     "term": "Splice Connection",
-    "definition": "A connection that joins two lengths of the same member end-to-end — for example, joining two column sections one above the other. Used when a member is too long to fabricate or transport in one piece.",
+    "definition": "A connection that joins two lengths of the same member end-to-end - for example, joining two column sections one above the other. Used when a member is too long to fabricate or transport in one piece.",
     "category": "Connections",
     "difficulty": "intermediate",
     "source": "extended"
@@ -106,7 +106,7 @@
   {
     "id": "73025b30-0537-45ea-832e-778db6d0cbfc",
     "term": "Seismic Connection",
-    "definition": "A connection specifically designed to withstand earthquake forces. Must be ductile — able to absorb energy through deformation without fracturing.",
+    "definition": "A connection specifically designed to withstand earthquake forces. Must be ductile - able to absorb energy through deformation without fracturing.",
     "category": "Connections",
     "difficulty": "advanced",
     "source": "extended"
@@ -290,7 +290,7 @@
   {
     "id": "29c04c52-a8e2-4467-8791-6fd2027de67f",
     "term": "Bolt Shear",
-    "definition": "The cutting force acting on a bolt across its cross-section. A bolt in shear is being pushed to one side on one face and the other side on the other face — like scissors cutting through it.",
+    "definition": "The cutting force acting on a bolt across its cross-section. A bolt in shear is being pushed to one side on one face and the other side on the other face - like scissors cutting through it.",
     "category": "Fasteners",
     "difficulty": "beginner",
     "source": "extended"
@@ -332,7 +332,7 @@
   {
     "id": "a9a53eec-9ade-4eac-8ff1-850d5fd64a12",
     "term": "Partial Penetration Weld",
-    "definition": "A butt weld that does not penetrate the full thickness. Cheaper but lower capacity — cannot develop the full strength of the base metal.",
+    "definition": "A butt weld that does not penetrate the full thickness. Cheaper but lower capacity - cannot develop the full strength of the base metal.",
     "category": "Fasteners",
     "difficulty": "intermediate",
     "source": "extended"
@@ -348,7 +348,7 @@
   {
     "id": "e1db9123-c96d-4277-b8d1-17698aa1d626",
     "term": "Weld Throat",
-    "definition": "The shortest distance from the root of a weld to its face — the critical dimension for weld strength calculations. For a standard equal-leg fillet weld, the throat = 0.707 × leg length (for a 45° weld geometry). Weld resistance is calculated per unit length of throat.",
+    "definition": "The shortest distance from the root of a weld to its face - the critical dimension for weld strength calculations. For a standard equal-leg fillet weld, the throat = 0.707 × leg length (for a 45° weld geometry). Weld resistance is calculated per unit length of throat.",
     "category": "Fasteners",
     "difficulty": "advanced",
     "source": "extended"
@@ -413,7 +413,7 @@
   {
     "id": "c437303b-c90f-4372-9556-8c9b0518a726",
     "term": "Torsion",
-    "definition": "A twisting force — a moment that tries to rotate a member about its own axis. Like wringing out a towel. Torsion is more complex than bending and often avoided in design.",
+    "definition": "A twisting force - a moment that tries to rotate a member about its own axis. Like wringing out a towel. Torsion is more complex than bending and often avoided in design.",
     "category": "Forces & Loads",
     "difficulty": "intermediate",
     "source": "extended"
@@ -421,7 +421,7 @@
   {
     "id": "0a5f5699-35f0-40cf-a261-f0a3b0747878",
     "term": "Axial Force",
-    "definition": "A force acting along the length (axis) of a member — either tension (pulling) or compression (pushing).",
+    "definition": "A force acting along the length (axis) of a member - either tension (pulling) or compression (pushing).",
     "category": "Forces & Loads",
     "difficulty": "beginner",
     "source": "extended"
@@ -429,7 +429,7 @@
   {
     "id": "dfd83242-eb31-4f3a-a87f-6cad6e26b33c",
     "term": "Normal Force",
-    "definition": "Another term for axial force — a force acting perpendicular to a surface or along a member's axis.",
+    "definition": "Another term for axial force - a force acting perpendicular to a surface or along a member's axis.",
     "category": "Forces & Loads",
     "difficulty": "beginner",
     "source": "extended"
@@ -437,7 +437,7 @@
   {
     "id": "7cb2a3ca-35a9-495a-af22-753b12e9fa71",
     "term": "Bearing Force",
-    "definition": "The compressive force between two surfaces in contact — for example, between a bolt shank and the edge of a bolt hole, or between a base plate and a concrete foundation.",
+    "definition": "The compressive force between two surfaces in contact - for example, between a bolt shank and the edge of a bolt hole, or between a base plate and a concrete foundation.",
     "category": "Forces & Loads",
     "difficulty": "intermediate",
     "source": "extended"
@@ -461,7 +461,7 @@
   {
     "id": "906c4a32-fc6e-47b1-89c9-6ab293585740",
     "term": "Dead Load",
-    "definition": "The permanent, constant weight of the structure itself — steel beams, concrete slabs, cladding. It never changes. Also called permanent load in Eurocode.",
+    "definition": "The permanent, constant weight of the structure itself - steel beams, concrete slabs, cladding. It never changes. Also called permanent load in Eurocode.",
     "category": "Forces & Loads",
     "difficulty": "beginner",
     "source": "extended"
@@ -493,7 +493,7 @@
   {
     "id": "8b5b2d5e-91d3-4b81-8201-764b241e1789",
     "term": "Imposed Load",
-    "definition": "Loads from the use and occupancy of a structure — people, furniture, vehicles. The Eurocode term for live load.",
+    "definition": "Loads from the use and occupancy of a structure - people, furniture, vehicles. The Eurocode term for live load.",
     "category": "Forces & Loads",
     "difficulty": "beginner",
     "source": "extended"
@@ -565,7 +565,7 @@
   {
     "id": "e4036697-0981-4e94-af5e-052de3fb8613",
     "term": "Ductility",
-    "definition": "The ability of a material or structure to undergo large deformations before fracturing. Ductility is crucial in seismic design — a ductile structure absorbs energy through controlled deformation rather than sudden collapse.",
+    "definition": "The ability of a material or structure to undergo large deformations before fracturing. Ductility is crucial in seismic design - a ductile structure absorbs energy through controlled deformation rather than sudden collapse.",
     "category": "Structural Behaviour",
     "difficulty": "intermediate",
     "source": "extended"
@@ -573,7 +573,7 @@
   {
     "id": "50664108-cdaf-4dc3-a648-fc29b9a797c8",
     "term": "Elasticity",
-    "definition": "The property of a material that allows it to return to its original shape after a load is removed. Elastic behaviour is reversible — no permanent deformation occurs.",
+    "definition": "The property of a material that allows it to return to its original shape after a load is removed. Elastic behaviour is reversible - no permanent deformation occurs.",
     "category": "Structural Behaviour",
     "difficulty": "beginner",
     "source": "extended"
@@ -581,7 +581,7 @@
   {
     "id": "85a344fc-79b9-40be-8d2d-638b130510a0",
     "term": "Plasticity",
-    "definition": "The behaviour of a material after it has been stressed beyond its yield point. Plastic deformation is permanent — the material does not spring back when the load is removed.",
+    "definition": "The behaviour of a material after it has been stressed beyond its yield point. Plastic deformation is permanent - the material does not spring back when the load is removed.",
     "category": "Structural Behaviour",
     "difficulty": "intermediate",
     "source": "extended"
@@ -589,7 +589,7 @@
   {
     "id": "b264f8b6-8a23-42d9-9178-5338e027d7b8",
     "term": "Yield Strength",
-    "definition": "The stress at which a material begins to deform permanently (plastically). For structural steel this is a key design parameter — members are typically designed to stay below yield under service loads.",
+    "definition": "The stress at which a material begins to deform permanently (plastically). For structural steel this is a key design parameter - members are typically designed to stay below yield under service loads.",
     "category": "Structural Behaviour",
     "difficulty": "intermediate",
     "source": "extended"
@@ -661,7 +661,7 @@
   {
     "id": "35e8565c-692f-41fa-99ec-96b78968aab6",
     "term": "Plastic Hinge",
-    "definition": "A location in a structure where the full plastic moment capacity (Mp) has been reached. The section continues to rotate at constant moment — behaving like a frictionless pin for additional rotation. Plastic analysis allows load to redistribute through a sequence of plastic hinge formations before collapse.",
+    "definition": "A location in a structure where the full plastic moment capacity (Mp) has been reached. The section continues to rotate at constant moment - behaving like a frictionless pin for additional rotation. Plastic analysis allows load to redistribute through a sequence of plastic hinge formations before collapse.",
     "category": "Structural Behaviour",
     "difficulty": "advanced",
     "source": "extended"
@@ -774,7 +774,7 @@
   {
     "id": "23445c51-332f-4342-8ed7-3cffc666d84d",
     "term": "Reinforcement Bar",
-    "definition": "Steel bar embedded in concrete to carry tensile forces. Commonly known as rebar. Ribbed bars are standard — the ribs improve the bond between steel and concrete.",
+    "definition": "Steel bar embedded in concrete to carry tensile forces. Commonly known as rebar. Ribbed bars are standard - the ribs improve the bond between steel and concrete.",
     "category": "Materials",
     "difficulty": "beginner",
     "source": "extended",
@@ -815,7 +815,7 @@
   {
     "id": "ddab3ae9-92dd-47c6-84c3-f480dd262e9a",
     "term": "Hollow Structural Section (HSS)",
-    "definition": "Steel sections with a hollow, closed cross-section — circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
+    "definition": "Steel sections with a hollow, closed cross-section - circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
     "category": "Materials",
     "difficulty": "intermediate",
     "source": "extended"
@@ -839,7 +839,7 @@
   {
     "id": "10b90eef-74f7-40dd-b679-67454215aba9",
     "term": "EC3 (EN 1993)",
-    "definition": "Eurocode 3 — the design standard for steel structures. Part 1-8 specifically covers the design of joints and connections in steel.",
+    "definition": "Eurocode 3 - the design standard for steel structures. Part 1-8 specifically covers the design of joints and connections in steel.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "extended"
@@ -847,7 +847,7 @@
   {
     "id": "7361096e-fec6-4585-af19-ca16b8b60d57",
     "term": "EC4 (EN 1994)",
-    "definition": "Eurocode 4 — the design standard for composite steel-concrete structures. Covers beams, columns, slabs, and connections in composite construction.",
+    "definition": "Eurocode 4 - the design standard for composite steel-concrete structures. Covers beams, columns, slabs, and connections in composite construction.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "extended"
@@ -855,7 +855,7 @@
   {
     "id": "67debb87-6382-4296-bf87-c90837248f37",
     "term": "EC2 (EN 1992)",
-    "definition": "Eurocode 2 — the design standard for concrete structures. Covers the design of reinforced and prestressed concrete elements.",
+    "definition": "Eurocode 2 - the design standard for concrete structures. Covers the design of reinforced and prestressed concrete elements.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "extended"
@@ -871,7 +871,7 @@
   {
     "id": "11587f95-fe3b-4a42-9368-a328d5815c7f",
     "term": "Ultimate Limit State (ULS)",
-    "definition": "A design condition representing structural failure — collapse, fracture, or overturning. Structure is designed so that applied loads do not exceed capacity at ULS. Safety factors are highest here.",
+    "definition": "A design condition representing structural failure - collapse, fracture, or overturning. Structure is designed so that applied loads do not exceed capacity at ULS. Safety factors are highest here.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "extended"
@@ -879,7 +879,7 @@
   {
     "id": "73bedb17-003c-41ad-b421-831d4a7580e5",
     "term": "Serviceability Limit State (SLS)",
-    "definition": "A design condition relating to the normal use of the structure — excessive deflection, vibration, or cracking. Not about collapse but about whether the structure performs satisfactorily in use.",
+    "definition": "A design condition relating to the normal use of the structure - excessive deflection, vibration, or cracking. Not about collapse but about whether the structure performs satisfactorily in use.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "extended"
@@ -1000,7 +1000,7 @@
   {
     "id": "3525ba69-11b2-4ab2-9edd-b38d234e2677",
     "term": "Flange",
-    "definition": "The horizontal plates at the top and bottom of an I-section or H-section. Primarily resist bending moment — the top flange is in compression and the bottom flange is in tension for a simply-supported beam.",
+    "definition": "The horizontal plates at the top and bottom of an I-section or H-section. Primarily resist bending moment - the top flange is in compression and the bottom flange is in tension for a simply-supported beam.",
     "category": "Members & Components",
     "difficulty": "beginner",
     "source": "extended"
@@ -1057,7 +1057,7 @@
   {
     "id": "8310fa06-619d-4984-bdc0-ea78ccf82387",
     "term": "CBFEM",
-    "definition": "Component-Based Finite Element Method — the analysis method used by IDEA StatiCa. Combines the speed and transparency of component-based design with the accuracy of finite element analysis. Gives detailed stress maps of connections.",
+    "definition": "Component-Based Finite Element Method - the analysis method used by IDEA StatiCa. Combines the speed and transparency of component-based design with the accuracy of finite element analysis. Gives detailed stress maps of connections.",
     "category": "Analysis & Software",
     "difficulty": "advanced",
     "source": "extended"
@@ -1097,7 +1097,7 @@
   {
     "id": "87c2650e-01bc-4661-89c4-168b6d82f3c9",
     "term": "D-Region",
-    "definition": "A 'Discontinuity Region' — a zone in a concrete or steel structure where the normal beam theory assumptions break down. Examples: near supports, openings, and concentrated loads. Requires special analysis (e.g. strut-and-tie).",
+    "definition": "A 'Discontinuity Region' - a zone in a concrete or steel structure where the normal beam theory assumptions break down. Examples: near supports, openings, and concentrated loads. Requires special analysis (e.g. strut-and-tie).",
     "category": "Analysis & Software",
     "difficulty": "advanced",
     "source": "extended"
@@ -1105,7 +1105,7 @@
   {
     "id": "ad2b10a7-56e7-48ad-bacb-4bbb83c8d422",
     "term": "B-Region",
-    "definition": "A 'Bernoulli Region' where standard beam theory applies — plane sections remain plane. The bulk of a beam span is a B-region.",
+    "definition": "A 'Bernoulli Region' where standard beam theory applies - plane sections remain plane. The bulk of a beam span is a B-region.",
     "category": "Analysis & Software",
     "difficulty": "advanced",
     "source": "extended"
@@ -1121,7 +1121,7 @@
   {
     "id": "e9775c7a-605f-447b-bb64-460b68f05767",
     "term": "Stress Concentration",
-    "definition": "A localised increase in stress around a geometric discontinuity — a hole, notch, or sharp corner. Stress concentrations are a common cause of fatigue cracking.",
+    "definition": "A localised increase in stress around a geometric discontinuity - a hole, notch, or sharp corner. Stress concentrations are a common cause of fatigue cracking.",
     "category": "Analysis & Software",
     "difficulty": "intermediate",
     "source": "extended"
@@ -1153,7 +1153,7 @@
   {
     "id": "743db126-19b9-406e-be8a-6357565c3103",
     "term": "Equilibrium",
-    "definition": "The condition where all forces and moments acting on a structure or part of it are balanced — net force and net moment are zero. Fundamental to all structural analysis.",
+    "definition": "The condition where all forces and moments acting on a structure or part of it are balanced - net force and net moment are zero. Fundamental to all structural analysis.",
     "category": "General Concepts",
     "difficulty": "beginner",
     "source": "extended"
@@ -1185,7 +1185,7 @@
   {
     "id": "55e29bb6-bcb5-4675-8b15-63fda0b73380",
     "term": "Statically Indeterminate",
-    "definition": "A structure with more unknowns than equilibrium equations. Needs additional compatibility equations to solve. Most real structures are indeterminate — continuous beams, frames, etc.",
+    "definition": "A structure with more unknowns than equilibrium equations. Needs additional compatibility equations to solve. Most real structures are indeterminate - continuous beams, frames, etc.",
     "category": "General Concepts",
     "difficulty": "intermediate",
     "source": "extended"
@@ -1265,7 +1265,7 @@
   {
     "id": "f78db683-aacd-42ef-8ed7-e3fe503dc45e",
     "term": "Centroid",
-    "definition": "The geometric centre of a cross-section — the point where the section would balance if supported. Bending stresses are zero at the centroid.",
+    "definition": "The geometric centre of a cross-section - the point where the section would balance if supported. Bending stresses are zero at the centroid.",
     "category": "General Concepts",
     "difficulty": "intermediate",
     "source": "extended"
@@ -1377,7 +1377,7 @@
   {
     "id": "fda89321-f171-44d6-b45e-91700e485c63",
     "term": "plate girder",
-    "definition": "A deep beam built up by welding or bolting plates together — typically two flanges and a web — rather than rolled as a single section. Used for very long spans or heavy loads.",
+    "definition": "A deep beam built up by welding or bolting plates together - typically two flanges and a web - rather than rolled as a single section. Used for very long spans or heavy loads.",
     "category": "Members & Components",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1465,7 +1465,7 @@
   {
     "id": "f9427d83-b5b6-47f2-b73c-5b4694e16010",
     "term": "cross-section",
-    "definition": "A view of a structural member cut perpendicular to its length, revealing the shape and size of the section — e.g., I-shape, circular hollow, rectangular. The cross-section properties (area, second moment of area) determine how a member resists load.",
+    "definition": "A view of a structural member cut perpendicular to its length, revealing the shape and size of the section - e.g., I-shape, circular hollow, rectangular. The cross-section properties (area, second moment of area) determine how a member resists load.",
     "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -1625,7 +1625,7 @@
   {
     "id": "c57415a4-ca68-4be9-9ee6-d607ddebcd56",
     "term": "smooth reinforcement",
-    "definition": "Lowercase. Plain (non-ribbed) rebar, common in older structures (1970s–80s).",
+    "definition": "Lowercase. Plain (non-ribbed) rebar, common in older structures (1970s-80s).",
     "category": "Structural Behaviour",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1657,7 +1657,7 @@
   {
     "id": "4c519c56-2d85-445a-9d4a-1ff5f872f40a",
     "term": "anchorage zone",
-    "definition": "The region of a concrete member where a concentrated force — such as a prestressing tendon force or a post-installed anchor load — is introduced and dispersed into the surrounding concrete. Typically a D-region requiring special design.",
+    "definition": "The region of a concrete member where a concentrated force - such as a prestressing tendon force or a post-installed anchor load - is introduced and dispersed into the surrounding concrete. Typically a D-region requiring special design.",
     "category": "General Concepts",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1697,7 +1697,7 @@
   {
     "id": "af8d40fd-99e7-41e9-b193-e2ef42ae3e9d",
     "term": "crack pattern",
-    "definition": "The arrangement and orientation of cracks in a concrete element under load. The crack pattern reveals the load path and tension trajectories — cracks form perpendicular to the principal tensile stress direction.",
+    "definition": "The arrangement and orientation of cracks in a concrete element under load. The crack pattern reveals the load path and tension trajectories - cracks form perpendicular to the principal tensile stress direction.",
     "category": "General Concepts",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1937,7 +1937,7 @@
   {
     "id": "01f5b3fa-2728-4693-affc-cc1bb75ccb40",
     "term": "EN",
-    "definition": "European Norm (European Standard). The prefix used for Eurocodes — e.g. EN 1993 (steel), EN 1992 (concrete). 'EN' indicates the standard is adopted across all EU member states, replacing previous national codes.",
+    "definition": "European Norm (European Standard). The prefix used for Eurocodes - e.g. EN 1993 (steel), EN 1992 (concrete). 'EN' indicates the standard is adopted across all EU member states, replacing previous national codes.",
     "category": "Design Codes",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -1953,7 +1953,7 @@
   {
     "id": "927cb2eb-848c-4866-afe4-d26266c25732",
     "term": "AISC 358",
-    "definition": "AISC Prequalified Connections for Special and Intermediate Steel Moment Frames. Lists connection configurations that have been tested and pre-approved for seismic use — designers can use them without additional testing.",
+    "definition": "AISC Prequalified Connections for Special and Intermediate Steel Moment Frames. Lists connection configurations that have been tested and pre-approved for seismic use - designers can use them without additional testing.",
     "category": "Design Codes",
     "difficulty": "advanced",
     "source": "statica_glossary"
@@ -1961,7 +1961,7 @@
   {
     "id": "768dc778-57ad-4023-8d76-61f0dc8c8f40",
     "term": "ACI 318",
-    "definition": "Building Code Requirements for Structural Concrete — the primary US code for reinforced concrete design. Covers beams, columns, slabs, foundations, and connections. Key design basis for concrete in North America.",
+    "definition": "Building Code Requirements for Structural Concrete - the primary US code for reinforced concrete design. Covers beams, columns, slabs, foundations, and connections. Key design basis for concrete in North America.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1969,7 +1969,7 @@
   {
     "id": "4743d5b0-38fa-4842-889c-290810e77935",
     "term": "EN 1993",
-    "definition": "Eurocode 3: Design of Steel Structures. The European standard covering hot-rolled sections, cold-formed sections, plated structures, and — critically for IDEA StatiCa — Part 1-8 covering the design of joints.",
+    "definition": "Eurocode 3: Design of Steel Structures. The European standard covering hot-rolled sections, cold-formed sections, plated structures, and - critically for IDEA StatiCa - Part 1-8 covering the design of joints.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -1977,7 +1977,7 @@
   {
     "id": "1a227158-c196-4e60-a35d-c0fff66f9f81",
     "term": "EN 1993-1-8:2020",
-    "definition": "Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections — bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
+    "definition": "Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections - bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
     "category": "Design Codes",
     "difficulty": "advanced",
     "source": "statica_glossary"
@@ -2025,7 +2025,7 @@
   {
     "id": "2d42fbc6-8422-413f-8527-15cabcbe1574",
     "term": "CSFM",
-    "definition": "Compatible Stress Field Method — the analysis method used by IDEA StatiCa Detail for concrete D-regions. Computes stress fields in concrete consistent with the material's behaviour, satisfying both equilibrium and compatibility.",
+    "definition": "Compatible Stress Field Method - the analysis method used by IDEA StatiCa Detail for concrete D-regions. Computes stress fields in concrete consistent with the material's behaviour, satisfying both equilibrium and compatibility.",
     "category": "Analysis & Software",
     "difficulty": "advanced",
     "source": "statica_glossary"
@@ -2041,7 +2041,7 @@
   {
     "id": "f410f240-902a-474d-90de-2f4791d2a0b5",
     "term": "ULS",
-    "definition": "Ultimate Limit State — the design condition representing structural failure (collapse, fracture, instability). All structural elements must have sufficient resistance at ULS with appropriate safety factors applied to both loads and material strengths.",
+    "definition": "Ultimate Limit State - the design condition representing structural failure (collapse, fracture, instability). All structural elements must have sufficient resistance at ULS with appropriate safety factors applied to both loads and material strengths.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -2049,7 +2049,7 @@
   {
     "id": "149c0903-2498-4961-8508-ec1cddd92f32",
     "term": "SLS",
-    "definition": "Serviceability Limit State — the design condition for normal use of the structure. Checks excessive deflection, vibration, cracking, and deformation that would impair the function or appearance of the structure, even if failure is not imminent.",
+    "definition": "Serviceability Limit State - the design condition for normal use of the structure. Checks excessive deflection, vibration, cracking, and deformation that would impair the function or appearance of the structure, even if failure is not imminent.",
     "category": "Design Codes",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -2057,7 +2057,7 @@
   {
     "id": "5841abc4-1a5e-4928-9eef-2769cd092d0f",
     "term": "HSS",
-    "definition": "Hollow Structural Section — the North American term for steel tubes with a hollow, closed cross-section. Can be circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
+    "definition": "Hollow Structural Section - the North American term for steel tubes with a hollow, closed cross-section. Can be circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
     "category": "Members & Components",
     "difficulty": "intermediate",
     "source": "statica_glossary"
@@ -2185,7 +2185,7 @@
   {
     "id": "4cd2506f-04b8-4e13-989e-55c487326801",
     "term": "LTB",
-    "definition": "Lateral-Torsional Buckling — a buckling mode affecting beams where the compression flange deflects laterally while the beam simultaneously twists. Prevented by providing lateral restraint to the compression flange (e.g. floor slab, purlins). Governed by EC3 Section 6.3.2.",
+    "definition": "Lateral-Torsional Buckling - a buckling mode affecting beams where the compression flange deflects laterally while the beam simultaneously twists. Prevented by providing lateral restraint to the compression flange (e.g. floor slab, purlins). Governed by EC3 Section 6.3.2.",
     "category": "Structural Behaviour",
     "difficulty": "advanced",
     "source": "statica_glossary"
@@ -2201,7 +2201,7 @@
   {
     "id": "567e55ad-1577-45fd-8ec4-954ec50261fd",
     "term": "PJP",
-    "definition": "Partial Joint Penetration — a butt weld that does not penetrate the full thickness of the connected material. Cheaper than full penetration but has lower capacity and cannot develop the full strength of the base metal. Used where the full joint strength is not required.",
+    "definition": "Partial Joint Penetration - a butt weld that does not penetrate the full thickness of the connected material. Cheaper than full penetration but has lower capacity and cannot develop the full strength of the base metal. Used where the full joint strength is not required.",
     "category": "Fasteners",
     "difficulty": "intermediate",
     "source": "statica_glossary"

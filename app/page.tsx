@@ -108,7 +108,7 @@ export default function Home() {
         {/* WEAK AREA BANNER */}
         {gamification && weakAreas.length > 0 && (
           <div style={{ background: "#FFFBF5", border: "1px solid #FED7AA", borderLeft: "4px solid #F36E22", borderRadius: "0 10px 10px 0", padding: "14px 20px", marginBottom: 28 }}>
-            <p style={{ fontSize: 13, fontWeight: 700, color: "#F36E22", marginBottom: 8 }}>📉 Weak areas — needs revision</p>
+            <p style={{ fontSize: 13, fontWeight: 700, color: "#F36E22", marginBottom: 8 }}>📉 Weak areas - needs revision</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {weakAreas.map((s) => (
                 <Link key={s.category} href={`/study/${encodeURIComponent(s.category)}`}
@@ -123,8 +123,8 @@ export default function Home() {
         {/* QUICK START */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12, marginBottom: 36 }}>
           {[
-            { href: "/study/all", icon: "📚", label: "Flashcards — All", sub: `${cards.length} cards` },
-            { href: "/quiz/all",  icon: "🧠", label: "Quiz — All",       sub: "3-option multiple choice" },
+            { href: "/study/all", icon: "📚", label: "Flashcards - All", sub: `${cards.length} cards` },
+            { href: "/quiz/all",  icon: "🧠", label: "Quiz - All",       sub: "3-option multiple choice" },
             { href: "/study/all", icon: "🔀", label: "Random Shuffle",   sub: "Mixed categories" },
           ].map((cta) => (
             <Link key={cta.label} href={cta.href}
