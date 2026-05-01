@@ -191,10 +191,10 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer style={{ marginTop: 60, borderTop: "1px solid #E5E7EB", padding: "20px 24px" }}>
+      <footer style={{ marginTop: 60, borderTop: "1px solid rgba(255,255,255,0.08)", background: "#111827", padding: "20px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <NavLogo />
-          <p style={{ fontSize: 12, color: "#9CA3AF" }}>Structural Term Trainer · {cards.length} terms</p>
+          <p style={{ fontSize: 12, color: "#6B7280", margin: 0 }}>Structural Term Trainer · {cards.length} terms</p>
         </div>
       </footer>
     </div>
