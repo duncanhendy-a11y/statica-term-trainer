@@ -39,12 +39,12 @@ export default function ProgressPage() {
     <div style={{ minHeight: "100vh", background: "#F7F8FA" }}>
 
       {/* Nav */}
-      <nav style={{ position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid #E5E7EB", background: "rgba(255,255,255,0.95)", backdropFilter: "blur(8px)" }}>
+      <nav style={{ position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid rgba(255,255,255,0.08)", background: "#111827" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "56px", display: "flex", alignItems: "center", gap: "12px" }}>
           <NavLogo />
-          <span style={{ color: "#D1D5DB" }}>/</span>
+          <span style={{ color: "rgba(255,255,255,0.2)" }}>/</span>
           <span style={{ fontSize: "13px", color: "#F36E22", fontWeight: 500 }}>📊 Progress</span>
-          <Link href="/" style={{ marginLeft: "auto", fontSize: "13px", color: "#6B7280", textDecoration: "none" }}>← Back</Link>
+          <Link href="/" style={{ marginLeft: "auto", fontSize: "13px", color: "#9CA3AF", textDecoration: "none" }}>← Back</Link>
         </div>
       </nav>
 

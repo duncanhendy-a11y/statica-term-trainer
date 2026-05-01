@@ -32,22 +32,22 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: "#F7F8FA", minHeight: "100vh" }}>
       {/* NAV */}
-      <nav style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid #E5E7EB", position: "sticky", top: 0, zIndex: 50 }}>
+      <nav style={{ backgroundColor: "#111827", borderBottom: "1px solid rgba(255,255,255,0.08)", position: "sticky", top: 0, zIndex: 50 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <NavLogo />
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <button onClick={() => setGamification((g) => !g)}
               style={{
                 fontSize: 13, fontWeight: 600, padding: "6px 14px", borderRadius: 20,
-                border: gamification ? "1.5px solid #F36E22" : "1.5px solid #D1D5DB",
-                background: gamification ? "#FFF5EE" : "#F9FAFB",
-                color: gamification ? "#F36E22" : "#6B7280",
+                border: gamification ? "1.5px solid #F36E22" : "1.5px solid rgba(255,255,255,0.2)",
+                background: gamification ? "rgba(243,110,34,0.15)" : "rgba(255,255,255,0.06)",
+                color: gamification ? "#F36E22" : "#9CA3AF",
                 cursor: "pointer", transition: "all 0.15s",
               }}>
               {gamification ? "🏆 Gamification ON" : "Gamification OFF"}
             </button>
             <Link href="/progress"
-              style={{ fontSize: 14, color: "#6B7280", padding: "6px 12px", borderRadius: 6, textDecoration: "none", fontWeight: 500 }}>
+              style={{ fontSize: 14, color: "#D1D5DB", padding: "6px 12px", borderRadius: 6, textDecoration: "none", fontWeight: 500 }}>
               Progress
             </Link>
           </div>
