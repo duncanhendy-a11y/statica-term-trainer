@@ -1,0 +1,2369 @@
+[
+  {
+    "id": "e2600d86-e717-4174-bc75-129e68af1ab4",
+    "term": "Bolted Connection",
+    "definition": "A joint between two structural members made using bolts. One of the two main connection types in steelwork (the other being welded). Can be assembled on site without specialist equipment.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "05d1d604-3866-495f-8b69-3a7da2cde932",
+    "term": "Welded Connection",
+    "definition": "A joint formed by melting metal at the interface between two members to fuse them together. Typically done in a fabrication workshop and creates a very strong, rigid joint.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "fa5df977-9b5e-42d4-906f-09d16b768f11",
+    "term": "Moment Connection",
+    "definition": "A connection designed to transfer bending moment from one member to another, as well as shear and axial forces. It keeps the angle between members fixed — the members behave as if continuous.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "354add10-e221-4b90-9c1f-8174bb5f2952",
+    "term": "Pinned Connection",
+    "definition": "A connection that transfers shear and axial forces but deliberately allows rotation. Think of it as a hinge — the members can rotate relative to each other, so no bending moment is transferred.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "6f409aa7-392f-455e-a0dd-fd246017042e",
+    "term": "Rigid Connection",
+    "definition": "A fully restrained connection that transfers all forces and moments. The angle between connected members does not change under load. Also called a 'fixed' connection.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "b2db943a-7aa0-4480-954f-ce74be7f16bb",
+    "term": "Semi-Rigid Connection",
+    "definition": "A connection between a pinned and rigid connection — it transfers some bending moment but also allows some rotation. Most real connections behave semi-rigidly, though they are often simplified in design.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "e57cd68a-d63a-464a-b3e7-7f4cda68aeb3",
+    "term": "Shear Connection",
+    "definition": "A connection designed primarily to transfer vertical shear force. It does not resist bending moment, so the beam end is free to rotate. Common for simply-supported beams.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "35d790fc-14a3-4ec7-ac9e-700781bfd2a4",
+    "term": "Splice Connection",
+    "definition": "A connection that joins two lengths of the same member end-to-end — for example, joining two column sections one above the other. Used when a member is too long to fabricate or transport in one piece.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "14467672-f27c-4d4f-906d-30f7cacb3855",
+    "term": "Fin Plate Connection",
+    "definition": "A simple shear connection where a flat plate is welded to the supporting member (e.g. a column) and bolted to the web of the beam. Quick and cheap to fabricate and erect.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "1363a22f-b71e-4286-9070-60d5e6386364",
+    "term": "End Plate Connection",
+    "definition": "A plate welded to the end of a beam which is then bolted to the face of a column or another beam. Can be designed as a shear-only or moment connection depending on plate size and bolt arrangement.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "e71ad3ad-2fb3-4e84-ace3-ddba7eb806e0",
+    "term": "Double Angle Cleat",
+    "definition": "A connection using two angle sections (cleats) bolted to both the beam web and the supporting member. One of the oldest and most traditional simple connection types in steelwork.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "a4fe7e75-2558-4f0d-a1b0-da308745e53b",
+    "term": "Web Cleat",
+    "definition": "Similar to an angle cleat but using a flat plate bolted to the beam web. Transfers shear load only.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b50d3eb3-5ab4-4ec5-9f9c-c5248b53c4b3",
+    "term": "Flange Plate Connection",
+    "definition": "A moment connection where plates are bolted or welded to the flanges of a beam to transfer bending moment to a column. The flanges carry the moment and the web carries the shear.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "73025b30-0537-45ea-832e-778db6d0cbfc",
+    "term": "Seismic Connection",
+    "definition": "A connection specifically designed to withstand earthquake forces. Must be ductile — able to absorb energy through deformation without fracturing.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "462a0611-896d-4b26-8e0f-851712ad3593",
+    "term": "Prequalified Connection",
+    "definition": "A connection configuration that has been tested and approved by a design code (e.g. AISC) for use in seismic zones without the need for project-specific testing.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "659ad538-f023-413d-a6da-f3cdd03bfd4f",
+    "term": "Column Base Connection",
+    "definition": "The connection at the bottom of a column to the foundation. Usually a steel base plate sitting on a concrete pad, anchored down with anchor bolts.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "ddb94c9a-2f35-41c9-afc1-af880217b2f4",
+    "term": "Haunch",
+    "definition": "A triangular steel plate added to the bottom of a beam near a moment connection to deepen the section and increase its stiffness and moment capacity at the joint.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "5d6eb7e1-7b38-4ef8-bb3d-7cc290b24cc6",
+    "term": "Gusset Plate",
+    "definition": "A flat steel plate used to connect bracing members, trusses, or other structural members to beams or columns. Acts as a hub that distributes load between members.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "5b99e8cd-28d8-4f32-b034-8e3d74b4aa72",
+    "term": "Anchor Bolt",
+    "definition": "A bolt used to connect a steel structure to a concrete foundation. Transfers loads from the steel into the concrete below. The most common way to fix a column base to a foundation.",
+    "category": "Anchors",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "8f7f5d56-7d9b-48ea-b90c-6f8afa0d72d5",
+    "term": "Cast-In Anchor",
+    "definition": "An anchor installed in wet concrete before it sets. Because it is embedded during casting, it bonds mechanically with the concrete for very high load capacity.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "82a33175-7702-46d8-9677-c5c8d67a5c8c",
+    "term": "Post-Installed Anchor",
+    "definition": "An anchor installed into hardened, existing concrete by drilling a hole. Either mechanical (expansion) or chemical (adhesive). Used when the concrete is already cast.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "4ec9d56c-da2e-4006-a7de-fb714c0e9fad",
+    "term": "Chemical Anchor",
+    "definition": "A post-installed anchor where adhesive (resin) is injected into a drilled hole and a threaded rod or rebar is inserted. The resin cures to create a strong bond. Also called an adhesive anchor.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "0b3d1d55-1f1d-4e80-aefc-d21c2762b7e7",
+    "term": "Expansion Anchor",
+    "definition": "A post-installed mechanical anchor that grips concrete by expanding against the walls of a drilled hole when tightened. Works by friction. Less strong than chemical anchors in cracked concrete.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "2c6564dd-c692-4915-a0f9-71350c3c7e39",
+    "term": "Headed Stud",
+    "definition": "A short steel rod with a head welded to a steel beam to create composite action with a concrete slab above. The head provides the mechanical interlock that transfers shear between steel and concrete.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "4f108059-d851-44a9-bab6-d769e6efb025",
+    "term": "Anchor Plate",
+    "definition": "A steel plate cast into a concrete element with anchors attached to it. Provides a steel face to which other steel members can be welded or bolted after the concrete is cast.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "fab68a5c-6131-44c9-8d8d-7cc49ee9f58a",
+    "term": "Anchor Channel",
+    "definition": "A C-shaped steel channel cast into concrete, allowing bolts to be slid along it and tightened at any position. Used for cladding and façade fixings where exact bolt positions are uncertain.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "67d3399b-7df0-4ffb-968f-75f008fcf787",
+    "term": "Undercut Anchor",
+    "definition": "A post-installed anchor that relies on a mechanical interlock created by cutting an undercut shape in the concrete hole. Very high load capacity, used in cracked concrete.",
+    "category": "Anchors",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "1ea6eaab-3e91-45e0-b84c-b0d070170124",
+    "term": "Grout",
+    "definition": "A cement-based material poured under a base plate after erection to fill the gap between the plate and the concrete foundation. Ensures even bearing and transfers load uniformly.",
+    "category": "Anchors",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "f860fc3a-15cf-45e5-a04a-384f753bd16d",
+    "term": "Holding-Down Bolt",
+    "definition": "Another name for anchor bolts used to hold down a column base. The term 'holding down' emphasises their role in resisting uplift as well as shear.",
+    "category": "Anchors",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "22e19ba7-a2f0-490d-b59f-d405a60d30bc",
+    "term": "Structural Bolt",
+    "definition": "A high-strength bolt used to join structural steel members. Unlike standard hardware bolts, structural bolts are manufactured to tight tolerances and come in defined grades.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "5cf74065-abb0-4721-a8bd-8dd0c42cf9b0",
+    "term": "Bolt Grade",
+    "definition": "A number indicating a bolt's strength. The first number is 1/100 of the tensile strength (MPa); the second is 10 times the yield-to-tensile ratio. E.g. grade 8.8: tensile strength 800 MPa, yield at 80% of that.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "7516bf8b-d6bb-4d90-868a-cfe27735c4ea",
+    "term": "8.8 Bolt",
+    "definition": "The most common grade of structural bolt. Tensile strength of 800 MPa. Used in the majority of standard steelwork connections.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "b40d6c25-a2ea-418d-ba48-9768bc4e7b51",
+    "term": "10.9 Bolt",
+    "definition": "A higher-strength bolt with tensile strength of 1000 MPa. Used in high-load connections or when bolt size needs to be kept small.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "029e82e5-2dc6-4d45-ab8d-c0bd90a86b33",
+    "term": "HSFG Bolt",
+    "definition": "High Strength Friction Grip bolt. Tightened to a very precise tension so the clamping force between the plates creates friction that transfers load. The bolt itself does not bear against the hole. Used in slip-critical connections.",
+    "category": "Fasteners",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "e35deb2a-b7f5-4b18-aa9c-10f92674f054",
+    "term": "Slip-Critical Connection",
+    "definition": "A bolted connection where load is transferred by friction between the contact surfaces rather than bolt bearing. Requires HSFG bolts tightened to a specified pretension. Used where slip would be unacceptable.",
+    "category": "Fasteners",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "d04875e9-968d-4492-8ff6-7ef1e861686b",
+    "term": "Bearing Connection",
+    "definition": "A standard bolted connection where the bolt shank bears against the hole edge to transfer load. Simpler and cheaper than friction connections but allows a small slip at first loading.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "29c04c52-a8e2-4467-8791-6fd2027de67f",
+    "term": "Bolt Shear",
+    "definition": "The cutting force acting on a bolt across its cross-section. A bolt in shear is being pushed to one side on one face and the other side on the other face — like scissors cutting through it.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "767e3328-ad09-45aa-9fb1-de92ac971b4c",
+    "term": "Bolt Tension",
+    "definition": "Force pulling a bolt along its length (trying to stretch it). Bolts in moment connections often experience tension as the connection tries to rotate and pull the flanges apart.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "7cb98373-9a44-4dc9-b2a9-652dc7742fe8",
+    "term": "Fillet Weld",
+    "definition": "The most common weld type, forming a triangular cross-section in the corner between two members. Used to join overlapping or perpendicular surfaces. Simpler and cheaper than a butt weld.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended",
+    "imageName": "img_fillet_weld"
+  },
+  {
+    "id": "fc4327aa-177e-4b72-ab6d-4c05b3f69a86",
+    "term": "Butt Weld",
+    "definition": "A weld that joins two members end-to-end in the same plane, filling the gap between them. A full-penetration butt weld is as strong as the parent material itself.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended",
+    "imageName": "img_butt_weld"
+  },
+  {
+    "id": "8ddaf8b1-995d-426d-ad88-906ee31cfe56",
+    "term": "Full Penetration Weld",
+    "definition": "A butt weld that penetrates the full thickness of the connected material. Develops the full strength of the base metal. More expensive than partial penetration.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "a9a53eec-9ade-4eac-8ff1-850d5fd64a12",
+    "term": "Partial Penetration Weld",
+    "definition": "A butt weld that does not penetrate the full thickness. Cheaper but lower capacity — cannot develop the full strength of the base metal.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "95dbd4b3-6002-4a88-88f3-4d7febf2e834",
+    "term": "Weld Size",
+    "definition": "The leg length of a fillet weld, or the throat depth of a butt weld. A larger weld size means greater capacity but more material and heat input.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "e1db9123-c96d-4277-b8d1-17698aa1d626",
+    "term": "Weld Throat",
+    "definition": "The shortest distance from the root of a weld to its face — the critical dimension for weld strength calculations. For a standard equal-leg fillet weld, the throat = 0.707 × leg length (for a 45° weld geometry). Weld resistance is calculated per unit length of throat.",
+    "category": "Fasteners",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "e23129f2-af4c-41e5-8dc1-8fb991aac0ff",
+    "term": "Washer",
+    "definition": "A flat disc placed under a bolt head or nut to distribute the clamping load over a larger area and prevent damage to the connected surface.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "b55ab855-a3b6-48a0-a250-98d5e4d1934a",
+    "term": "Nut",
+    "definition": "The threaded female component that engages with a bolt thread. Tightening the nut draws the bolt into tension and clamps the connected parts together.",
+    "category": "Fasteners",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "38e1ba57-f916-4c31-96d7-21a252ec63ff",
+    "term": "Stud Welding",
+    "definition": "A process that welds headed studs directly to a steel beam using an electric arc, typically to create composite action with a concrete slab.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "90a7df7e-049f-4f34-a323-bdd8b78412f3",
+    "term": "Tension",
+    "definition": "A pulling force that tries to stretch a member along its length. A rope under load is in pure tension. Steel is very strong in tension.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "dff6a7cf-1e4b-4b1c-a60d-7748957c1bde",
+    "term": "Compression",
+    "definition": "A pushing force that tries to shorten a member along its length. A column carrying the weight of a building is in compression.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "b398f8bb-d0b0-4862-b4fd-5f62018d4db5",
+    "term": "Shear Force",
+    "definition": "A force acting across (perpendicular to) a member, trying to cut it in two. Like the action of scissors. Beams experience shear due to the vertical loads they carry.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "94639797-7fe5-4c15-b68b-da97f80f55fc",
+    "term": "Bending Moment",
+    "definition": "The internal force that causes a beam or column to bend. It is the product of a force multiplied by the distance from the point of interest. A long, loaded beam experiences high bending moments in its middle.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended",
+    "imageName": "img_bmd"
+  },
+  {
+    "id": "c437303b-c90f-4372-9556-8c9b0518a726",
+    "term": "Torsion",
+    "definition": "A twisting force — a moment that tries to rotate a member about its own axis. Like wringing out a towel. Torsion is more complex than bending and often avoided in design.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "0a5f5699-35f0-40cf-a261-f0a3b0747878",
+    "term": "Axial Force",
+    "definition": "A force acting along the length (axis) of a member — either tension (pulling) or compression (pushing).",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "dfd83242-eb31-4f3a-a87f-6cad6e26b33c",
+    "term": "Normal Force",
+    "definition": "Another term for axial force — a force acting perpendicular to a surface or along a member's axis.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "7cb2a3ca-35a9-495a-af22-753b12e9fa71",
+    "term": "Bearing Force",
+    "definition": "The compressive force between two surfaces in contact — for example, between a bolt shank and the edge of a bolt hole, or between a base plate and a concrete foundation.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "dba31c25-e247-4b58-8113-d904f1b55828",
+    "term": "Punching Shear",
+    "definition": "A localised shear failure that can occur in a concrete slab or column base when a concentrated load punches through like a cookie cutter. Critical for column-to-slab connections.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "76244d8d-c7a0-4241-9dee-3fb894bfc8f3",
+    "term": "Prying Force",
+    "definition": "An additional tensile force in a bolt caused by the lever action of a bending plate. When a plate deforms under load it 'pries' on the bolt, increasing the bolt tension beyond what simple calculation suggests.",
+    "category": "Forces & Loads",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "906c4a32-fc6e-47b1-89c9-6ab293585740",
+    "term": "Dead Load",
+    "definition": "The permanent, constant weight of the structure itself — steel beams, concrete slabs, cladding. It never changes. Also called permanent load in Eurocode.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "300313a3-522e-434e-9b96-9feffad4c0d6",
+    "term": "Live Load",
+    "definition": "Forces from the occupants, furniture, and moveable equipment in a building. It varies over time. Also called imposed load or variable load.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "7c37762a-eff6-4328-abdf-2c2d1d20353b",
+    "term": "Wind Load",
+    "definition": "Lateral and uplift forces applied to a structure by wind pressure and suction. Buildings must be designed to resist wind in all directions.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "db844343-5b5e-46a5-bd61-fd48b56b9777",
+    "term": "Seismic Load",
+    "definition": "Forces generated in a structure during an earthquake by ground movement causing the structure to accelerate. Requires special design considerations for ductility.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "8b5b2d5e-91d3-4b81-8201-764b241e1789",
+    "term": "Imposed Load",
+    "definition": "Loads from the use and occupancy of a structure — people, furniture, vehicles. The Eurocode term for live load.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "0e055532-eefe-4fcd-8ae6-5e44066ed1db",
+    "term": "Point Load",
+    "definition": "A concentrated force acting at a single location. For example, a column sitting on a beam applies a point load at that location.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "3973d228-0002-4fb8-ae77-662f31a434b2",
+    "term": "Distributed Load",
+    "definition": "A load spread over a length or area rather than concentrated at one point. For example, the self-weight of a beam is a uniformly distributed load along its length.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "0424716d-934f-4764-b680-b57d196d12f1",
+    "term": "Reaction Force",
+    "definition": "The force exerted by a support on a structure in response to the applied loads. At a simple support, the reaction is vertical; at a fixed support, there are also horizontal and moment reactions.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "3d59a330-9e5b-4fde-b818-8eaa07bd9947",
+    "term": "Load Combination",
+    "definition": "A set of rules specifying which loads must be applied together for design. Different combinations apply for different limit states. The most onerous combination governs the design.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "cbe959ef-738a-426a-a51b-91355005432b",
+    "term": "Design Load",
+    "definition": "The factored load used in structural calculations. It equals the characteristic load multiplied by a partial safety factor, and is used to check structural capacity at the ultimate limit state.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "3972c85b-c0f4-4e60-89fa-3b9fea287416",
+    "term": "Characteristic Load",
+    "definition": "A statistically defined value of a load, used as the reference value before safety factors are applied. For variable loads (wind, imposed), it typically corresponds to a value with a 50-year return period (2% annual probability of exceedance). For permanent loads (self-weight), it is usually the mean value.",
+    "category": "Forces & Loads",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "a6254766-d587-4e6c-8644-9b2f28b81d71",
+    "term": "Self-Weight",
+    "definition": "The weight of the structural members themselves. Always present and must be accounted for in design.",
+    "category": "Forces & Loads",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "cb4471fa-f958-4b49-a796-3e64dcf94f9e",
+    "term": "Stiffness",
+    "definition": "A measure of how much a structure resists deformation when loaded. A stiff structure deflects little; a flexible one deflects a lot. Measured as force per unit displacement.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "e4036697-0981-4e94-af5e-052de3fb8613",
+    "term": "Ductility",
+    "definition": "The ability of a material or structure to undergo large deformations before fracturing. Ductility is crucial in seismic design — a ductile structure absorbs energy through controlled deformation rather than sudden collapse.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "50664108-cdaf-4dc3-a648-fc29b9a797c8",
+    "term": "Elasticity",
+    "definition": "The property of a material that allows it to return to its original shape after a load is removed. Elastic behaviour is reversible — no permanent deformation occurs.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "85a344fc-79b9-40be-8d2d-638b130510a0",
+    "term": "Plasticity",
+    "definition": "The behaviour of a material after it has been stressed beyond its yield point. Plastic deformation is permanent — the material does not spring back when the load is removed.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b264f8b6-8a23-42d9-9178-5338e027d7b8",
+    "term": "Yield Strength",
+    "definition": "The stress at which a material begins to deform permanently (plastically). For structural steel this is a key design parameter — members are typically designed to stay below yield under service loads.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "83615a3a-e04c-43c7-8dfa-c9b9e0b16e42",
+    "term": "Ultimate Strength",
+    "definition": "The maximum stress a material can withstand before fracturing. Higher than yield strength. The difference between yield and ultimate is the material's 'reserve' strength.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "5dd34048-3d92-4bf7-9bfc-e11f980a0403",
+    "term": "Buckling",
+    "definition": "A sudden sideways failure of a slender member under compression. Instead of squashing, the member bows sideways. Long, thin columns and beam webs are prone to buckling.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b97b41ae-79f0-4244-a0b2-d2f09445c9b4",
+    "term": "Lateral-Torsional Buckling",
+    "definition": "A buckling mode in which an unrestrained beam deflects laterally and twists simultaneously under load. The compression flange acts like a strut and buckles sideways. Prevented by lateral restraints (purlins, floor slabs) that brace the compression flange. Critical for long, deep, unrestrained beams.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "c06eb191-e59d-4843-bff9-6b36c7350e35",
+    "term": "Local Buckling",
+    "definition": "Buckling of a thin plate element within a section (e.g. the web or flange of an I-beam) rather than the member as a whole. Prevented by limiting plate slenderness.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "df8838df-f417-40e9-b261-28443556a53e",
+    "term": "Deflection",
+    "definition": "The movement of a structure or member from its original position under load. Beams sag; columns sway. Deflection limits are set by serviceability requirements.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "8104f64f-d2e2-4acd-8d6e-1b5850d515ca",
+    "term": "Deformation",
+    "definition": "A change in shape or size of a structural member under load. Includes both elastic (recoverable) and plastic (permanent) deformation.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "c5d17957-e5b5-401f-b734-368aede95c75",
+    "term": "Stress",
+    "definition": "The internal force per unit area within a material. Measured in megapascals (MPa) or N/mm². There are normal stresses (tension/compression) and shear stresses.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "13dac5e8-cafe-42a6-97fa-9b606c02b289",
+    "term": "Strain",
+    "definition": "The deformation of a material expressed as a fraction of its original dimension. Strain = change in length ÷ original length. Dimensionless (no units).",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "35e8565c-692f-41fa-99ec-96b78968aab6",
+    "term": "Plastic Hinge",
+    "definition": "A location in a structure where the full plastic moment capacity (Mp) has been reached. The section continues to rotate at constant moment — behaving like a frictionless pin for additional rotation. Plastic analysis allows load to redistribute through a sequence of plastic hinge formations before collapse.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "43afd078-03f3-4904-a4bf-56ad603efc73",
+    "term": "Utilisation Ratio",
+    "definition": "The ratio of applied load to design capacity, expressed as a decimal or percentage. A ratio of 1.0 (or 100%) means the member is exactly at capacity. Ratios above 1.0 indicate overstress.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "a3a7ed21-1f56-497e-94ba-c9a1449a6569",
+    "term": "Factor of Safety",
+    "definition": "A multiplier applied to loads or divider applied to capacities to ensure a structure has adequate reserve strength beyond its design load.",
+    "category": "Structural Behaviour",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "df713a2d-4ccf-488a-a47a-822930819703",
+    "term": "Partial Safety Factor",
+    "definition": "A factor applied to loads (γF) or material strengths (γM) in limit state design to account for uncertainty. For example, in Eurocode, dead load is typically factored by γG = 1.35 and steel yield strength is divided by γM0 = 1.0 at ULS. Partial factors replace the old single global safety factor.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "4fbebadf-28d4-48af-bcfe-bd5a550ec8b6",
+    "term": "Redistribution",
+    "definition": "In an indeterminate structure, the shift of bending moment from sections that have reached their plastic moment capacity to less-stressed sections. Allows a more economical design than elastic analysis. Limited by Eurocode to prevent excessive plastic rotation damaging serviceability.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "5ee051d7-de4c-4be5-907d-5f164d9ed3ae",
+    "term": "Fracture",
+    "definition": "Sudden failure of a material by the propagation of a crack. Unlike ductile failure, fracture is abrupt and without warning. Brittle fracture is a particular concern in cold weather with certain steel grades.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "969f182e-4416-49b2-894c-ff48d7d2a428",
+    "term": "Fatigue",
+    "definition": "Progressive weakening of a material under repeated cyclic loading. A small crack can grow with each load cycle until failure occurs at a stress far below the static strength.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "fc29c609-3bad-4da5-9106-04188583fc42",
+    "term": "Creep",
+    "definition": "The slow, time-dependent deformation of a material under sustained load. Most significant in concrete, especially under compressive loading at elevated temperatures.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "bf202bb1-cb83-4364-9978-c25a1d95a8ee",
+    "term": "Structural Steel",
+    "definition": "A form of steel specifically produced to consistent mechanical properties for use in construction. Key properties: high strength, ductility, and weldability.",
+    "category": "Materials",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "2a91e911-ff74-4cb1-9df1-f1e6353c8ea4",
+    "term": "Steel Grade S235",
+    "definition": "A structural steel grade with a nominal yield strength of 235 MPa. The 'S' denotes structural, '235' is the yield strength. Used for lightly loaded members and in older structures.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b90dbc49-4650-4227-a5f8-b93c6a33534d",
+    "term": "Steel Grade S275",
+    "definition": "Structural steel with a nominal yield strength of 275 MPa. The standard grade for most UK and European structural steelwork.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "fed16085-996b-42a1-bdb4-9accf4e05b16",
+    "term": "Steel Grade S355",
+    "definition": "Structural steel with a nominal yield strength of 355 MPa. Higher strength than S275, allowing smaller sections. Common for heavily loaded structures.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b1aadfb2-cb4f-4dc9-9926-7dca3de35b0c",
+    "term": "Steel Grade S420 / S460",
+    "definition": "High-strength structural steels with yield strengths of 420 and 460 MPa. Used in long-span structures or where weight saving is critical. Require more care in welding.",
+    "category": "Materials",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "963fb9df-c255-4f92-a0a4-a91c3e041aef",
+    "term": "Reinforced Concrete",
+    "definition": "Concrete strengthened by embedding steel bars (rebar) or mesh within it. Concrete is strong in compression but weak in tension; the steel carries the tensile forces.",
+    "category": "Materials",
+    "difficulty": "beginner",
+    "source": "extended",
+    "imageName": "img_rebar"
+  },
+  {
+    "id": "23445c51-332f-4342-8ed7-3cffc666d84d",
+    "term": "Reinforcement Bar",
+    "definition": "Steel bar embedded in concrete to carry tensile forces. Commonly known as rebar. Ribbed bars are standard — the ribs improve the bond between steel and concrete.",
+    "category": "Materials",
+    "difficulty": "beginner",
+    "source": "extended",
+    "imageName": "img_rebar"
+  },
+  {
+    "id": "9a7f5389-8ff8-4474-9633-ecffc18ca521",
+    "term": "Concrete Class",
+    "definition": "A designation indicating the compressive strength of concrete. E.g. C25/30 means a cylinder strength of 25 MPa and a cube strength of 30 MPa. Higher classes for more highly loaded elements.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b3816fcc-5161-4fc7-8c25-ea3f76199eb5",
+    "term": "Composite Construction",
+    "definition": "Construction where steel and concrete work together as a combined structural system, each contributing what it does best. Steel beams with concrete slabs on top, connected by shear studs.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "4797c906-f7c4-4c31-8f3f-2754cdad040a",
+    "term": "Hot-Rolled Section",
+    "definition": "A steel section (I-beam, channel, angle) formed by pushing hot steel through shaped rollers. The most common way to produce standard steel sections.",
+    "category": "Materials",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "5ecca16a-fddf-4bd1-ad3e-b112cc8642e2",
+    "term": "Cold-Formed Section",
+    "definition": "A steel section formed at room temperature by bending thin sheet steel. Lighter and thinner than hot-rolled sections. Used for purlins, cladding rails, and light structures.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "ddab3ae9-92dd-47c6-84c3-f480dd262e9a",
+    "term": "Hollow Structural Section (HSS)",
+    "definition": "Steel sections with a hollow, closed cross-section — circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
+    "category": "Materials",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "917425c3-58a2-4afb-812e-c3e2c918cfe1",
+    "term": "Galvanising",
+    "definition": "A corrosion-protection process where steel is coated with zinc by dipping it in molten zinc. The zinc corrodes preferentially, protecting the steel underneath.",
+    "category": "Materials",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "c1834b7f-eafa-4113-957a-b2563771f663",
+    "term": "Eurocode",
+    "definition": "A set of European design standards for structural engineering, covering concrete (EC2), steel (EC3), composite (EC4), and other materials. Used across the EU and many other countries.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "10b90eef-74f7-40dd-b679-67454215aba9",
+    "term": "EC3 (EN 1993)",
+    "definition": "Eurocode 3 — the design standard for steel structures. Part 1-8 specifically covers the design of joints and connections in steel.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "7361096e-fec6-4585-af19-ca16b8b60d57",
+    "term": "EC4 (EN 1994)",
+    "definition": "Eurocode 4 — the design standard for composite steel-concrete structures. Covers beams, columns, slabs, and connections in composite construction.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "67debb87-6382-4296-bf87-c90837248f37",
+    "term": "EC2 (EN 1992)",
+    "definition": "Eurocode 2 — the design standard for concrete structures. Covers the design of reinforced and prestressed concrete elements.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "c695455b-fae4-4b3c-8d36-9f8f01ef8927",
+    "term": "AISC 360",
+    "definition": "The American Institute of Steel Construction specification for structural steel buildings. The primary US code for steel design, widely used internationally.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "11587f95-fe3b-4a42-9368-a328d5815c7f",
+    "term": "Ultimate Limit State (ULS)",
+    "definition": "A design condition representing structural failure — collapse, fracture, or overturning. Structure is designed so that applied loads do not exceed capacity at ULS. Safety factors are highest here.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "73bedb17-003c-41ad-b421-831d4a7580e5",
+    "term": "Serviceability Limit State (SLS)",
+    "definition": "A design condition relating to the normal use of the structure — excessive deflection, vibration, or cracking. Not about collapse but about whether the structure performs satisfactorily in use.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "5de84ccc-2b2b-4c1d-b57f-86df7a913072",
+    "term": "National Annex",
+    "definition": "A country-specific supplement to a Eurocode that sets the values of nationally determined parameters (safety factors, load values, etc.) for use in that country.",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "4d3bdbf1-0be6-400d-b9bf-a74ebe3052c2",
+    "term": "Characteristic Value",
+    "definition": "A value of a material property or load with a defined low probability of being exceeded. For material strength, typically the 5th percentile (only 5% of samples are weaker).",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "37992d0b-adbc-42ab-8899-de70b13b1282",
+    "term": "Design Value",
+    "definition": "A characteristic value divided by (or multiplied by) a partial safety factor. Used in ULS calculations. Accounts for uncertainty in material properties and loads.",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "623b2e71-44f1-4cce-a061-a58430f51f87",
+    "term": "Code Check",
+    "definition": "Verification that a structural element or connection satisfies all the relevant criteria in a design code. IDEA StatiCa performs code checks automatically using FEA results.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "97435684-78f9-4d88-85d5-732a068d9e6c",
+    "term": "Beam",
+    "definition": "A horizontal structural member that primarily carries loads by bending. Transfers load from slabs and other elements to columns or walls.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "302b5e05-0083-4433-85c7-b5953eea873d",
+    "term": "Column",
+    "definition": "A vertical structural member that primarily carries load in compression (axial force). Transfers load from beams down to foundations.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "153714aa-c31d-4b8e-9dae-72fc2fd19f70",
+    "term": "Bracing",
+    "definition": "Diagonal members added to a structural frame to resist horizontal loads (wind, seismic). Bracing works by forming triangles within the frame, which are inherently rigid.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "a723b555-f785-4531-8252-197312706031",
+    "term": "Truss",
+    "definition": "A structural framework made of straight members arranged in triangles. Very efficient for spanning long distances. The top and bottom chords carry bending; the diagonals and verticals carry shear.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended",
+    "imageName": "img_truss"
+  },
+  {
+    "id": "dc7053bc-77a5-471e-bb9e-16eb49dfb870",
+    "term": "Purlin",
+    "definition": "A horizontal beam running along the length of a roof, spanning between rafters or portal frames. Supports the roof cladding and provides lateral restraint to the rafters.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "e656a3c5-9127-400e-8ffe-175f6e468d2e",
+    "term": "Rafter",
+    "definition": "A sloping roof beam running from the ridge to the eave. In a portal frame building, the rafter is the sloping part of the frame.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "742b61b4-bed6-4543-bb3f-bd3e280199a7",
+    "term": "Portal Frame",
+    "definition": "A structural system consisting of columns and rafters rigidly connected at their joints, forming a 'portal' shape. Extremely common for industrial buildings and warehouses.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "b153f712-a406-4711-a186-d1521191075a",
+    "term": "Base Plate",
+    "definition": "A flat steel plate welded to the bottom of a column and bolted to the foundation. Spreads the column load over the larger area of the concrete foundation.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "62cce831-37f9-4f3b-abf3-a57c224123e5",
+    "term": "Stiffener",
+    "definition": "A plate welded to a beam web or column web to prevent local buckling and distribute concentrated loads. Common at connection points and under point loads.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "04d8116f-89d2-4391-a7da-5194d96cee27",
+    "term": "Web",
+    "definition": "The vertical plate of an I-section or H-section connecting the two flanges. Primarily resists shear force.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "3525ba69-11b2-4ab2-9edd-b38d234e2677",
+    "term": "Flange",
+    "definition": "The horizontal plates at the top and bottom of an I-section or H-section. Primarily resist bending moment — the top flange is in compression and the bottom flange is in tension for a simply-supported beam.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "81f3693c-0ef8-408f-9181-b592683b6c53",
+    "term": "I-Section (UB/UC)",
+    "definition": "The classic cross-section shape for steel beams (Universal Beam) and columns (Universal Column). Efficient because material is concentrated in the flanges where bending stresses are highest.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended",
+    "imageName": "img_i_section"
+  },
+  {
+    "id": "9b8e84fa-158b-4a51-b089-ff281d2521e6",
+    "term": "Angle Section",
+    "definition": "An L-shaped steel section with two legs. Used for bracing members, cleats, and small secondary members.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "ed4bd8a7-902a-4848-82b7-4e9ccfb7b960",
+    "term": "Channel Section",
+    "definition": "A C-shaped steel section. Used for secondary beams, purlins, and connection components.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "d39a24fa-c02b-455b-904c-9622f2496595",
+    "term": "Circular Hollow Section (CHS)",
+    "definition": "A round hollow steel tube. Very efficient for compression and torsion. Often used for columns and bracing in architecturally exposed structures.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "5302d2bb-e57b-43a3-b943-fbbebf0885d5",
+    "term": "Rectangular Hollow Section (RHS)",
+    "definition": "A square or rectangular hollow steel tube. Good for columns and members subject to bending in one direction.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "268590fd-e4e6-4b48-97b2-16042d23d001",
+    "term": "Finite Element Analysis (FEA)",
+    "definition": "A computational method that divides a complex structure into thousands of small elements and calculates the stresses, strains, and deformations in each one. Allows very detailed analysis of complex connections.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "8310fa06-619d-4984-bdc0-ea78ccf82387",
+    "term": "CBFEM",
+    "definition": "Component-Based Finite Element Method — the analysis method used by IDEA StatiCa. Combines the speed and transparency of component-based design with the accuracy of finite element analysis. Gives detailed stress maps of connections.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "9a82bbcc-e33d-41c0-8f65-0738a19adb11",
+    "term": "Elastic Analysis",
+    "definition": "A structural analysis that assumes all materials remain within their elastic range. Stresses are proportional to strains (Hooke's Law). Conservative but simple.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "bbb47eb1-dcf2-4956-865e-1460396c33f6",
+    "term": "Plastic Analysis",
+    "definition": "A structural analysis that allows materials to yield and form plastic hinges, enabling load redistribution. Allows a more economic design but requires careful attention to ductility.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "d999ee58-4b37-450c-8299-c64c7bf1f983",
+    "term": "Nonlinear Analysis",
+    "definition": "Analysis that accounts for changes in stiffness as the structure deforms or as material yields. More accurate than linear analysis for large deformations and post-yield behaviour.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "6da1003c-96c8-4492-95bb-8ba6b09dd8c9",
+    "term": "GMNIA",
+    "definition": "Geometrically and Materially Nonlinear Analysis with Imperfections. The most rigorous buckling analysis method in Eurocode. Accounts for real-world initial imperfections in the geometry.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "87c2650e-01bc-4661-89c4-168b6d82f3c9",
+    "term": "D-Region",
+    "definition": "A 'Discontinuity Region' — a zone in a concrete or steel structure where the normal beam theory assumptions break down. Examples: near supports, openings, and concentrated loads. Requires special analysis (e.g. strut-and-tie).",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "ad2b10a7-56e7-48ad-bacb-4bbb83c8d422",
+    "term": "B-Region",
+    "definition": "A 'Bernoulli Region' where standard beam theory applies — plane sections remain plane. The bulk of a beam span is a B-region.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "94bb3cae-93d6-4060-8272-6a848e14e9a9",
+    "term": "Strut-and-Tie Model",
+    "definition": "A simplified model for analysing D-regions in concrete. The complex stress field is idealised as a truss of compression struts (concrete) and tension ties (reinforcement).",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "e9775c7a-605f-447b-bb64-460b68f05767",
+    "term": "Stress Concentration",
+    "definition": "A localised increase in stress around a geometric discontinuity — a hole, notch, or sharp corner. Stress concentrations are a common cause of fatigue cracking.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "fd8c92de-388a-4c9c-b183-a157881fa6cf",
+    "term": "Von Mises Stress",
+    "definition": "A scalar stress measure that combines all six stress components (three direct + three shear) into a single equivalent value for comparison with yield strength. Derived from the von Mises yield criterion. In FEA, contour plots of von Mises stress immediately show where the material has yielded (where the value exceeds fy).",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "12d030b1-da9a-4a6d-9bca-1c48a2c3638f",
+    "term": "Principal Stress",
+    "definition": "The maximum and minimum direct stresses at a point, acting on planes where shear stress is zero. FEA results are often presented as principal stresses.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "dd0d1164-0431-4b43-824b-d1aac997ca9a",
+    "term": "Plastic Strain",
+    "definition": "The permanent (irrecoverable) deformation remaining after a load is removed. In CBFEM, plastic strain in a connection is limited to ensure the connection does not deform excessively.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "743db126-19b9-406e-be8a-6357565c3103",
+    "term": "Equilibrium",
+    "definition": "The condition where all forces and moments acting on a structure or part of it are balanced — net force and net moment are zero. Fundamental to all structural analysis.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "6ab5514c-3f32-4ec8-9c1c-1b097db37c64",
+    "term": "Support Conditions",
+    "definition": "The way a structure is attached to its foundations or supporting structure. Common types: pin (allows rotation), fixed (resists rotation), roller (allows horizontal movement). These determine how loads are transferred.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "c1622b71-8552-47c3-ab53-ee5f3aac7790",
+    "term": "Free Body Diagram",
+    "definition": "A sketch showing an isolated part of a structure with all the external forces and reactions acting on it. The essential first step in hand calculations.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "3a59eff8-3087-4740-8d9d-195e73b4b55a",
+    "term": "Statically Determinate",
+    "definition": "A structure where all reactions and internal forces can be found using only the three equations of equilibrium. Simple beams and trusses are usually determinate.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "55e29bb6-bcb5-4675-8b15-63fda0b73380",
+    "term": "Statically Indeterminate",
+    "definition": "A structure with more unknowns than equilibrium equations. Needs additional compatibility equations to solve. Most real structures are indeterminate — continuous beams, frames, etc.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "01848f03-b392-4af7-92d9-17b5901745d8",
+    "term": "Redundancy",
+    "definition": "In structural engineering, a redundant member or reaction is one that is not strictly needed for equilibrium but adds alternative load paths. Redundancy improves structural robustness.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "4f0b91a1-03d0-42af-b81d-5ccc7b0550e3",
+    "term": "Robustness",
+    "definition": "The ability of a structure to withstand accidental or unexpected events (e.g. a vehicle impact, explosion) without disproportionate collapse. Achieved through tying, continuity, and redundancy.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "317e57b2-c83e-441d-92a1-196c6d30b0a9",
+    "term": "Progressive Collapse",
+    "definition": "A catastrophic failure mode where local damage (e.g. loss of a column) triggers a cascade of failures throughout the structure. Prevented by good tying and robust design.",
+    "category": "General Concepts",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "b7abc5e2-fbc7-4b4a-9a44-5e9b0a92fbdc",
+    "term": "Span",
+    "definition": "The distance between supports of a beam or slab. Longer spans require deeper, heavier sections.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "6367faf6-4946-4a49-928d-e14d759f8f3d",
+    "term": "Slenderness Ratio",
+    "definition": "A dimensionless measure of a compression member's susceptibility to buckling: Slenderness = effective length / radius of gyration (λ = Lcr / i). A high slenderness indicates a slender column prone to buckling at a stress well below yield. Eurocode uses a normalised slenderness λ̄ to define buckling curves.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "2cb7cac7-b182-4b5a-86fb-67da915ef4eb",
+    "term": "Effective Length",
+    "definition": "The length of an equivalent pin-ended strut that would buckle at the same load as the real member with its actual end conditions. A pin-pin column: Leff = L. A fixed-fixed column: Leff = 0.5L. A fixed-free (flagpole) column: Leff = 2L. Effective length is the key parameter in column buckling calculations.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "75430e4c-b596-4270-8611-646978494a97",
+    "term": "Radius of Gyration",
+    "definition": "A property of a cross-section that measures how far the material is distributed from the centroid. Used in buckling calculations: higher radius of gyration = more buckling resistance.",
+    "category": "General Concepts",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "a7ed8530-e23c-40aa-87d1-b6b38075c5da",
+    "term": "Section Modulus",
+    "definition": "A geometric property of a cross-section used to calculate bending stress. Stress = Bending Moment ÷ Section Modulus. A larger section modulus means lower stress for the same moment.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "96c7af60-2b0f-4d25-a9fa-8e32f4a6f57c",
+    "term": "Second Moment of Area",
+    "definition": "A geometric property of a cross-section, also called the moment of inertia (symbol I), measuring how the area is distributed about the bending axis. Higher I means more bending stiffness and lower bending stress for the same moment. I = ∫y²dA. Measured in mm⁴ or cm⁴.",
+    "category": "General Concepts",
+    "difficulty": "advanced",
+    "source": "extended"
+  },
+  {
+    "id": "f78db683-aacd-42ef-8ed7-e3fe503dc45e",
+    "term": "Centroid",
+    "definition": "The geometric centre of a cross-section — the point where the section would balance if supported. Bending stresses are zero at the centroid.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "d52de980-9536-4093-b4fc-932a26348c86",
+    "term": "Neutral Axis",
+    "definition": "The line in a beam cross-section where bending stress is zero. Above it the material is in compression; below it in tension (for a sagging beam).",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "72c246e9-a9d3-448e-9a5d-277540185790",
+    "term": "Hogging",
+    "definition": "A beam that bends concave downward (curves like a hump). The top is in tension and the bottom in compression. Typical over a continuous support.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "extended"
+  },
+  {
+    "id": "0447162f-a588-4a1b-9b77-a1be934918d7",
+    "term": "Sagging",
+    "definition": "A beam that bends concave upward (curves like a sag). The top is in compression and the bottom in tension. Typical in the span between supports.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "eeae88c0-c33f-4875-a7bc-c174b44b495a",
+    "term": "Tributary Area",
+    "definition": "The area of floor or roof that a member (beam, column) is responsible for supporting. Used to calculate the load applied to that member.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "8aedd837-a5fb-46c9-92cd-6d0b3255bbee",
+    "term": "Load Path",
+    "definition": "The route that loads travel through a structure from where they are applied to where they are resisted (usually the foundations). Understanding load paths is fundamental to structural design.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "extended"
+  },
+  {
+    "id": "85320180-09da-427a-919c-b5f31c5d4b5b",
+    "term": "anchor bolts",
+    "definition": "Bolts cast into or drilled into a concrete foundation to secure a steel base plate. They resist uplift, shear, and overturning forces at the column base.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "84025790-09b9-476e-be8a-75f0228889bc",
+    "term": "steel connection",
+    "definition": "A joint between two or more steel structural members, transferring forces between them. Can be bolted, welded, or a combination of both.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "d28fd7e4-0254-4cbf-a2f4-1c4925d0543a",
+    "term": "HSS connection",
+    "definition": "'HSS' always uppercase (Hollow Structural Section). 'connection' lowercase.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "7070f032-e79c-4c70-a75a-0e66a04e7eb5",
+    "term": "steel-to-timber connection",
+    "definition": "Lowercase except at start of sentence.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "197be6e6-3d6f-46cd-9c89-7b4bb9319f7d",
+    "term": "steel-to-concrete",
+    "definition": "A connection or interface between a steel member and a concrete element. Requires special consideration for load transfer mechanisms including bearing, friction, and anchors.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "b4e19ad9-d1b7-4794-ab4f-447595b6a6da",
+    "term": "steel-to-glulam",
+    "definition": "'glulam' = glued laminated timber. Lowercase.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6c3e16d0-1ec3-4e05-bc47-09c639cc61f3",
+    "term": "weld / welded",
+    "definition": "Lowercase.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6318660b-5aa6-4960-92b4-076913677bee",
+    "term": "bolt / bolted",
+    "definition": "Lowercase.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "fda89321-f171-44d6-b45e-91700e485c63",
+    "term": "plate girder",
+    "definition": "A deep beam built up by welding or bolting plates together — typically two flanges and a web — rather than rolled as a single section. Used for very long spans or heavy loads.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "ef403f7e-a2dc-4086-83ad-a4659a935f61",
+    "term": "metal deck slab",
+    "definition": "Three words, lowercase.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c2f86ca6-ef90-42e4-9e5a-302cb81e3f9e",
+    "term": "discontinuity region",
+    "definition": "Lowercase. Full form of D-region.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "0af33dfc-1929-4e12-bef7-d2bec58f2a23",
+    "term": "reinforcement",
+    "definition": "Lowercase. Steel bars in concrete.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "be732198-2fde-40c7-b740-5d2afc186edf",
+    "term": "rebar / rebars",
+    "definition": "Lowercase. Short for reinforcing bar.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "3f84c789-19d4-42aa-af2b-e1b99d6ca3f6",
+    "term": "pile cap",
+    "definition": "A thick concrete slab or block that sits on top of a group of piles and distributes the column load evenly between them.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "fd356cde-d98f-4b23-a537-843b84f351fd",
+    "term": "pier cap",
+    "definition": "The widened top section of a bridge pier that supports the bridge beams and distributes load into the pier.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "bd020bb7-c3cf-427c-86b3-0fc6561758c8",
+    "term": "dapped end",
+    "definition": "A notched or recessed end of a precast concrete beam where it bears on its support. The notch allows the top of the beam to be flush with the support, but creates a stress concentration requiring reinforcement.",
+    "category": "Members & Components",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5b92102d-ed4e-4ac0-adc9-6c9b0080c031",
+    "term": "corbel",
+    "definition": "Lowercase. A bracket projecting from a wall.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "a6285f25-9d39-4a7b-b7e6-9bd23292fa52",
+    "term": "column pedestal",
+    "definition": "A short concrete stub column above the foundation that raises a steel base plate above the floor level, keeping the steel clear of moisture and allowing grouting.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "d63a5bb0-1475-467b-843f-361e435f2cc9",
+    "term": "shear lug",
+    "definition": "A steel plate or bar welded to the underside of a column base plate that projects into the concrete foundation. It transfers horizontal shear forces from the column into the foundation directly, rather than relying on friction alone.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f9427d83-b5b6-47f2-b73c-5b4694e16010",
+    "term": "cross-section",
+    "definition": "A view of a structural member cut perpendicular to its length, revealing the shape and size of the section — e.g., I-shape, circular hollow, rectangular. The cross-section properties (area, second moment of area) determine how a member resists load.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "ce2676ee-35cb-4135-80c1-d245593253dd",
+    "term": "prestressed concrete",
+    "definition": "Lowercase. Concrete with pre-tensioned or post-tensioned tendons.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6ba29020-0ad2-49b5-985a-9b5b2829cecc",
+    "term": "crack width",
+    "definition": "The width of a crack in concrete, measured at the surface. Controlled by serviceability checks in Eurocode. Excessive crack widths can allow water ingress, cause corrosion of reinforcement, and indicate overstress.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "bc8f90c5-0cd5-4e49-8082-fca9048bb331",
+    "term": "code-check",
+    "definition": "The process of verifying that a structural element or connection satisfies all the relevant requirements of a design code. IDEA StatiCa automates code-checks using CBFEM analysis.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "1a3d36b7-c8a8-4fcb-a352-d1d70a6f350b",
+    "term": "deplanation",
+    "definition": "Lowercase. Warping of a cross-section. Less common term.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "0c178a4f-47bc-42b6-8bfa-dd0b2fd73ae9",
+    "term": "linear buckling analysis",
+    "definition": "Lowercase. A type of stability analysis.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "7941f919-655e-4e0d-b1b5-df81f0bcfa83",
+    "term": "fire design",
+    "definition": "Lowercase. Design for fire resistance.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4aac74c1-891f-4655-b994-738b1e720059",
+    "term": "fire resistance check",
+    "definition": "Lowercase.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "67248507-7b14-437a-b40b-e8a3b271fd8d",
+    "term": "seismic design",
+    "definition": "Lowercase. Design for earthquake resistance.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "60a437b4-7f8f-4822-91bd-0a776cce5272",
+    "term": "bearing capacity",
+    "definition": "Lowercase. Load-carrying ability.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "8dd74944-692e-451f-abe9-f3868ba0dbf2",
+    "term": "tension stiffening",
+    "definition": "Lowercase. Concrete contribution to stiffness between cracks.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "a9c04c65-8c74-430f-a771-98477ec093d0",
+    "term": "compression softening",
+    "definition": "Lowercase.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "58c0be02-88c2-44d8-a11d-576c9a711881",
+    "term": "force vector paths",
+    "definition": "Lowercase. Visualization of load path through concrete.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "ce636c16-dfb1-40aa-805e-ea39687b0b0c",
+    "term": "bill of materials",
+    "definition": "Lowercase. List of reinforcement quantities.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "90288686-b17e-4806-989c-4473e05e11c8",
+    "term": "full report",
+    "definition": "Lowercase. 'full report' used as a feature descriptor (bold on site).",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "fa0023ad-8422-4d38-9740-8a708a6c7187",
+    "term": "smart templates",
+    "definition": "Lowercase. Appears in bold on site as a descriptor, not a proper noun.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "50be090a-cb91-4528-a448-1abddef7108e",
+    "term": "sample projects",
+    "definition": "Lowercase.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "456e2591-4231-4c42-b226-40cbd623bab7",
+    "term": "cast-in-place",
+    "definition": "Concrete placed and cast in its final position on site, as opposed to precast concrete which is cast off-site. Cast-in-place construction allows complex shapes but requires formwork.",
+    "category": "General Concepts",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f4d35fc3-4760-4a1c-bbbb-0e464e5794ba",
+    "term": "post-installed",
+    "definition": "Lowercase. An anchor drilled/set after concrete has cured.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5dd9b698-aa36-4980-972f-5deda914aa70",
+    "term": "headed studs",
+    "definition": "Short steel cylinders with a head welded to a steel beam to create composite action with a concrete slab poured over it. The head provides mechanical interlock that transfers shear between the steel and concrete.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c57415a4-ca68-4be9-9ee6-d607ddebcd56",
+    "term": "smooth reinforcement",
+    "definition": "Lowercase. Plain (non-ribbed) rebar, common in older structures (1970s–80s).",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4a276d13-73e1-455d-b506-aaf403342d7d",
+    "term": "unbonded prestressing",
+    "definition": "Lowercase. Prestressing tendons not bonded to surrounding concrete.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c335416d-eaf7-49d2-bb91-e530cd43b430",
+    "term": "unbonded tendons",
+    "definition": "Lowercase. Tendons used for strengthening bridges and precast elements.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "32593f9d-8180-429c-a13d-ce6b0a3b25d1",
+    "term": "bond strength",
+    "definition": "The resistance at the interface between an anchor (or rebar) and the surrounding concrete. Relies on adhesion, friction, and mechanical interlock. Critical for chemical anchors and reinforcement development lengths.",
+    "category": "Structural Behaviour",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4c519c56-2d85-445a-9d4a-1ff5f872f40a",
+    "term": "anchorage zone",
+    "definition": "The region of a concrete member where a concentrated force — such as a prestressing tendon force or a post-installed anchor load — is introduced and dispersed into the surrounding concrete. Typically a D-region requiring special design.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "23309005-e55c-4055-b872-23527450409c",
+    "term": "stirrup",
+    "definition": "Lowercase. A closed-loop reinforcement bar for shear resistance.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6c8bd3bb-20c0-4ff0-bf1c-0cd2c4f1cb34",
+    "term": "tendon",
+    "definition": "Lowercase. A steel strand or bar used in prestressing.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "7f55470e-5714-4983-a185-2510976f739f",
+    "term": "topology optimization",
+    "definition": "Lowercase. Computational method to find optimal reinforcement layout.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "b22f17cb-d6b2-44b6-8354-5661c05471da",
+    "term": "stress field",
+    "definition": "The distribution of internal stresses throughout a structural element. In FEA and CBFEM, the stress field is visualised as a colour map, showing where stresses are highest and where the material is close to its limit.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "af8d40fd-99e7-41e9-b193-e2ef42ae3e9d",
+    "term": "crack pattern",
+    "definition": "The arrangement and orientation of cracks in a concrete element under load. The crack pattern reveals the load path and tension trajectories — cracks form perpendicular to the principal tensile stress direction.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "a7ac3f51-b305-4db2-9bbe-6b7b6e75c7a7",
+    "term": "utilization",
+    "definition": "Lowercase. The ratio of demand to capacity, expressed as percentage.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f7e72bbe-3146-4e23-a3e9-51835fb830bb",
+    "term": "PJP weld (Partial Joint Penetration)",
+    "definition": "PJP always all caps. Also 'PJP groove weld'. Introduced in v24.0.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6111d1bb-1ca6-468a-8feb-4c356b327165",
+    "term": "weld autodesign",
+    "definition": "An automated process in IDEA StatiCa that calculates the minimum required weld size for a connection to satisfy code requirements. Saves time compared to manual weld sizing iterations.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f5b620a9-b1c9-43f3-89c5-a9ff87794d5b",
+    "term": "filler plate (packing plate)",
+    "definition": "Two words, lowercase. Also called 'packing plate' in some contexts.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "692b70c0-363d-432f-840e-00343da78e79",
+    "term": "slotted holes",
+    "definition": "Elongated bolt holes that allow movement of a connected member parallel to the slot direction. Used to accommodate thermal expansion, construction tolerances, or deliberate sliding joints.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "795e35aa-931d-4a3d-886f-3776cd6de422",
+    "term": "WT sections",
+    "definition": "'WT' all caps. A structural tee cut from a wide-flange section.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5a8d33f5-fb00-4f6a-b94d-d5dd14b3106c",
+    "term": "cold-formed sections",
+    "definition": "Lowercase. Thin-walled steel sections.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "8a6de961-3959-460d-a92b-c88bff4c6a32",
+    "term": "CHS (Circular Hollow Section)",
+    "definition": "A round tube steel profile.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f2d8929c-ff77-4619-9a81-a2e7f0f14ac4",
+    "term": "cleat",
+    "definition": "Lowercase. An angle piece used in connections. Also 'cleat manufacturing operation'.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "43e59008-6db8-40a6-9266-40bb57222f42",
+    "term": "nonlinear (one word, no hyphen)",
+    "definition": "Describes analysis or behaviour where the relationship between load and deformation is not proportional. Nonlinear analysis captures material yielding and geometric effects that linear analysis misses.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "dbe6fe9f-b723-4580-9358-a10ade491aad",
+    "term": "AVOID: use 'nonlinear' instead",
+    "definition": "INCONSISTENCY: Some older support articles use 'non-linear' with hyphen.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "ce57066b-0f2d-429c-a761-a38519844486",
+    "term": "lateral-torsional buckling (LTB)",
+    "definition": "Lowercase. Abbreviation: LTB. Note: some pages omit the hyphen.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c0af7655-4e60-49ff-9649-3fc515aad135",
+    "term": "condensed superelements",
+    "definition": "Lowercase. Internal CBFEM solver feature for modeling member stiffness.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "d99b5fc0-a22c-4126-ba90-dc89ebbfdf2d",
+    "term": "stepped analysis",
+    "definition": "Lowercase. A method for incremental loading in Member.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "2205d92d-f009-44a5-a34d-e85c2207ee4e",
+    "term": "loads in equilibrium",
+    "definition": "Lowercase. Default setting from v22.0 requiring balanced loads.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f8ffb199-4a47-43f5-8753-4b324ad95b5e",
+    "term": "Load Extreme Selection",
+    "definition": "Title case as a feature name. Selects the governing load combination.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "0cb2b5a9-f4f4-4676-98af-dc2f452e2f34",
+    "term": "singularity",
+    "definition": "Lowercase. A numerical issue in FEM analysis. 'Singularity check' and 'singularity warning'.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "25662b6e-4105-4b15-8ec3-787e44db9531",
+    "term": "fatigue analysis",
+    "definition": "Lowercase. Analysis for cyclic loading damage.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5e334a85-7d9c-4f42-b8fd-9de49cd3ce2a",
+    "term": "Stand-off",
+    "definition": "Capitalize when used as a category name: Stand-off, Direct, Mortar joint, Gap.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "ad725649-43ca-4240-a2e9-86f2cde6de80",
+    "term": "Mortar joint",
+    "definition": "Title case when used as a category name.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "bf1f00dd-c9b6-4f01-a502-f0c5bdffeb4a",
+    "term": "3D scene",
+    "definition": "Lowercase 'scene'. The 3D visualization window in the application.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5a036a42-30b5-4851-9ca0-74647a89052f",
+    "term": "Load Effects",
+    "definition": "Title case. A tab in the Connection application for defining loads.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "342095ab-071b-494b-b3f0-914b612a507b",
+    "term": "Forces in Node, Forces in Bolts, Forces in Position",
+    "definition": "Title case for each variation. Load input methods in Connection.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "29303436-87d9-44b3-90bc-1211ffcf5059",
+    "term": "Code setup",
+    "definition": "Capital C, lowercase s. A settings section in the application.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "e1eaed1c-578f-456a-a90d-9fb0cf59df91",
+    "term": "Check tables",
+    "definition": "Capital C, lowercase t. Results display showing pass/fail checks.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "22ec1654-9348-4fbc-afae-db12d0344842",
+    "term": "Navigator",
+    "definition": "Capitalize. The left-side panel for model navigation.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "7aa33aef-bd9d-4650-91b1-1040ccf04ae5",
+    "term": "Developer Tab",
+    "definition": "Title case both words. Used for parametric design advanced features.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4351ef55-47f1-4443-9f08-807ef116c17a",
+    "term": "AISC",
+    "definition": "American Institute of Steel Construction. The US body that produces the primary American steel design standard (AISC 360). AISC specifications are used throughout North America and internationally where US codes apply.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "be9be7d9-8baa-4f8f-95b6-581aa59540bc",
+    "term": "ACI",
+    "definition": "American Concrete Institute. The US body that produces ACI 318, the primary American concrete design standard. Widely used in North America and internationally.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "01f5b3fa-2728-4693-affc-cc1bb75ccb40",
+    "term": "EN",
+    "definition": "European Norm (European Standard). The prefix used for Eurocodes — e.g. EN 1993 (steel), EN 1992 (concrete). 'EN' indicates the standard is adopted across all EU member states, replacing previous national codes.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "e9264241-5ea2-4b87-8af8-29a5dc14eedd",
+    "term": "AISC 341",
+    "definition": "AISC Seismic Provisions for Structural Steel Buildings. The US code governing the design of steel structures in seismic zones, covering special moment frames, concentrically braced frames, and other seismic systems.",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "927cb2eb-848c-4866-afe4-d26266c25732",
+    "term": "AISC 358",
+    "definition": "AISC Prequalified Connections for Special and Intermediate Steel Moment Frames. Lists connection configurations that have been tested and pre-approved for seismic use — designers can use them without additional testing.",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "768dc778-57ad-4023-8d76-61f0dc8c8f40",
+    "term": "ACI 318",
+    "definition": "Building Code Requirements for Structural Concrete — the primary US code for reinforced concrete design. Covers beams, columns, slabs, foundations, and connections. Key design basis for concrete in North America.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4743d5b0-38fa-4842-889c-290810e77935",
+    "term": "EN 1993",
+    "definition": "Eurocode 3: Design of Steel Structures. The European standard covering hot-rolled sections, cold-formed sections, plated structures, and — critically for IDEA StatiCa — Part 1-8 covering the design of joints.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "1a227158-c196-4e60-a35d-c0fff66f9f81",
+    "term": "EN 1993-1-8:2020",
+    "definition": "Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections — bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
+    "category": "Design Codes",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "e546f13d-c6a9-4fe1-862d-4fcd4d43b956",
+    "term": "BIM",
+    "definition": "Building Information Modelling. A digital process for creating and managing information about a building. In structural engineering, BIM models (from Tekla, Revit, etc.) are linked to IDEA StatiCa via Checkbot to extract connection geometry for design.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "dc1e07b9-50f3-4cd1-8748-f26943a11ec0",
+    "term": "FEA",
+    "definition": "Finite Element Analysis. A computational method that divides a structure into small elements, calculates the behaviour of each, and assembles the results to find stresses, strains, and deformations throughout the whole structure.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f6d452d0-bfca-45b9-8cfd-b4290a973ccc",
+    "term": "CAD",
+    "definition": "Computer-Aided Design. Software used to create technical drawings and 3D models. In structural engineering, CAD tools (AutoCAD, Tekla, Revit) define the geometry that feeds into analysis and connection design.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "a5980cfd-1dbb-4d3f-8cb0-274ff994c375",
+    "term": "API",
+    "definition": "Abbreviation for Application Programming Interface. Plural: APIs.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c11c8819-b71b-41af-bb5f-2d9e6bbe81af",
+    "term": "REST",
+    "definition": "Abbreviation for Representational State Transfer. As in 'REST APIs'.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "2d42fbc6-8422-413f-8527-15cabcbe1574",
+    "term": "CSFM",
+    "definition": "Compatible Stress Field Method — the analysis method used by IDEA StatiCa Detail for concrete D-regions. Computes stress fields in concrete consistent with the material's behaviour, satisfying both equilibrium and compatibility.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "2944a81e-5f7f-43b9-87d0-24f2ae87edfb",
+    "term": "MNA",
+    "definition": "Abbreviation for Materially Nonlinear Analysis.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "f410f240-902a-474d-90de-2f4791d2a0b5",
+    "term": "ULS",
+    "definition": "Ultimate Limit State — the design condition representing structural failure (collapse, fracture, instability). All structural elements must have sufficient resistance at ULS with appropriate safety factors applied to both loads and material strengths.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "149c0903-2498-4961-8508-ec1cddd92f32",
+    "term": "SLS",
+    "definition": "Serviceability Limit State — the design condition for normal use of the structure. Checks excessive deflection, vibration, cracking, and deformation that would impair the function or appearance of the structure, even if failure is not imminent.",
+    "category": "Design Codes",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5841abc4-1a5e-4928-9eef-2769cd092d0f",
+    "term": "HSS",
+    "definition": "Hollow Structural Section — the North American term for steel tubes with a hollow, closed cross-section. Can be circular (CHS), rectangular (RHS), or square (SHS). Very efficient for columns and members carrying both bending and torsion.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "e6ef1f9c-7707-482a-b88a-f95025b72503",
+    "term": "RCS",
+    "definition": "Abbreviation for Reinforced Concrete Section. Also an IDEA StatiCa module name.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c6075646-dafa-4f77-bdcc-85ece2edff97",
+    "term": "IFC",
+    "definition": "Abbreviation for Industry Foundation Classes. Open BIM exchange format.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "122c9686-fe80-42d2-83a7-23392e2c04b1",
+    "term": "DXF",
+    "definition": "Abbreviation for Drawing Exchange Format. AutoCAD-origin file format.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "48f60c2f-9fef-4bf1-871a-e3117cd93721",
+    "term": "DWG",
+    "definition": "Abbreviation for Drawing (AutoCAD native format).",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "dc8baeb3-7592-45b3-ac0d-365c1e775ad1",
+    "term": "SSO",
+    "definition": "Abbreviation for Single Sign-On.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "467c9011-56d2-44ce-9437-337638200913",
+    "term": "EOP",
+    "definition": "Abbreviation for Enterprise Onboarding Program.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "27c1682a-8b77-433a-b8ff-18ccf9231678",
+    "term": "RBS",
+    "definition": "Abbreviation for Reduced Beam Section. A prequalified seismic connection type.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5a450015-f964-4a0c-af3f-7d40ccc3d916",
+    "term": "EPM",
+    "definition": "Abbreviation for End Plate Moment.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "935d3b1e-5b95-44b5-a30e-9116a7ad2aa0",
+    "term": "WUF-W",
+    "definition": "Abbreviation for Welded Unreinforced Flange-Welded Web. All caps with hyphen.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "cc616484-033c-40da-82ce-6f242ec16922",
+    "term": "WUF-B",
+    "definition": "Abbreviation for Welded Unreinforced Flange-Bolted Web. All caps with hyphen.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "3e19b2ce-7d4e-488f-9342-13863924e638",
+    "term": "PDF",
+    "definition": "Abbreviation for Portable Document Format.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6cc1dae7-1242-4d35-b19c-cdaf6b4f35c1",
+    "term": "DOCX",
+    "definition": "Abbreviation for Microsoft Word Open XML Document.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "1a9d6209-a5f5-454f-bbd2-8e71c0012eda",
+    "term": "FAQ",
+    "definition": "Abbreviation for Frequently Asked Questions.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "81d8ca47-2a02-4583-81e3-c3c4556e23f6",
+    "term": "EOR",
+    "definition": "Abbreviation for Engineer of Record. Plural: EORs.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6ca0ad3b-0ab3-41d9-bf96-b6513c04d7e2",
+    "term": "LBA",
+    "definition": "Abbreviation for Linear Buckling Analysis. A type of stability analysis for finding critical buckling modes.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "4cd2506f-04b8-4e13-989e-55c487326801",
+    "term": "LTB",
+    "definition": "Lateral-Torsional Buckling — a buckling mode affecting beams where the compression flange deflects laterally while the beam simultaneously twists. Prevented by providing lateral restraint to the compression flange (e.g. floor slab, purlins). Governed by EC3 Section 6.3.2.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "c5fcf511-f6ba-4860-8dd0-d3b7ce4bf614",
+    "term": "GMNA",
+    "definition": "Abbreviation for Geometrically and Materially Nonlinear Analysis. Like GMNIA but WITHOUT imperfections. Distinct from GMNIA.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "567e55ad-1577-45fd-8ec4-954ec50261fd",
+    "term": "PJP",
+    "definition": "Partial Joint Penetration — a butt weld that does not penetrate the full thickness of the connected material. Cheaper than full penetration but has lower capacity and cannot develop the full strength of the base metal. Used where the full joint strength is not required.",
+    "category": "Fasteners",
+    "difficulty": "intermediate",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "e4344d33-1de8-4cbc-a3d3-4c587a486e48",
+    "term": "CHS",
+    "definition": "Abbreviation for Circular Hollow Section. Round tube steel section.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "dfa9364f-dfc0-4f3c-8387-5b80c848a78f",
+    "term": "MPRL",
+    "definition": "Abbreviation for Material and Product Range Library. The built-in material and cross-section database.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "0a07f29d-8018-4fd4-99ae-90ba7b0d5cca",
+    "term": "ETA",
+    "definition": "Abbreviation for European Technical Assessment. A European product approval document for construction products.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "44c0939a-b3c8-46dd-bf07-b327a811a44c",
+    "term": "ICC-ES",
+    "definition": "Abbreviation for International Code Council Evaluation Service. All caps with hyphen. US product evaluation/certification body.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "98bd831d-420a-4fc2-b286-0fcac3141d35",
+    "term": "EULA",
+    "definition": "Abbreviation for End User License Agreement. The software license agreement.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "0dac6fe2-1b12-43c7-987e-9640af2d0853",
+    "term": "FEM",
+    "definition": "Abbreviation for Finite Element Method (or Model). Context-dependent: 'Method' (general) or 'Model' (specific). Distinct from FEA (Analysis).",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "d6a7698e-3984-4b4a-8504-a668a073eb8e",
+    "term": "LCS",
+    "definition": "Abbreviation for Local Coordinate System. The coordinate system relative to a member.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "1bdd40b3-8583-4ed1-9cb8-ad86fb1006cf",
+    "term": "IS 800",
+    "definition": "Abbreviation for Indian Standard for Steel. 'IS' all caps, space, number. Indian steel design standard.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "3be20b1c-54c5-43d1-83ea-1cc6df69bb37",
+    "term": "HKG",
+    "definition": "Abbreviation for Hong Kong Code. All caps. Abbreviation for Hong Kong building code.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "86d67fc3-5cfc-4ec3-9936-d98990a322be",
+    "term": "SIA",
+    "definition": "Abbreviation for Schweizerischer Ingenieur- und Architektenverein (Swiss code). All caps. Swiss engineering standards. E.g., SIA 262.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "8e373d88-7618-4f0e-b64d-2ee03e71a09f",
+    "term": "SP 16",
+    "definition": "Abbreviation for Set of Rules (Russian). 'SP' all caps, space, number. Russian structural design standard.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "5a516e54-158e-4842-a8e0-c3e979a83c8e",
+    "term": "GB",
+    "definition": "Abbreviation for Guobiao (Chinese National Standard). 'GB' all caps. Chinese building code. Full format: GB50007-2011 (no spaces).",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "3be8ca21-68a5-4c1f-99e5-e7d366826128",
+    "term": "CSA S16:19",
+    "definition": "Abbreviation for Canadian Standards Association, Steel Standard 2019. 'CSA' all caps, space, standard number, colon, year.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "9c955bd0-c019-4f70-920e-223091ea6815",
+    "term": "AISC 360-22",
+    "definition": "Abbreviation for AISC 360, 2022 edition.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "9049f362-f97f-4eae-bd8c-9afdf7cd8b1b",
+    "term": "ACI 318-25",
+    "definition": "Abbreviation for ACI 318, 2025 edition. Latest ACI concrete code.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "6666a8ce-c188-414e-a8d0-4693bfa869fe",
+    "term": "ACI 318-19",
+    "definition": "Abbreviation for ACI 318, 2019 edition. Previous edition, still widely referenced.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "d6c08ddf-7f12-407a-838d-42031b79b09d",
+    "term": "AS 3600",
+    "definition": "Abbreviation for Australian Standard for Concrete. 'AS' all caps, space, number. Australian concrete standard.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "86a1fe5b-7f2f-4b6d-b570-eb4633177eec",
+    "term": "fib Model Code",
+    "definition": "Abbreviation for fib Model Code. Lowercase 'fib' (federation). 'Model Code' in title case. International concrete design reference.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "94139f9d-c7af-4be1-8bea-29b53902f166",
+    "term": "ÖNORM",
+    "definition": "Abbreviation for Austrian National Standard. Exact spelling with Ö umlaut.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  },
+  {
+    "id": "47b79086-4d81-408e-a2e7-eb7e089de9e1",
+    "term": "STUBS",
+    "definition": "Abbreviation for Shell elements in Beam/RCS. All caps. Shell elements for more realistic member modeling in Beam and RCS.",
+    "category": "Design Codes",
+    "difficulty": "beginner",
+    "source": "statica_glossary"
+  }
+]
