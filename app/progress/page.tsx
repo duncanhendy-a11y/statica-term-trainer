@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { loadFlashcards, getCategoryStats, getCurrentLevel } from "@/lib/flashcards";
+import NavLogo from "@/components/NavLogo";
 import { loadProgress, resetProgress } from "@/lib/storage";
 import { CATEGORY_ICONS } from "@/lib/types";
 import type { Flashcard, CategoryStats, Progress } from "@/lib/types";
@@ -41,9 +41,7 @@ export default function ProgressPage() {
       {/* Nav */}
       <nav style={{ position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid #E5E7EB", background: "rgba(255,255,255,0.95)", backdropFilter: "blur(8px)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "56px", display: "flex", alignItems: "center", gap: "12px" }}>
-          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-            <Image src="/logo.svg" alt="IDEA StatiCa" width={130} height={16} />
-          </Link>
+          <NavLogo />
           <span style={{ color: "#D1D5DB" }}>/</span>
           <span style={{ fontSize: "13px", color: "#F36E22", fontWeight: 500 }}>📊 Progress</span>
           <Link href="/" style={{ marginLeft: "auto", fontSize: "13px", color: "#6B7280", textDecoration: "none" }}>← Back</Link>

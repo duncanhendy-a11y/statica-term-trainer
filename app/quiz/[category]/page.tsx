@@ -1,8 +1,8 @@
 "use client";
 import { use, useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { loadFlashcards, filterCards } from "@/lib/flashcards";
+import NavLogo from "@/components/NavLogo";
 import type { Flashcard } from "@/lib/types";
 import QuizDeck from "@/components/QuizDeck";
 
@@ -33,9 +33,7 @@ export default function QuizPage({ params }: { params: Promise<{ category: strin
       {/* Nav */}
       <nav style={{ position: "sticky", top: 0, zIndex: 50, borderBottom: "1px solid #E5E7EB", background: "rgba(255,255,255,0.95)", backdropFilter: "blur(8px)" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", height: "56px", display: "flex", alignItems: "center", gap: "12px" }}>
-          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-            <Image src="/logo.svg" alt="IDEA StatiCa" width={130} height={16} />
-          </Link>
+          <NavLogo />
           <span style={{ color: "#D1D5DB" }}>/</span>
           <Link href="/" style={{ fontSize: "13px", color: "#6B7280", textDecoration: "none" }}>Home</Link>
           <span style={{ color: "#D1D5DB" }}>/</span>

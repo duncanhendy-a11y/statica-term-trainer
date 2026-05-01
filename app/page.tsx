@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { loadFlashcards, getCategories, getCategoryStats, getCurrentLevel } from "@/lib/flashcards";
+import NavLogo from "@/components/NavLogo";
 import { loadProgress } from "@/lib/storage";
 import { CATEGORY_ICONS } from "@/lib/types";
 import type { Flashcard, CategoryStats, Progress } from "@/lib/types";
@@ -34,10 +34,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid #E5E7EB", position: "sticky", top: 0, zIndex: 50 }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", height: 60, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <Link href="/">
-            <Image src="/logo-dark.svg" alt="IDEA StatiCa" width={150} height={19} priority
-              onError={(e) => { (e.target as HTMLImageElement).src = "/logo.svg"; }} />
-          </Link>
+          <NavLogo />
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <button onClick={() => setGamification((g) => !g)}
               style={{
@@ -196,7 +193,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer style={{ marginTop: 60, borderTop: "1px solid #E5E7EB", padding: "20px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <Image src="/logo.svg" alt="IDEA StatiCa" width={110} height={14} />
+          <NavLogo />
           <p style={{ fontSize: 12, color: "#9CA3AF" }}>Structural Term Trainer · {cards.length} terms</p>
         </div>
       </footer>
