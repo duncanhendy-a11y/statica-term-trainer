@@ -831,32 +831,32 @@
   {
     "id": "c1834b7f-eafa-4113-957a-b2563771f663",
     "term": "Eurocode",
-    "definition": "A set of European design standards for structural engineering, covering concrete (EC2), steel (EC3), composite (EC4), and other materials. Used across the EU and many other countries.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] A set of European design standards for structural engineering, covering concrete (EC2), steel (EC3), composite (EC4), and other materials. Used across the EU and many other countries.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "beginner",
     "source": "extended"
   },
   {
     "id": "10b90eef-74f7-40dd-b679-67454215aba9",
     "term": "EC3 (EN 1993)",
-    "definition": "Eurocode 3 - the design standard for steel structures. Part 1-8 specifically covers the design of joints and connections in steel.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] Eurocode 3 - the design standard for steel structures. Part 1-8 specifically covers the design of joints and connections in steel.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "intermediate",
     "source": "extended"
   },
   {
     "id": "7361096e-fec6-4585-af19-ca16b8b60d57",
     "term": "EC4 (EN 1994)",
-    "definition": "Eurocode 4 - the design standard for composite steel-concrete structures. Covers beams, columns, slabs, and connections in composite construction.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] Eurocode 4 - the design standard for composite steel-concrete structures. Covers beams, columns, slabs, and connections in composite construction.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "intermediate",
     "source": "extended"
   },
   {
     "id": "67debb87-6382-4296-bf87-c90837248f37",
     "term": "EC2 (EN 1992)",
-    "definition": "Eurocode 2 - the design standard for concrete structures. Covers the design of reinforced and prestressed concrete elements.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] Eurocode 2 - the design standard for concrete structures. Covers the design of reinforced and prestressed concrete elements.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "intermediate",
     "source": "extended"
   },
@@ -1969,16 +1969,16 @@
   {
     "id": "4743d5b0-38fa-4842-889c-290810e77935",
     "term": "EN 1993",
-    "definition": "Eurocode 3: Design of Steel Structures. The European standard covering hot-rolled sections, cold-formed sections, plated structures, and - critically for IDEA StatiCa - Part 1-8 covering the design of joints.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] Eurocode 3: Design of Steel Structures. The European standard covering hot-rolled sections, cold-formed sections, plated structures, and - critically for IDEA StatiCa - Part 1-8 covering the design of joints.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "intermediate",
     "source": "statica_glossary"
   },
   {
     "id": "1a227158-c196-4e60-a35d-c0fff66f9f81",
     "term": "EN 1993-1-8:2020",
-    "definition": "Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections - bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
-    "category": "Design Codes",
+    "definition": "[1st Generation Eurocode] Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections - bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
+    "category": "1st Generation Eurocodes",
     "difficulty": "advanced",
     "source": "statica_glossary"
   },
@@ -2365,5 +2365,110 @@
     "category": "Design Codes",
     "difficulty": "beginner",
     "source": "statica_glossary"
+  },
+  {
+    "id": "b961fe94-7f21-4d70-a0b1-804581444488",
+    "term": "2nd Generation Eurocodes",
+    "definition": "[2nd Generation Eurocode] A comprehensive revision of the original (1st generation) Eurocodes, developed by CEN/TC 250 from around 2015 onwards. Aims to incorporate advances in research, harmonise National Annexes, and improve usability. Published progressively between 2022 and 2028, with a transition period before national adoption replaces 1st generation standards.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "6bb1bb42-7ea3-4360-b4dc-0428371193df",
+    "term": "EN 1990:2023",
+    "definition": "[2nd Generation Eurocode] The 2nd generation Basis of Structural Design. Published in 2023. Introduces a revised and more coherent reliability framework, updated partial factors, clearer guidance on robustness and structural integrity, and improved rules for design assisted by testing. Forms the backbone of all other 2nd generation Eurocodes.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "e3308678-923c-48b0-aec8-6daef52ea022",
+    "term": "EN 1992 (2nd Gen)",
+    "definition": "[2nd Generation Eurocode] The revised Eurocode 2 for concrete structures, currently in final stages of publication. Key changes include updated creep and shrinkage models, revised fire design rules, improved detailing rules for connections, and better integration with EN 1990:2023. Replaces EN 1992-1-1:2004 after national transition.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "70f113d7-a890-4744-b3ce-227704d15f7e",
+    "term": "EN 1993 (2nd Gen)",
+    "definition": "[2nd Generation Eurocode] The revised Eurocode 3 for steel structures, under development by CEN/TC 250/SC3. Updates cover new steel grades (up to S700), revised buckling curves, improved fatigue rules, and restructured parts. EN 1993-1-8 (joints) is also being revised to align with CBFEM approaches and modern connection behaviour research.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "fa862a99-a0eb-47de-bc16-c9ceefc83008",
+    "term": "EN 1993-1-8 (2nd Gen)",
+    "definition": "[2nd Generation Eurocode] The revised Eurocode 3 Part 1-8: Design of Joints. Being updated to reflect advances in connection behaviour, numerical methods (including CBFEM as used in IDEA StatiCa), and harmonised National Annex parameters. Aims to reduce the number of NDPs (Nationally Determined Parameters) to improve cross-border consistency.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "621165c5-2ede-493e-986d-fef3e98f493f",
+    "term": "EN 1994 (2nd Gen)",
+    "definition": "[2nd Generation Eurocode] The revised Eurocode 4 for composite steel-concrete structures, being updated in parallel with EN 1992 and EN 1993. Revised push-out test procedures, updated headed stud resistance models, and improved rules for composite connections are among the expected changes.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "8ca75529-0a0a-423d-8d7e-d67c95af87e7",
+    "term": "NDP (Nationally Determined Parameter)",
+    "definition": "[2nd Generation Eurocode] A value or choice within a Eurocode that each country sets in its National Annex rather than the code itself. One of the goals of the 2nd generation Eurocodes is to significantly reduce the number of NDPs, making designs more consistent and comparable across EU member states.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "64314a4c-3c68-4de3-89ef-cdbfd5ce72ac",
+    "term": "Eurocode Transition Period",
+    "definition": "[2nd Generation Eurocode] The period during which both 1st and 2nd generation Eurocodes are valid simultaneously. Typically 3 to 5 years after a 2nd generation standard is published nationally. During this window, engineers can use either generation; after it ends, only the 2nd generation standard applies in that country.",
+    "category": "2nd Generation Eurocodes",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "efa510cf-daa7-4bab-8666-67ed2df687dc",
+    "term": "AASHTO",
+    "definition": "American Association of State Highway and Transportation Officials. The US body that publishes the primary design standards for highway bridges and transportation infrastructure. AASHTO specifications are adopted by US state Departments of Transportation (DOTs) and form the legal design basis for publicly funded bridge projects.",
+    "category": "AASHTO",
+    "difficulty": "beginner"
+  },
+  {
+    "id": "0bfef11c-63b5-4a54-b1ec-76d0c1fc4ba4",
+    "term": "AASHTO LRFD Bridge Design Specifications",
+    "definition": "The primary US standard for highway bridge design, published by AASHTO. Uses Load and Resistance Factor Design (LRFD) - factored loads must not exceed factored resistance. Covers superstructures, substructures, foundations, and connections. Now in its 9th edition. Mandatory on federally funded US bridge projects since 2007.",
+    "category": "AASHTO",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "b39c1ad8-2d1e-43d4-a2ad-760c65a35eda",
+    "term": "HL-93",
+    "definition": "The AASHTO standard highway live load model, introduced in 1993. Consists of a design truck (72 kip / 320 kN gross weight), a design tandem (two 25 kip axles), and a lane load (0.64 kip/ft uniformly distributed). The critical effect of truck or tandem combined with lane load governs design. Used in all AASHTO LRFD bridge designs.",
+    "category": "AASHTO",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "88b406d1-8c95-42b0-aa8b-e22b5222a677",
+    "term": "AASHTO Guide Spec for LRFD Seismic Bridge Design",
+    "definition": "AASHTO's seismic design standard for highway bridges, providing an alternative to the seismic provisions in the main LRFD spec. Uses a displacement-based design philosophy. Classifies bridges into Seismic Design Categories (SDC A-D) based on site hazard. Emphasises ductile detailing of columns and connections to survive design earthquakes.",
+    "category": "AASHTO",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "ab97b2f7-1a81-4071-b17d-1696abc426a3",
+    "term": "AASHTO Standard Specifications (ASD)",
+    "definition": "The original AASHTO bridge design code, based on Allowable Stress Design (ASD). Largely superseded by the LRFD specifications after the mandatory LRFD transition in 2007, but still used for some older bridge assessments and rehabilitation projects. Contrast with AASHTO LRFD, which uses factored load and resistance checks.",
+    "category": "AASHTO",
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "5eeffbad-7791-4611-8919-7fb4f9ba793b",
+    "term": "AASHTO LRFD Load Combinations",
+    "definition": "AASHTO LRFD defines specific load combinations for bridge design: Strength (I-V), Extreme Event (I-II for seismic/vessel collision), Service (I-IV for deflection/cracking), and Fatigue (I-II for stress range). Each combination uses different load factors. More complex than building codes due to the range of dynamic and vehicular effects.",
+    "category": "AASHTO",
+    "difficulty": "advanced"
+  },
+  {
+    "id": "1d168928-848f-48f7-ade4-aa6b762cddcd",
+    "term": "AASHTO vs Eurocode",
+    "definition": "The two dominant bridge and structural design code families worldwide. AASHTO governs in the US; Eurocodes govern in Europe and many other countries. Both use LRFD/limit state principles but differ in load models (HL-93 vs LM1), partial factors, material standards (ASTM vs EN), and connection design approaches. IDEA StatiCa supports both code families.",
+    "category": "AASHTO",
+    "difficulty": "intermediate"
   }
 ]

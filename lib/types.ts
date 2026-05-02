@@ -42,14 +42,17 @@ export const LEVELS = [
 ] as const;
 
 export const CATEGORY_ICONS: Record<string, string> = {
-  "Connections":          "🔗",
-  "Anchors":              "⚓",
-  "Fasteners":            "🔩",
-  "Forces & Loads":       "↕️",
-  "Structural Behaviour": "📈",
-  "Materials":            "🏗️",
-  "Design Codes":         "📋",
-  "Members & Components": "🔧",
-  "Analysis & Software":  "💻",
-  "General Concepts":     "💡",
+  "Connections":              "🔗",
+  "Anchors":                  "⚓",
+  "Fasteners":                "🔩",
+  "Forces & Loads":           "↕️",
+  "Structural Behaviour":     "📈",
+  "Materials":                "🏗️",
+  "Design Codes":             "📋",
+  "Members & Components":     "🔧",
+  "Analysis & Software":      "💻",
+  "General Concepts":         "💡",
+  "1st Generation Eurocodes": "🇪🇺",
+  "2nd Generation Eurocodes": "🆕",
+  "AASHTO":                   "🌉",
 };
