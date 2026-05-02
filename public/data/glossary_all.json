@@ -2010,7 +2010,7 @@
     "id": "a5980cfd-1dbb-4d3f-8cb0-274ff994c375",
     "term": "API",
     "definition": "Abbreviation for Application Programming Interface. Plural: APIs.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2018,7 +2018,7 @@
     "id": "c11c8819-b71b-41af-bb5f-2d9e6bbe81af",
     "term": "REST",
     "definition": "Abbreviation for Representational State Transfer. As in 'REST APIs'.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2034,7 +2034,7 @@
     "id": "2944a81e-5f7f-43b9-87d0-24f2ae87edfb",
     "term": "MNA",
     "definition": "Abbreviation for Materially Nonlinear Analysis.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2066,7 +2066,7 @@
     "id": "e6ef1f9c-7707-482a-b88a-f95025b72503",
     "term": "RCS",
     "definition": "Abbreviation for Reinforced Concrete Section. Also an IDEA StatiCa module name.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2074,7 +2074,7 @@
     "id": "c6075646-dafa-4f77-bdcc-85ece2edff97",
     "term": "IFC",
     "definition": "Abbreviation for Industry Foundation Classes. Open BIM exchange format.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2082,7 +2082,7 @@
     "id": "122c9686-fe80-42d2-83a7-23392e2c04b1",
     "term": "DXF",
     "definition": "Abbreviation for Drawing Exchange Format. AutoCAD-origin file format.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2090,7 +2090,7 @@
     "id": "48f60c2f-9fef-4bf1-871a-e3117cd93721",
     "term": "DWG",
     "definition": "Abbreviation for Drawing (AutoCAD native format).",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2098,7 +2098,7 @@
     "id": "dc8baeb3-7592-45b3-ac0d-365c1e775ad1",
     "term": "SSO",
     "definition": "Abbreviation for Single Sign-On.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2106,7 +2106,7 @@
     "id": "467c9011-56d2-44ce-9437-337638200913",
     "term": "EOP",
     "definition": "Abbreviation for Enterprise Onboarding Program.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2114,7 +2114,7 @@
     "id": "27c1682a-8b77-433a-b8ff-18ccf9231678",
     "term": "RBS",
     "definition": "Abbreviation for Reduced Beam Section. A prequalified seismic connection type.",
-    "category": "Design Codes",
+    "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2122,7 +2122,7 @@
     "id": "5a450015-f964-4a0c-af3f-7d40ccc3d916",
     "term": "EPM",
     "definition": "Abbreviation for End Plate Moment.",
-    "category": "Design Codes",
+    "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2130,7 +2130,7 @@
     "id": "935d3b1e-5b95-44b5-a30e-9116a7ad2aa0",
     "term": "WUF-W",
     "definition": "Abbreviation for Welded Unreinforced Flange-Welded Web. All caps with hyphen.",
-    "category": "Design Codes",
+    "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2138,7 +2138,7 @@
     "id": "cc616484-033c-40da-82ce-6f242ec16922",
     "term": "WUF-B",
     "definition": "Abbreviation for Welded Unreinforced Flange-Bolted Web. All caps with hyphen.",
-    "category": "Design Codes",
+    "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2146,7 +2146,7 @@
     "id": "3e19b2ce-7d4e-488f-9342-13863924e638",
     "term": "PDF",
     "definition": "Abbreviation for Portable Document Format.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2154,7 +2154,7 @@
     "id": "6cc1dae7-1242-4d35-b19c-cdaf6b4f35c1",
     "term": "DOCX",
     "definition": "Abbreviation for Microsoft Word Open XML Document.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2162,7 +2162,7 @@
     "id": "1a9d6209-a5f5-454f-bbd2-8e71c0012eda",
     "term": "FAQ",
     "definition": "Abbreviation for Frequently Asked Questions.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2170,7 +2170,7 @@
     "id": "81d8ca47-2a02-4583-81e3-c3c4556e23f6",
     "term": "EOR",
     "definition": "Abbreviation for Engineer of Record. Plural: EORs.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2178,7 +2178,7 @@
     "id": "6ca0ad3b-0ab3-41d9-bf96-b6513c04d7e2",
     "term": "LBA",
     "definition": "Abbreviation for Linear Buckling Analysis. A type of stability analysis for finding critical buckling modes.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2194,7 +2194,7 @@
     "id": "c5fcf511-f6ba-4860-8dd0-d3b7ce4bf614",
     "term": "GMNA",
     "definition": "Abbreviation for Geometrically and Materially Nonlinear Analysis. Like GMNIA but WITHOUT imperfections. Distinct from GMNIA.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2210,7 +2210,7 @@
     "id": "e4344d33-1de8-4cbc-a3d3-4c587a486e48",
     "term": "CHS",
     "definition": "Abbreviation for Circular Hollow Section. Round tube steel section.",
-    "category": "Design Codes",
+    "category": "Members & Components",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2218,7 +2218,7 @@
     "id": "dfa9364f-dfc0-4f3c-8387-5b80c848a78f",
     "term": "MPRL",
     "definition": "Abbreviation for Material and Product Range Library. The built-in material and cross-section database.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2242,7 +2242,7 @@
     "id": "98bd831d-420a-4fc2-b286-0fcac3141d35",
     "term": "EULA",
     "definition": "Abbreviation for End User License Agreement. The software license agreement.",
-    "category": "Design Codes",
+    "category": "General Concepts",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2250,7 +2250,7 @@
     "id": "0dac6fe2-1b12-43c7-987e-9640af2d0853",
     "term": "FEM",
     "definition": "Abbreviation for Finite Element Method (or Model). Context-dependent: 'Method' (general) or 'Model' (specific). Distinct from FEA (Analysis).",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2258,7 +2258,7 @@
     "id": "d6a7698e-3984-4b4a-8504-a668a073eb8e",
     "term": "LCS",
     "definition": "Abbreviation for Local Coordinate System. The coordinate system relative to a member.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
@@ -2362,7 +2362,7 @@
     "id": "47b79086-4d81-408e-a2e7-eb7e089de9e1",
     "term": "STUBS",
     "definition": "Abbreviation for Shell elements in Beam/RCS. All caps. Shell elements for more realistic member modeling in Beam and RCS.",
-    "category": "Design Codes",
+    "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
   },
