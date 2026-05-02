@@ -1976,8 +1976,8 @@
   },
   {
     "id": "1a227158-c196-4e60-a35d-c0fff66f9f81",
-    "term": "EN 1993-1-8:2020",
-    "definition": "[1st Generation Eurocode] Eurocode 3, Part 1-8 (2020 edition): Design of Joints. The European standard specifically for the design of steel connections - bolted, welded, and moment-resisting. The primary code reference for IDEA StatiCa Connection.",
+    "term": "EN 1993-1-8:2005",
+    "definition": "[1st Generation Eurocode] Eurocode 3, Part 1-8: Design of Joints. The 1st generation European standard for the design of steel connections - bolted, welded, and moment-resisting. Published in 2005 (with corrigendum AC:2009). The primary 1st generation code reference for steel connection design, and the basis on which IDEA StatiCa Connection was originally built.",
     "category": "1st Generation Eurocodes",
     "difficulty": "advanced",
     "source": "statica_glossary"
@@ -2369,14 +2369,14 @@
   {
     "id": "b961fe94-7f21-4d70-a0b1-804581444488",
     "term": "2nd Generation Eurocodes",
-    "definition": "[2nd Generation Eurocode] A comprehensive revision of the original (1st generation) Eurocodes, developed by CEN/TC 250 from around 2015 onwards. Aims to incorporate advances in research, harmonise National Annexes, and improve usability. Published progressively between 2022 and 2028, with a transition period before national adoption replaces 1st generation standards.",
+    "definition": "[2nd Generation Eurocode] A comprehensive revision of the original (1st generation) Eurocodes, developed by CEN/TC 250 from around 2015 onwards under European Commission Mandate M/515. First parts published in 2023 (EN 1990:2023). All 2nd generation parts must be published by 30 September 2027, with all conflicting 1st generation standards withdrawn by 30 March 2028.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "intermediate"
   },
   {
     "id": "6bb1bb42-7ea3-4360-b4dc-0428371193df",
     "term": "EN 1990:2023",
-    "definition": "[2nd Generation Eurocode] The 2nd generation Basis of Structural Design. Published in 2023. Introduces a revised and more coherent reliability framework, updated partial factors, clearer guidance on robustness and structural integrity, and improved rules for design assisted by testing. Forms the backbone of all other 2nd generation Eurocodes.",
+    "definition": "[2nd Generation Eurocode] The 2nd generation Basis of Structural and Geotechnical Design — notably expanding scope to include geotechnical design alongside structural. Published 30 August 2023. Introduces a revised reliability framework, updated partial factors, clearer guidance on robustness and structural integrity, and improved rules for design assisted by testing. Forms the backbone of all other 2nd generation Eurocodes.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "advanced"
   },
@@ -2390,14 +2390,14 @@
   {
     "id": "70f113d7-a890-4744-b3ce-227704d15f7e",
     "term": "EN 1993 (2nd Gen)",
-    "definition": "[2nd Generation Eurocode] The revised Eurocode 3 for steel structures, under development by CEN/TC 250/SC3. Updates cover new steel grades (up to S700), revised buckling curves, improved fatigue rules, and restructured parts. EN 1993-1-8 (joints) is also being revised to align with CBFEM approaches and modern connection behaviour research.",
+    "definition": "[2nd Generation Eurocode] The revised Eurocode 3 for steel structures. Key updates include higher strength steel grades (up to S700 incorporated directly into EN 1993-1-1), revised buckling curves, improved fatigue rules, and restructured parts. EN 1993-1-8:2024 (joints) introduces design-oriented finite element analysis as a formal code procedure - the category that CBFEM, as used by IDEA StatiCa, falls within.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "advanced"
   },
   {
     "id": "fa862a99-a0eb-47de-bc16-c9ceefc83008",
-    "term": "EN 1993-1-8 (2nd Gen)",
-    "definition": "[2nd Generation Eurocode] The revised Eurocode 3 Part 1-8: Design of Joints. Being updated to reflect advances in connection behaviour, numerical methods (including CBFEM as used in IDEA StatiCa), and harmonised National Annex parameters. Aims to reduce the number of NDPs (Nationally Determined Parameters) to improve cross-border consistency.",
+    "term": "EN 1993-1-8:2024",
+    "definition": "[2nd Generation Eurocode] The published 2nd generation Eurocode 3 Part 1-8: Design of Joints (published 2024). Formally introduces design-oriented finite element analysis as a code procedure - which encompasses the CBFEM method used by IDEA StatiCa. Also harmonises National Annex parameters and reduces NDPs to improve cross-border consistency in connection design.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "advanced"
   },
@@ -2418,7 +2418,7 @@
   {
     "id": "64314a4c-3c68-4de3-89ef-cdbfd5ce72ac",
     "term": "Eurocode Transition Period",
-    "definition": "[2nd Generation Eurocode] The period during which both 1st and 2nd generation Eurocodes are valid simultaneously. Typically 3 to 5 years after a 2nd generation standard is published nationally. During this window, engineers can use either generation; after it ends, only the 2nd generation standard applies in that country.",
+    "definition": "[2nd Generation Eurocode] The coexistence window between 1st and 2nd generation Eurocodes. All conflicting 1st generation standards must be formally withdrawn by 30 March 2028, regardless of when a country adopts the 2nd generation version nationally. The length of coexistence therefore varies by part: EN 1990:2023 has roughly 4-5 years of coexistence; parts published closer to 2027 have a much shorter window.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "intermediate"
   },
