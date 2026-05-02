@@ -1265,7 +1265,7 @@
   {
     "id": "f78db683-aacd-42ef-8ed7-e3fe503dc45e",
     "term": "Centroid",
-    "definition": "The geometric centre of a cross-section - the point where the section would balance if supported. Bending stresses are zero at the centroid.",
+    "definition": "The geometric centre of a cross-section - the point where the section would balance if supported. For doubly symmetric sections, bending stresses are zero at the centroid; for asymmetric sections, the neutral axis (where bending stress is zero) may not coincide with the centroid.",
     "category": "General Concepts",
     "difficulty": "intermediate",
     "source": "extended"
@@ -2129,7 +2129,7 @@
   {
     "id": "935d3b1e-5b95-44b5-a30e-9116a7ad2aa0",
     "term": "WUF-W",
-    "definition": "Abbreviation for Welded Unreinforced Flange-Welded Web. All caps with hyphen.",
+    "definition": "Welded Unreinforced Flange-Welded Web. A moment connection type prequalified under AISC 358 for use in Ordinary Moment Frames (OMF), Intermediate Moment Frames (IMF), and Special Moment Frames (SMF). The beam flanges are groove-welded to the column and the web is welded. All caps with hyphen.",
     "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -2137,7 +2137,7 @@
   {
     "id": "cc616484-033c-40da-82ce-6f242ec16922",
     "term": "WUF-B",
-    "definition": "Abbreviation for Welded Unreinforced Flange-Bolted Web. All caps with hyphen.",
+    "definition": "Welded Unreinforced Flange-Bolted Web. A moment connection type prequalified under AISC 358 for use in Ordinary Moment Frames (OMF) only. The beam flanges are groove-welded to the column and the web is bolted. All caps with hyphen.",
     "category": "Connections",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -2273,7 +2273,7 @@
   {
     "id": "3be20b1c-54c5-43d1-83ea-1cc6df69bb37",
     "term": "HKG",
-    "definition": "Abbreviation for Hong Kong Code. All caps. Abbreviation for Hong Kong building code.",
+    "definition": "Informal shorthand sometimes used for Hong Kong structural design codes, such as the 'Code of Practice for the Structural Use of Steel' (HKSS) or 'Code of Practice for Structural Use of Concrete' (HKCP), published by the Buildings Department of Hong Kong. Not a formally standardised abbreviation.",
     "category": "Design Codes",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -2305,7 +2305,7 @@
   {
     "id": "3be8ca21-68a5-4c1f-99e5-e7d366826128",
     "term": "CSA S16:19",
-    "definition": "Abbreviation for Canadian Standards Association, Steel Standard 2019. 'CSA' all caps, space, standard number, colon, year.",
+    "definition": "Abbreviation for Canadian Standards Association Steel Standard 2019. 'CSA' all caps, space, standard number, colon, year. Note: superseded by CSA S16:24 (published 2024), which is the current edition.",
     "category": "Design Codes",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -2432,7 +2432,7 @@
   {
     "id": "0bfef11c-63b5-4a54-b1ec-76d0c1fc4ba4",
     "term": "AASHTO LRFD Bridge Design Specifications",
-    "definition": "The primary US standard for highway bridge design, published by AASHTO. Uses Load and Resistance Factor Design (LRFD) - factored loads must not exceed factored resistance. Covers superstructures, substructures, foundations, and connections. Now in its 9th edition. Mandatory on federally funded US bridge projects since 2007.",
+    "definition": "The primary US standard for highway bridge design, published by AASHTO. Uses Load and Resistance Factor Design (LRFD) - factored loads must not exceed factored resistance. Covers superstructures, substructures, foundations, and connections. Now in its 10th edition (2024). Mandatory on federally funded US bridge projects since 2007.",
     "category": "AASHTO",
     "difficulty": "intermediate"
   },
