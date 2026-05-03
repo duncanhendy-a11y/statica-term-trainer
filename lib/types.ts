@@ -55,4 +55,7 @@ export const CATEGORY_ICONS: Record<string, string> = {
   "1st Generation Eurocodes": "🇪🇺",
   "2nd Generation Eurocodes": "🆕",
   "AASHTO":                   "🌉",
+  "Concrete Detail Design":   "🧱",
+  "User Roles":               "👷",
+  "Precast & Transport":      "🚛",
 };

@@ -2376,7 +2376,7 @@
   {
     "id": "6bb1bb42-7ea3-4360-b4dc-0428371193df",
     "term": "EN 1990:2023",
-    "definition": "[2nd Generation Eurocode] The 2nd generation Basis of Structural and Geotechnical Design — notably expanding scope to include geotechnical design alongside structural. Published 30 August 2023. Introduces a revised reliability framework, updated partial factors, clearer guidance on robustness and structural integrity, and improved rules for design assisted by testing. Forms the backbone of all other 2nd generation Eurocodes.",
+    "definition": "[2nd Generation Eurocode] The 2nd generation Basis of Structural and Geotechnical Design - notably expanding scope to include geotechnical design alongside structural. Published 30 August 2023. Introduces a revised reliability framework, updated partial factors, clearer guidance on robustness and structural integrity, and improved rules for design assisted by testing. Forms the backbone of all other 2nd generation Eurocodes.",
     "category": "2nd Generation Eurocodes",
     "difficulty": "advanced"
   },
@@ -2470,5 +2470,775 @@
     "definition": "The two dominant bridge and structural design code families worldwide. AASHTO governs in the US; Eurocodes govern in Europe and many other countries. Both use LRFD/limit state principles but differ in load models (HL-93 vs LM1), partial factors, material standards (ASTM vs EN), and connection design approaches. IDEA StatiCa supports both code families.",
     "category": "AASHTO",
     "difficulty": "intermediate"
+  },
+  {
+    "term": "IDEA StatiCa Detail",
+    "definition": "The IDEA StatiCa product for concrete detail design. It uses the Compatible Stress Field Method (CSFM) to analyse and code-check discontinuity regions in reinforced concrete - corbels, dapped ends, pile caps, wall openings, coupling beams, and other areas where beam theory does not apply.",
+    "category": "Concrete Detail Design",
+    "difficulty": "beginner",
+    "id": "9842669d-ddfc-45d5-b965-df6523fb44a4"
+  },
+  {
+    "term": "Compatible Stress Field Method (CSFM)",
+    "definition": "The analysis method used by IDEA StatiCa Detail. A plasticity-based approach that satisfies both equilibrium and compatibility simultaneously in reinforced concrete. More rigorous than strut-and-tie modelling because it accounts for the actual stress distribution and concrete softening due to transverse cracking.",
+    "category": "Concrete Detail Design",
+    "difficulty": "advanced",
+    "id": "66bf07a3-32a4-4ea0-8217-c33f1d8dc6fa"
+  },
+  {
+    "term": "Strut-and-Tie Model (STM)",
+    "definition": "A design method for D-regions that models the flow of forces through concrete as a truss: concrete carries compression (struts) and reinforcement carries tension (ties). Required by EN 1992 and ACI 318 for discontinuity regions. IDEA StatiCa Detail automates and verifies STM-type force flows using CSFM.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "cd08bc7f-f9f3-48a7-9d57-2afcda0a4914"
+  },
+  {
+    "term": "Concrete Strut",
+    "definition": "In strut-and-tie modelling, a concrete compression member representing the compressive stress field. Three types: prismatic (uniform cross-section), fan-shaped (spreading), and bottle-shaped (bulging). Strength is reduced from cylinder strength by an efficiency factor to account for cracking and biaxial stress states.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "4512d8d6-ef3d-4783-923d-63d4ed650270"
+  },
+  {
+    "term": "Tie (STM)",
+    "definition": "The tension member in a strut-and-tie model, normally a reinforcing bar or group of bars. The tie force equals the tension demand from the truss model. Anchorage of the tie beyond the nodal zone is critical - the bar must be fully developed by the point where the force is needed.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "38123816-536d-441a-8163-b0d527f54721"
+  },
+  {
+    "term": "Nodal Zone",
+    "definition": "The region in a strut-and-tie model where struts and ties meet. Three types: CCC (all compression), CCT (one tie), CTT (two ties). The geometry and strength of the nodal zone control the achievable strut angle and anchor force, and must be checked for multi-directional compression.",
+    "category": "Concrete Detail Design",
+    "difficulty": "advanced",
+    "id": "b1474d8f-f67a-4714-adec-bbe058b99f3b"
+  },
+  {
+    "term": "Dapped End Beam",
+    "definition": "A precast concrete beam with a notch cut into its end to reduce the overall structural depth at supports. Creates a complex D-region with multiple potential failure planes. Requires careful reinforcement detailing at the re-entrant corner to prevent diagonal cracking. Commonly analysed in IDEA StatiCa Detail.",
+    "category": "Concrete Detail Design",
+    "difficulty": "advanced",
+    "id": "2d37be86-0baa-4787-bca2-10045e3ca089"
+  },
+  {
+    "term": "Deep Beam",
+    "definition": "A beam with a span-to-depth ratio of less than approximately 2 (for simply supported) or 2.5 (for continuous). The entire beam behaves as a D-region. Shear is carried by direct arch action rather than conventional beam shear, and must be designed using STM. Standard beam equations for shear are not applicable.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "dfd6dac4-3f95-4d40-8cd4-52af13c92de4"
+  },
+  {
+    "term": "Transfer Beam",
+    "definition": "A heavily loaded beam that collects loads from columns or walls above and transfers them to columns or walls below, often spanning across an opening in the structure. Almost always a deep beam D-region with complex load paths. Common in podium structures and carparks.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "e34a30af-5460-4dda-b0f5-c5756ae6b864"
+  },
+  {
+    "term": "Hammerhead Pier",
+    "definition": "A bridge pier with a wide, flat cap beam resembling a hammer head in cross-section. The cap beam is a D-region subject to high shear and torsion from eccentric loading. Requires STM or detailed FEA for design. Common in highway bridge and viaduct design.",
+    "category": "Concrete Detail Design",
+    "difficulty": "advanced",
+    "id": "024fb2bf-bcb8-44b5-baf3-d3f571fa4314"
+  },
+  {
+    "term": "Coupling Beam",
+    "definition": "A short, deep beam connecting adjacent structural walls at each floor level. Allows the walls to act as a coupled shear wall system with significantly increased lateral stiffness and energy dissipation. High shear demand means standard beam shear design may not apply - often requires diagonal reinforcement.",
+    "category": "Concrete Detail Design",
+    "difficulty": "advanced",
+    "id": "3b90ba11-93b1-41ad-bc6c-fc83ae849a37"
+  },
+  {
+    "term": "Wall Opening Reinforcement",
+    "definition": "Reinforcement provided around openings in concrete walls or slabs to replace the interrupted reinforcement and control crack widths. Typically diagonal bars at corners to redirect force flow around the opening, plus trimmer bars. The region around the opening is a D-region best analysed with STM or CSFM.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "dbe9ae4b-50c4-41ac-b2ae-e91a223dffd8"
+  },
+  {
+    "term": "Punching Shear (Concrete)",
+    "definition": "A failure mode in flat slabs and pad footings where a column or pile punches through the slab along a truncated cone surface. Checked on a defined control perimeter. Critical in flat plate construction. EN 1992 and ACI 318 provide design equations; IDEA StatiCa Detail can model the punching region explicitly.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "c07efa20-edee-4663-af0b-0bde303e4774"
+  },
+  {
+    "term": "Development Length",
+    "definition": "The minimum length of reinforcing bar that must be embedded in concrete to transfer the full yield force from the bar to the surrounding concrete through bond. Depends on bar diameter, concrete strength, cover, confinement, and coating. Must be satisfied at all cut-off points and at nodal zones in STM.",
+    "category": "Concrete Detail Design",
+    "difficulty": "beginner",
+    "id": "e04aac22-f2e2-4539-83ee-76f34f189170"
+  },
+  {
+    "term": "Concrete Splitting Tension",
+    "definition": "Tensile stresses that develop in concrete perpendicular to a compression strut or anchor tension force, caused by the spreading of a concentrated force. Can cause longitudinal splitting cracks. Controlled by confinement reinforcement (links or hoops) and by keeping stress levels below cracking limits. Critical in anchor design and near supports.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "47042790-cd51-4572-b4f1-12b5c6599d88"
+  },
+  {
+    "term": "Ledger Beam",
+    "definition": "A beam with a ledge or nib projecting from its side to support the end of a secondary beam or precast plank without the secondary member sitting on top. The ledge and its connection to the main beam form a D-region requiring careful detailing of the hanger reinforcement and the local bearing.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "ff8d7cee-7882-46de-aabe-b95f9dc90d4a"
+  },
+  {
+    "term": "Connection Designer",
+    "definition": "The engineer responsible for the detailed design of structural connections, specifying weld sizes, bolt grades and patterns, plate thicknesses, and checking all failure modes against the design code. In steelwork, connection design may be carried out by the fabricator's engineer, a specialist consultant, or the EOR. IDEA StatiCa Connection is the primary tool.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "981c0999-a98f-45c2-ab75-ab6ab9c29c76"
+  },
+  {
+    "term": "Detailer",
+    "definition": "A draughtsperson or technician who produces the detailed fabrication and erection drawings from the engineer's design. In steelwork, the detailer works within the fabricator's team and interprets connection designs into full shop drawings. Increasingly uses 3D BIM software (Tekla, Revit, SDS/2) and exports models directly to IDEA StatiCa.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "a2597406-2c82-4059-982b-fdbe86900896"
+  },
+  {
+    "term": "Steel Fabricator",
+    "definition": "The company that manufactures structural steelwork in a workshop: cutting, drilling, welding, and priming members and connections to the engineer's drawings. The fabricator often has their own connection design team and may use IDEA StatiCa to optimise connections for ease of manufacture. Responsible for CE Marking under EN 1090 in Europe.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "c882c053-2298-4b6b-9106-f4c4c45d8bd4"
+  },
+  {
+    "term": "Engineer of Record (EOR)",
+    "definition": "The licensed structural engineer who takes overall responsibility for the structural design of a project. Signs and seals the structural drawings. In delegated design, the EOR defines the design loads and performance requirements for connections but may allow the fabricator or specialist to size them, subject to the EOR's review and approval.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "0e29eec8-f029-432a-97f0-b018a382eaec"
+  },
+  {
+    "term": "Delegated Connection Design",
+    "definition": "An arrangement, common in North America and increasingly in the UK, where the EOR specifies the design forces for each connection and delegates the detailed design to the steel fabricator or their specialist engineer. The fabricator uses IDEA StatiCa or tables to design each connection and submits calculations for the EOR's review.",
+    "category": "User Roles",
+    "difficulty": "intermediate",
+    "id": "ff0fa542-aace-449b-af0a-179707a424d7"
+  },
+  {
+    "term": "Global Analysis Engineer",
+    "definition": "The engineer who builds and runs the global structural model (typically in Robot, SAP2000, ETABS, or similar) to determine member forces and reactions throughout the structure. Their output - beam end forces, column loads, reaction envelopes - forms the input to IDEA StatiCa for connection and detail design.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "4e6ab443-e0d7-43c2-8838-f93c9375b361"
+  },
+  {
+    "term": "Finite Element Analyst",
+    "definition": "An engineer specialising in detailed FEA of complex components or regions using general-purpose solvers such as ANSYS, ABAQUS, or LS-DYNA, or specialist structural tools. In the IDEA StatiCa context, CBFEM is the built-in FEA engine; a standalone FEA specialist is typically engaged only for unusually complex or novel connection geometries.",
+    "category": "User Roles",
+    "difficulty": "intermediate",
+    "id": "3f87898b-da19-472b-8cfb-97299052b655"
+  },
+  {
+    "term": "Checker / Independent Verifier",
+    "definition": "An engineer - separate from the designer - who reviews calculations, drawings, and models to confirm the design is correct and code-compliant. In the UK, checking is a legal requirement for certain structures under Building Regulations. IDEA StatiCa's code-check outputs are structured to facilitate efficient third-party checking.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "9f736674-01cf-4832-b2be-64ec863fa81d"
+  },
+  {
+    "term": "BIM Coordinator",
+    "definition": "The team member responsible for managing the 3D digital model and ensuring consistency between disciplines (architecture, structure, MEP). For steelwork, the BIM coordinator oversees the Tekla or Revit model from which IDEA StatiCa Connection can import geometry directly via its BIM link, eliminating manual data re-entry.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "8cbe42ad-3afe-4c86-9e95-938c077825f5"
+  },
+  {
+    "term": "Erector",
+    "definition": "The specialist steelwork contractor responsible for assembling and connecting the prefabricated steel frame on site. Distinct from the fabricator. The erector follows the erection procedure and uses the connection design (bolted site joints, temporary connections) to assemble the structure safely in sequence.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "80e9c129-03ff-4a4a-b0f4-f00161bca05f"
+  },
+  {
+    "term": "Precast Concrete Manufacturer",
+    "definition": "The company that casts, cures, stresses (if prestressed), and delivers precast concrete elements. Responsible for production quality, dimensional tolerances, and handling documentation (including lifting and transport load calculations). Often uses IDEA StatiCa Detail to design connection zones, corbels, and dapped ends within their precast elements.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "b8cbb19f-36c8-4337-80d1-788d294b4ff5"
+  },
+  {
+    "term": "Design-Build Contractor",
+    "definition": "A procurement route in which a single entity holds contracts for both design and construction. The contractor employs or engages the structural engineer and the fabricator. This arrangement increases the contractor's control over connection and detail design decisions, and tools like IDEA StatiCa add value by reducing design-fabrication iteration time.",
+    "category": "User Roles",
+    "difficulty": "beginner",
+    "id": "e4627437-3dfd-4d99-8f1e-d528ee7d9dff"
+  },
+  {
+    "term": "Precast Concrete Element",
+    "definition": "A structural concrete component - beam, column, slab, wall panel, or staircase - cast in a factory under controlled conditions and transported to site for erection. Factory production improves quality and speed but introduces additional load cases: demoulding, storage, transport, and erection, each of which may govern the reinforcement design.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "23d4715c-8f33-4b22-a077-32a30d0d2190"
+  },
+  {
+    "term": "Prestressed Precast Beam",
+    "definition": "A precast beam in which high-tensile tendons (wires or strands) are pre-tensioned before casting or post-tensioned after. The prestress introduces a permanent compression force that counteracts tensile bending stresses under service loads, allowing longer spans and shallower depths than conventionally reinforced beams. Typical sections: I, inverted T, U, Super T, Y-beam.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "d60af6da-7d07-4935-ae2e-2e183c7f7804"
+  },
+  {
+    "term": "Transportation Load Case",
+    "definition": "The structural load case representing forces on a precast element during road or rail transport. Typically modelled as a simply supported beam on two support points (dunnage positions) subject to self-weight amplified by a dynamic factor. May govern tension in the top flange of an inverted-T or I-beam, requiring additional top steel.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "aac40148-5d56-44c3-9ccd-28dd41039de6"
+  },
+  {
+    "term": "Dynamic Amplification Factor (Transport)",
+    "definition": "A multiplier applied to static self-weight to account for road surface irregularities and vibration during transport. Commonly 1.3 to 2.0 depending on road quality, element length, and support conditions. Specified in transport standards (e.g. UK BD 86 for abnormal loads) or agreed with the transport engineer.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "2a230711-eb41-4989-999d-612073c9b6c0"
+  },
+  {
+    "term": "Dunnage",
+    "definition": "Timber or rubber packing materials placed between a precast element and the truck bed or between stacked elements in storage, at specified positions to support the element without inducing unwanted bending. Dunnage position is critical: supports must be at the designed lifting/support points, not randomly placed.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "6bc93d3f-8cea-4d5a-802c-547e855374f0"
+  },
+  {
+    "term": "Lifting Point",
+    "definition": "The designated location on a precast element where lifting inserts (loops, anchors, or ferrules) are cast in to allow the element to be lifted by crane. Position is calculated to minimise bending moments during lift, typically at the quarter-points for a simply supported lift or at specific points to avoid overstress at the notch, end, or weakened section.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "5e4dcf06-50bb-471c-a704-edb30008d91e"
+  },
+  {
+    "term": "Lifting Insert",
+    "definition": "A cast-in steel device - loop, ferrule, anchor plate, or proprietary clutch insert - embedded in a precast element to accept lifting equipment. Designed for the full lift force including dynamic effects. Must be checked for concrete cone pullout, edge effects, and group interaction in accordance with EN 1992-4 or equivalent anchoring design code.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "e74410a9-3291-4674-91eb-c69adc5a8f74"
+  },
+  {
+    "term": "Camber",
+    "definition": "The upward precamber deliberately induced in a prestressed beam by the eccentric prestress force. Camber is intended to offset the anticipated sagging deflection under dead and live loads. Because camber varies with time (creep) and production tolerances, it must be managed during erection and in the floor level design.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "4f3dca21-fe6a-4cb4-95cd-c69a6e6d9487"
+  },
+  {
+    "term": "Sweep",
+    "definition": "Lateral bow of a precast element, measured as the maximum offset from a straight line between the two ends. Arises from casting inaccuracies, differential shrinkage, and eccentric prestress. Excessive sweep can cause difficulties during erection and may affect lateral stability of slender beams during transport and before permanent bracing is in place.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "48b7e746-c29e-43fb-8c0c-f61903a86143"
+  },
+  {
+    "term": "Lateral Stability During Transport",
+    "definition": "The check that a slender precast beam will not overturn or fail in lateral bending when transported on a truck. A beam lying on its side is much weaker than when upright. Critical parameters are the beam's lateral bending stiffness, the height of the support points, the lateral stiffness of the truck, and the dynamic transverse acceleration.",
+    "category": "Precast & Transport",
+    "difficulty": "advanced",
+    "id": "01ce8a87-34f4-4e1a-a6bc-48981ef3ecc9"
+  },
+  {
+    "term": "Erection Sequence",
+    "definition": "The planned order in which structural elements are lifted and connected on site, designed to maintain stability of the partially built structure at every stage. For precast concrete, the erection sequence must ensure that temporary propping, bracing, and grouting operations are completed before the next elements are placed.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "909ac296-e904-4fdf-8679-33b997b3146d"
+  },
+  {
+    "term": "Temporary Propping",
+    "definition": "Temporary steel or timber props used to support precast or in-situ concrete elements until joints are grouted, in-situ concrete has gained strength, or the permanent structure is complete. Props must be designed for their loads and have a clear removal procedure - premature removal before strength is achieved is a common cause of collapse.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "5ddf0f54-bcd0-4f5d-acfc-130919a97351"
+  },
+  {
+    "term": "Bearing Pad",
+    "definition": "A flexible elastomeric (rubber or neoprene) or hard (steel, PTFE) pad placed between a precast element and its support. Accommodates relative rotation and differential settlement, distributes bearing stress, and prevents hard point contact which could cause edge spalling. Pad dimensions govern the local bearing pressure and the required seat width.",
+    "category": "Precast & Transport",
+    "difficulty": "beginner",
+    "id": "6fa8b0f7-b602-408f-a059-52e86656fcc0"
+  },
+  {
+    "term": "Seat Width",
+    "definition": "The minimum length of bearing required at the end of a precast element to ensure it cannot fall off its support under worst-case movements. Accounts for manufacturing tolerances, setting-out tolerances, thermal movement, and seismic displacement. Governed by EN 1992-1-1 Section 10 for precast or AASHTO LRFD for bridges.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "ce69fb97-134f-48f7-8565-446e366791eb"
+  },
+  {
+    "term": "Handling Stress",
+    "definition": "The stress induced in a precast element during demoulding, lifting, transport, or erection - typically before the full design strength of the concrete has been achieved and before any composite action with a topping slab. Handling stresses often govern the design of the top flange reinforcement in prestressed beams and the skin reinforcement in slender panels.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "27b04a5c-498a-4f5c-8cae-66d7a2d9df43"
+  },
+  {
+    "term": "Grout Pocket Connection",
+    "definition": "A precast connection where projecting reinforcement from one element passes through a pocket or sleeve cast into the adjacent element, which is then filled with non-shrink grout. Transfers tension, compression, and shear. The pocket provides tolerance during erection, and the grouted bar must achieve full development within the pocket depth.",
+    "category": "Precast & Transport",
+    "difficulty": "intermediate",
+    "id": "4ac9d40e-435e-4937-b443-c067d55f756f"
+  },
+  {
+    "term": "Pullout Failure",
+    "definition": "An anchor failure mode in which the anchor pulls out of the concrete while the surrounding concrete remains intact - the anchor displaces relative to the concrete rather than the concrete fracturing as a cone. Occurs in smooth bars or anchors with insufficient bearing area at their tip. Prevented by using headed anchors, bent bars, or adequate embedment.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "0d3fbec5-258e-4066-abcb-466582846d31"
+  },
+  {
+    "term": "Pryout Failure",
+    "definition": "A concrete failure mode for anchors loaded in shear, particularly short, stiff anchors where the anchor tries to rotate and 'pry out' a concrete mass on the side opposite to the load direction. Pryout capacity is typically 1 to 2 times the concrete cone (breakout) capacity in tension. Governs for anchors with embedment-to-diameter ratios less than about 4.5.",
+    "category": "Anchors",
+    "difficulty": "advanced",
+    "id": "7bccd4db-a635-464f-a2ba-bede4622ca96"
+  },
+  {
+    "term": "Concrete Cone Breakout",
+    "definition": "A tension failure mode in anchor design where a cone of concrete is pulled out of the base material. The projected area method (used in EN 1992-4 and ACI 318 Ch.17) calculates capacity from the projected area of the failure cone on the concrete surface, modified for edge distance, spacing, and eccentricity. Critical design check for all tension anchors.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "88894a72-53ef-4860-9081-7db2f989583a"
+  },
+  {
+    "term": "Edge Distance (Anchoring)",
+    "definition": "The distance from the centreline of an anchor to the nearest free edge of the concrete. A small edge distance reduces concrete breakout and splitting capacity significantly. EN 1992-4 defines minimum edge distances to avoid splitting during installation and specifies how edge distance modifies the characteristic breakout resistance. Critical for anchors near slab edges, beam ends, and wall faces.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "c4fec5b5-741e-4fcf-be03-3bcb00f4fe9d"
+  },
+  {
+    "term": "Embedment Depth",
+    "definition": "The effective depth to which an anchor is embedded in concrete, measured from the concrete surface to the load-bearing element (nut, head, or bond end). Governs concrete cone breakout capacity, bond capacity (adhesive anchors), and pullout capacity. Increasing embedment depth is the most effective way to improve anchor tension resistance.",
+    "category": "Anchors",
+    "difficulty": "beginner",
+    "id": "601393bb-344c-43d3-a1a6-97ac508ec6ad"
+  },
+  {
+    "term": "Anchor Group Effect",
+    "definition": "The reduction in breakout resistance when multiple anchors are spaced closely enough that their failure cones overlap. The group is less efficient than the sum of individual anchor capacities. EN 1992-4 accounts for this using the ratio of actual projected breakout area to theoretical non-overlapping area. Anchors beyond a critical spacing (typically 3 times the embedment depth) are treated independently.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "cbb2a987-f022-4a2a-8e78-d7a269801d15"
+  },
+  {
+    "term": "Supplementary Reinforcement (Anchoring)",
+    "definition": "Reinforcement placed in the concrete specifically to intercept potential concrete cone or edge breakout failure surfaces and transfer the load into the concrete body. When properly detailed and tied, supplementary reinforcement can increase anchor capacity beyond the plain concrete breakout resistance. EN 1992-4 allows its consideration in design; ACI 318 treats it similarly via the anchor reinforcement approach.",
+    "category": "Anchors",
+    "difficulty": "advanced",
+    "id": "789dc42e-9854-46d0-943a-417dbc5d5347"
+  },
+  {
+    "term": "Characteristic Anchor Resistance",
+    "definition": "The anchor resistance value corresponding to a defined fractile of the statistical distribution of test results, typically the 5th percentile. Determined from product approval testing (ETA in Europe; ICC-ES report in the US) under controlled conditions. Used with partial safety factors to calculate the design resistance for comparison with design actions.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "2444330f-e09d-4200-bf41-251737b04ea0"
+  },
+  {
+    "term": "European Technical Assessment (ETA)",
+    "definition": "The document granting CE Marking to a post-installed anchor product for use in Europe. Issued by an approved Technical Assessment Body (TAB) following testing to EOTA TR. Contains the characteristic resistances for all relevant failure modes across approved concrete strength classes and installation conditions. Required for use of post-installed anchors under EN 1992-4.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "d02a65eb-188d-4c4e-8c9e-19e7aec61403"
+  },
+  {
+    "term": "Cracked Concrete Condition",
+    "definition": "The design assumption that concrete in the tension zone has cracked, reducing the bearing resistance of anchors. EN 1992-4 and ACI 318 require the engineer to justify whether uncracked conditions can be guaranteed; if not, the lower cracked-concrete resistance values must be used. Post-installed anchors must be tested and approved separately for cracked and uncracked conditions.",
+    "category": "Anchors",
+    "difficulty": "intermediate",
+    "id": "495ed67f-ddfa-4c3f-aa26-2fc0bbd7ffd9"
+  },
+  {
+    "term": "Grout Pad (Base)",
+    "definition": "A layer of non-shrink cementitious or epoxy grout placed between the underside of a steel baseplate and the concrete foundation to provide full contact, accommodate level tolerances, and transfer compressive forces uniformly. Typically 25 to 75 mm thick. The grout must be considered in the anchor design because it affects the effective embedment depth and lever arm for shear.",
+    "category": "Anchors",
+    "difficulty": "beginner",
+    "id": "15fe7570-f9b8-41b0-b18a-f6f68a756453"
+  },
+  {
+    "term": "Seismic Anchor Design",
+    "definition": "The additional requirements for anchors in seismic design categories C through F (ACI 318) or seismic design situations (EN 1992-4). Anchors must develop ductile failure before concrete failure, or the attached element must be designed to remain elastic. Often achieved by using capacity-designed steel governs, reducing design resistance, or requiring ductile anchors with tested cyclic performance.",
+    "category": "Anchors",
+    "difficulty": "advanced",
+    "id": "f727b131-778c-4d84-88dc-c1189d54e172"
+  },
+  {
+    "term": "Green Book",
+    "definition": "Informal name for SCI/BCSA publication P358 'Joints in Steel Construction: Simple Joints to Eurocode 3'. Provides standardised design tables for common simple connections (fin plates, flexible end plates, double angle web cleats) used in the UK. The tables give bolt numbers, weld sizes, and component dimensions for given shear and tying forces, eliminating the need for individual calculation.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "id": "bb29bc68-61ab-436c-83bc-998bdc755989"
+  },
+  {
+    "term": "Blue Book",
+    "definition": "Informal name for SCI publication P363 'Steel Building Design: Design Data'. Contains section property tables, buckling curves, and resistance tables for standard UK hot-rolled steel sections to Eurocode 3. Used by connection designers to look up section properties needed for connection calculations and by detailers to specify sections.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "id": "2322b80c-99c6-4423-b39d-52daa4c0a019"
+  },
+  {
+    "term": "Moment Connection (Steel)",
+    "definition": "A connection designed to transfer bending moment between members, providing rotational continuity. Classified as rigid (full-strength, no relative rotation) or partial-strength (moment capacity less than the weaker connected member). Required at frames designed for sway resistance. Typically uses extended end plates, haunched connections, or directly welded flanges.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "5bfce00c-98b0-462d-91c9-db829e3827f2"
+  },
+  {
+    "term": "Flexible End Plate",
+    "definition": "A simple shear connection where a plate is shop-welded across the full height of the supported beam web and site-bolted to the supporting member's flange or web. The plate is thin enough to flex and release moment. Also called a partial depth end plate. Covered in Green Book P358.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "id": "3472da8a-83db-45de-9f49-0f18bdefdd58"
+  },
+  {
+    "term": "Extended End Plate",
+    "definition": "A moment connection where the end plate extends beyond the beam top and/or bottom flange, allowing additional bolt rows above and below the flanges to resist the applied moment as a bolt force couple. The bolts in the tension zone are the critical design component. Classified as rigid or partial-strength depending on plate stiffness, bolt stiffness, and flange flexibility.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "b7e37440-9781-412a-a94e-94df4524de0e"
+  },
+  {
+    "term": "Column Splice",
+    "definition": "A connection joining two lengths of column, typically at mid-height between floors to simplify erection. Must transfer compression, bending, shear, and tying forces. In pure compression splices, the load may be transferred by direct bearing between machined surfaces (bearing splice); tension cases require bolted cover plates or end-plate connections.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "df3becd0-a1b4-4f4b-b411-ff9da832b99e"
+  },
+  {
+    "term": "Beam Splice",
+    "definition": "A connection joining two lengths of beam in the span. Must transfer moment, shear, and axial force at the splice location. Splice position is chosen to minimise design forces, often near a point of contraflexure. May use bolted cover plates to flanges and webs, or welded joints. Temporary stability during erection is a key design consideration.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "3e3794b9-807f-490b-a07c-ba26191a715c"
+  },
+  {
+    "term": "Haunch Connection",
+    "definition": "A moment connection to a column in which the beam is deepened at the connection by welding a triangular haunch below the bottom flange. The haunch increases the lever arm for the bolt group or weld, reducing bolt forces for a given moment. Common in portal frames. The haunch geometry is set by the moment demand and the practical constraints of the bolt pitch.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "328462b9-9c4e-4a3b-a1ff-9bab7f78cb93"
+  },
+  {
+    "term": "Ring Flange Connection",
+    "definition": "A bolted moment connection used for circular hollow section (CHS) members, particularly wind turbine towers, monopoles, and pipelines. A thick forged or welded ring flange is site-bolted to a matching ring on the adjacent member. Design must account for prying action of the circular flange plate and the non-uniform bolt force distribution around the ring.",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "id": "6b54c717-52aa-4d24-b3da-f3333d9fcb0c"
+  },
+  {
+    "term": "Hollow Section Connection",
+    "definition": "A connection involving circular (CHS) or rectangular (RHS/SHS) hollow sections. Behaviour is dominated by local deformation of the chord face. Classified by joint type: T, Y, K, N, X. Design in Eurocode 3 Part 1-8 uses dimensionless parameters (beta, gamma, eta) to determine the governing failure mode (chord face yielding, punching shear, shear yielding of chord).",
+    "category": "Connections",
+    "difficulty": "advanced",
+    "id": "665edc76-1e3f-474b-a7a7-77b95c61961a"
+  },
+  {
+    "term": "Doubler Plate",
+    "definition": "A plate shop-welded to the web of a column within the connection panel zone to increase its shear strength and stiffness. Used where the panel zone shear demand from beam flanges in a moment connection exceeds the web's capacity without reinforcement. The doubler plate must be fully welded to transfer the additional shear force.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "c271ac73-f30c-4637-a478-b9692593ae8b"
+  },
+  {
+    "term": "Continuity Plate",
+    "definition": "A horizontal stiffener plate welded to the column web and flanges at the beam flange level in a moment connection. Also called a 'through plate' or 'transverse stiffener'. Its purpose is to prevent local flange bending and web buckling at the point of concentrated force from the beam flange. Required when the column web and flanges are too thin to resist the flange force alone.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "38399a8b-a60d-469a-bef6-5c8204aa77d3"
+  },
+  {
+    "term": "Seating Cleat",
+    "definition": "A short angle section bolted or welded to a column or beam to provide a temporary seating for a secondary beam during erection, before permanent bolts are tightened. The cleat carries a small proportion of the final shear; the web connection carries the majority. Also used as a permanent bearing connection in some secondary framing situations.",
+    "category": "Connections",
+    "difficulty": "beginner",
+    "id": "db951692-3b91-43ed-90be-6ad607886e08"
+  },
+  {
+    "term": "Tying Force",
+    "definition": "A minimum horizontal tensile force that all connections in a building structure must be able to resist to provide robustness and prevent progressive collapse following an accidental event. Required by EN 1991-1-7 and structural integrity clauses of national building codes. The tying force is distinct from the design shear and must be checked as an additional ULS combination.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "ffd66526-418a-4817-8999-fe7fdfcd9cf2"
+  },
+  {
+    "term": "Connection Stiffness",
+    "definition": "The rotational stiffness of a connection, relating the applied bending moment to the resulting rotation. EN 1993-1-8 classifies connections as rigid (stiffness above upper bound), semi-rigid (between bounds), or pinned (below lower bound). The stiffness must be consistent with the assumptions made in the global analysis model. IDEA StatiCa Connection calculates and reports connection stiffness.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "4b7839b6-66d0-496c-85b5-f1f5b1a4cda3"
+  },
+  {
+    "term": "Column Base Plate",
+    "definition": "A steel plate welded to the foot of a steel column to distribute the column load to the concrete foundation. Must be designed for compression (bearing), tension (anchor bolts), and shear (friction or shear lug). Base plate thickness is governed by bending of the plate cantilever beyond the column flange or web. Critical in portal frame design and seismic applications.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "1cec7ac7-b5b2-48eb-9fba-225a08a8004c"
+  },
+  {
+    "term": "Weld Access Hole",
+    "definition": "A small cutout in the web of a steel member at the flange-to-web junction, providing access for the welder to deposit a full-penetration groove weld across the full flange width. Shape and dimensions are specified in standards (AWS D1.1, AISC) as the profile affects fatigue performance. Seismically critical connections require carefully profiled holes to avoid stress concentrations.",
+    "category": "Connections",
+    "difficulty": "intermediate",
+    "id": "8f04947f-75b7-4ce2-b5fe-61828c687076"
+  },
+  {
+    "term": "Blanket Forces",
+    "definition": "A conservative set of standardised connection forces applied uniformly across all connections of a given type when actual connection forces from the global analysis are unavailable or the analysis is at an early stage. Commonly used in design-and-build projects where connections are sized before the final global model is complete. IDEA StatiCa can batch-check connections against blanket force sets.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "b638e973-fece-472a-9e18-ba85121dc6c8"
+  },
+  {
+    "term": "Envelope Forces",
+    "definition": "The worst-case combination of forces at a given location across all load combinations and load patterns. For a connection this may be, for example, the maximum shear combined with the maximum tension, or the maximum moment with minimum axial. IDEA StatiCa allows multiple load cases to be imported and checked; the envelope defines the governing combination for each failure mode.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "4812eb3b-eec3-4167-a31f-301596061fda"
+  },
+  {
+    "term": "Design Force Envelope",
+    "definition": "A table or matrix of the critical force combinations that a connection or element must be designed to resist, derived by scanning all load combinations and extracting the governing set for each failure mode. May include maximum positive and negative values of each force component, and the forces co-existing with each maximum. Used as input to IDEA StatiCa Connection.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "7787ec08-f708-4fce-8050-5d8bf450f85d"
+  },
+  {
+    "term": "Notional Horizontal Force",
+    "definition": "A small equivalent horizontal force applied to the structure in the global analysis to account for initial out-of-plumb imperfections and to ensure a minimum level of lateral stiffness. EN 1993-1-1 specifies 0.5% of the vertical design load as the minimum notional force. Generates connection forces that would otherwise be zero in a perfectly upright frame.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "0f35b249-04de-466c-8ab8-2d687a0e4d80"
+  },
+  {
+    "term": "Destabilising Load",
+    "definition": "A load that increases the tendency of a member or structure to buckle or overturn. Applies to beams in lateral-torsional buckling checks when the load is applied to the top (compression) flange rather than the shear centre - the load moves with the buckled shape and amplifies displacement. EN 1993-1-1 uses a larger effective length for destabilising loads.",
+    "category": "Forces & Loads",
+    "difficulty": "advanced",
+    "id": "1535c61f-dc00-4583-9e03-5d18f188fb48"
+  },
+  {
+    "term": "Catenary Action",
+    "definition": "The tensile membrane action that develops in a beam when it has undergone large deflections following loss of a support or severe loading. The beam acts like a cable, carrying load predominantly in tension. EN 1991-1-7 and UFC 4-023-03 require that connections have sufficient tying capacity and deformation to develop catenary action as an alternate load path.",
+    "category": "Forces & Loads",
+    "difficulty": "advanced",
+    "id": "b32e7343-590b-4e33-82d4-832302c1068d"
+  },
+  {
+    "term": "Robustness / Structural Integrity",
+    "definition": "The ability of a structure to withstand an accidental event (explosion, vehicle impact, fire) without disproportionate collapse. Achieved by providing alternate load paths, tying connections together, and ensuring connections can deform without fracture. Governed by EN 1991-1-7 Annex A/B and UFC 4-023-03 in the US. Connection ductility and tying capacity are critical design parameters.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "8f4ce9d8-2af8-4211-a6a6-fe083d0eceb3"
+  },
+  {
+    "term": "Accidental Design Situation",
+    "definition": "A load combination in EN 1990 that combines the permanent loads, a reduced variable load, and an accidental action (fire, explosion, vehicle impact) with reduced partial safety factors. Used to check structural integrity and robustness. The reduced factors reflect the low probability that maximum variable loads coincide with an accidental event.",
+    "category": "Forces & Loads",
+    "difficulty": "intermediate",
+    "id": "c52f1dc8-5565-4029-b68e-0316440bdb4b"
+  },
+  {
+    "term": "IDEA StatiCa Connection",
+    "definition": "The flagship IDEA StatiCa product for steel connection design and code-checking using CBFEM. Engineers model the connection geometry, apply loads, run analysis, and receive a complete code-check report to EN 1993, AISC 360, or other supported codes. The product integrates with Tekla, Revit, Robot, SAP2000, ETABS, and other CAD/analysis software via direct BIM links.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "80ffc752-ae0f-45fd-be91-960372c983d9"
+  },
+  {
+    "term": "IDEA StatiCa Member",
+    "definition": "An IDEA StatiCa product that analyses individual steel members - beams, columns, or frames - including cross-section checks and lateral-torsional buckling, using MNA/GMNIA. Handles tapered members, haunched rafters, and non-standard cross-sections that are difficult to check with standard code tables. Provides code-check to EN 1993-1-1 and EN 1993-1-3.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "id": "b81b4537-9a32-496e-897a-0017ecbfa35d"
+  },
+  {
+    "term": "IDEA StatiCa Concrete",
+    "definition": "An IDEA StatiCa product for reinforced concrete cross-section design and code-checking. Checks beams, columns, and walls under combined bending, shear, torsion, and axial force. Generates interaction diagrams and capacity envelopes. Used by RC frame designers as an alternative to general-purpose analysis software for detailed section checks to EN 1992.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "id": "f3e962fb-ac14-4602-a58e-a861574f6586"
+  },
+  {
+    "term": "Code-Check (IDEA StatiCa)",
+    "definition": "The process within IDEA StatiCa of comparing calculated stresses, strains, bolt forces, and weld throat utilisation against code-defined limits. Reported as a utilisation ratio (demand divided by capacity) for every component. The connection passes when all utilisation ratios are below 1.0 (100%). Components at or above the limit are highlighted red in the graphical output.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "2c736ea6-30c5-4c3b-b08d-4d0371c7d5d4"
+  },
+  {
+    "term": "Manufacturing Operations (IDEA StatiCa)",
+    "definition": "The production process steps defined in IDEA StatiCa Connection that build up the connection geometry: cut, weld, bolt, general weld, coped cut, bend, system line, and negative volume. Each operation modifies the FE mesh and stress distribution. The order of operations matters for correct FE model generation. Corresponds to actual fabrication steps, helping the detailer verify constructability.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "id": "bed47ded-46ee-4189-9c04-d90776a99c5e"
+  },
+  {
+    "term": "Stiffness Classification (IDEA StatiCa)",
+    "definition": "The automated classification of a connection as rigid, semi-rigid, or nominally pinned, based on the computed initial rotational stiffness compared to the thresholds in EN 1993-1-8 Figure 5.4. IDEA StatiCa Connection reports the initial stiffness after the CBFEM analysis, allowing the engineer to verify that the connection stiffness is consistent with the global analysis assumptions.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "id": "0eb9c260-8e99-4ebf-9bb5-8d39cf0a041d"
+  },
+  {
+    "term": "MNA (Materially Non-linear Analysis)",
+    "definition": "An analysis that accounts for material yielding but assumes the structure remains geometrically linear (small deformations). The stiffness matrix is updated as elements yield. Used in IDEA StatiCa Member for cross-section and member resistance checks. Captures plastic redistribution within a cross-section and member without the complexity of geometric non-linearity.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "id": "dc1f8ada-d02b-4595-a8f0-ee2ee1e497f0"
+  },
+  {
+    "term": "GMNIA (Geometric and Material Non-linear Analysis with Imperfections)",
+    "definition": "The most rigorous analysis type in EN 1993-1-1, combining geometric non-linearity (P-delta and P-delta effects), material non-linearity (yielding), and initial geometric imperfections in a single model. Used in IDEA StatiCa Member to directly determine buckling resistance of complex steel members. Eliminates the need for reduction factors (chi) when the analysis is correctly set up.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "id": "e9a0c089-2d50-4741-bb0f-b6f9e0c3ff07"
+  },
+  {
+    "term": "BIM Link (IDEA StatiCa)",
+    "definition": "The direct software interface between IDEA StatiCa and a structural analysis or detailing program. Supported links include Tekla Structures, Autodesk Revit, SCIA Engineer, Robot Structural Analysis, SAP2000, ETABS, Advance Steel, and others. The link passes connection geometry, member forces, and load cases from the host program to IDEA StatiCa, and can write results back, eliminating manual data re-entry.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "3fe5f6c0-e4e7-424c-af03-cd6dfc413bd3"
+  },
+  {
+    "term": "Overall Check (IDEA StatiCa)",
+    "definition": "A supplementary check in IDEA StatiCa Connection that computes the overall deformation and resistance of the joint using simplified beam-spring models, ensuring that the connection meets EN 1993-1-8 requirements for ductility and rotation capacity that cannot be inferred from the local CBFEM stress checks alone. Particularly relevant for simple connections requiring rotation capacity.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate",
+    "id": "61bec47a-ee98-4dd9-a9fb-8f4a73a187f5"
+  },
+  {
+    "term": "Plastic Strain Limit",
+    "definition": "In IDEA StatiCa Connection, the maximum allowable equivalent plastic strain in a steel plate before the material is considered to have failed. Typically limited to 5% for structural steel under EN 1993 design. Plastic strain concentration at re-entrant corners, weld toes, and bolt holes indicates local overstress; exceeding the limit is shown in red on the results plot.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "id": "3e343470-eca2-458f-ba6d-c19ec73e0468"
+  },
+  {
+    "term": "Mesh Sensitivity",
+    "definition": "The dependence of FEA results on the size and type of the finite element mesh. In CBFEM, IDEA StatiCa uses a predefined meshing strategy that has been validated against tests and hand calculations. Users should not manually coarsen the mesh. Results should be checked for mesh sensitivity when modelling unusual geometries by refining and comparing.",
+    "category": "Analysis & Software",
+    "difficulty": "advanced",
+    "id": "15fa861b-6ddb-483a-bee8-802b6692708e"
+  },
+  {
+    "term": "Load Case Import (IDEA StatiCa)",
+    "definition": "The process of bringing member end forces (N, Vy, Vz, Mx, My, Mz) from a global analysis model into IDEA StatiCa via a BIM link or manual entry. Multiple load cases can be imported and checked simultaneously. The governing (worst) utilisation across all load cases is reported. Correct sign convention and member orientation must be verified after import.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "7184dcee-10a2-4620-8ff9-5259588c95ba"
+  },
+  {
+    "term": "Stress Concentration Factor (Kt)",
+    "definition": "The ratio of the peak local stress at a geometric discontinuity (notch, hole, change in cross-section) to the nominal stress remote from the discontinuity. High Kt values at weld toes, bolt holes, and re-entrant corners drive fatigue crack initiation. Controlled by good detailing: smooth transitions, avoiding sharp corners, grinding weld toes in fatigue-critical joints.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "id": "f11573f1-db1e-409c-89bb-de065d217dd4"
+  },
+  {
+    "term": "Fracture Mechanics",
+    "definition": "The branch of mechanics dealing with the behaviour of materials containing cracks. Applied to structural steel to determine critical crack sizes, stress intensity factors, and conditions for brittle fracture. Underpins Charpy impact testing requirements and the selection of steel sub-grades for low-temperature or thick-plate applications in welded connections.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "id": "8fbe8a26-001f-43c3-b96f-f47fca3ba2af"
+  },
+  {
+    "term": "Panel Zone Shear",
+    "definition": "The shear stress in the column web within the beam-column connection panel zone, generated by the opposing beam flange forces in a moment connection. If the panel zone is too thin, it will yield in shear before the beam or column reaches its capacity. Checked in EN 1993-1-8 and AISC 360 Section J10; resisted by the web alone or with a doubler plate.",
+    "category": "Structural Behaviour",
+    "difficulty": "advanced",
+    "id": "f9ef428c-d0a2-452d-9d83-e3ad6267c925"
+  },
+  {
+    "term": "Tapered Member",
+    "definition": "A structural member with a cross-section that varies along its length, typically by varying the web depth or flange width. Common in portal frame rafters and eaves haunch regions to match the bending moment diagram and reduce material use. Standard code buckling checks do not directly apply; GMNIA in IDEA StatiCa Member or specialist software is required.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "id": "94510f2c-00ea-4430-80fa-7b8963cfe1dd"
+  },
+  {
+    "term": "Eaves Haunch",
+    "definition": "A deepened section at the eaves of a portal frame, created by welding a cut rafter section below the bottom flange of the rafter at its junction with the column. Transfers the large eaves bending moment efficiently and provides the geometry for the eaves moment connection. The haunch length is typically 10% of the span.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "id": "51386497-7ace-404c-a518-b8e1ba068917"
+  },
+  {
+    "term": "Apex Connection",
+    "definition": "The ridge connection of a portal frame where two rafters meet at the apex. Transfers relatively small bending moments (near the point of contraflexure), shear, and axial force. Usually an end plate bolted connection with a bolted apex plate on each side. Often the simplest connection in the portal frame to design.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "id": "ad6b0db6-d4ca-43f0-9de3-f2705570d77f"
+  },
+  {
+    "term": "Crane Girder",
+    "definition": "A beam, typically a heavy plate girder or standard section with a rail on top, designed to carry the wheel loads from an overhead travelling crane. Subject to repeated, fatigue-inducing loads. Connection design is critical: the top flange must be detailed to avoid fatigue cracking at the connection point, and the end connections must transfer large cyclic horizontal (surge) forces.",
+    "category": "Members & Components",
+    "difficulty": "intermediate",
+    "id": "4490a9bf-cefe-46a2-b705-3b41eed30ca2"
+  },
+  {
+    "term": "Base Plate Grout",
+    "definition": "Non-shrink cementitious or epoxy grout packed beneath a steel base plate after column erection to ensure full bearing contact with the concrete foundation. Must achieve specified compressive strength before loads are applied. Grout thickness is typically 25-50 mm; the grout layer affects the effective embedment of anchor bolts and must be included in the anchor design model.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "id": "628d0888-61b8-4af6-918d-57999460fb48"
+  },
+  {
+    "term": "Holding-Down Bolt Assembly",
+    "definition": "The complete assembly of anchor bolt, nut, washer, and often a sleeve or oversized hole in the base plate that allows adjustment during erection. The oversized hole is later filled with grout. Bolt projection above the base plate must accommodate the grout thickness, nut, washer, and allowance for error, typically 100-150 mm above the finished concrete level.",
+    "category": "Members & Components",
+    "difficulty": "beginner",
+    "id": "d01a3139-48a1-466b-a345-7c95d61da5f9"
+  },
+  {
+    "term": "Capacity Design",
+    "definition": "A seismic design philosophy in which the structure is detailed to ensure that energy dissipation occurs in designated ductile zones (plastic hinges) while all other components - including connections - are designed with sufficient overstrength to remain elastic. Connections in a capacity-designed structure must be stronger than the member they connect, not just able to resist the design forces.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "0c7df152-eebd-465c-8d30-bd227a7aa3ff"
+  },
+  {
+    "term": "Disproportionate Collapse",
+    "definition": "Collapse of a structure to an extent disproportionate to the initiating cause. Avoided by ensuring that the failure of a single element does not lead to the loss of a large floor or wall area. Regulated in EN 1991-1-7 and in UK Building Regulations Part A. Key measures include tying connections, protected key elements, and adequate robustness.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "b086c74f-cf17-4f47-8d90-70f204ef83df"
+  },
+  {
+    "term": "Tolerances (Steel Construction)",
+    "definition": "Permitted deviations from the specified geometry in fabrication and erection of steelwork. Fabrication tolerances (straightness, camber, hole position) are specified in EN 1090-2 Annex D. Erection tolerances (plumb, alignment) in EN 1090-2 Annex C. Connection design must accommodate these tolerances: oversized or slotted holes, adjustable base plates, and site-welded connections all address tolerance management.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "b10f2544-29c0-46f1-bed2-e9f0e8831b67"
+  },
+  {
+    "term": "EN 1090-2",
+    "definition": "The European standard 'Execution of steel structures and aluminium structures - Part 2: Technical requirements for steel structures'. Specifies fabrication tolerances, welding procedures, bolt tightening methods, and quality management requirements. CE Marking of structural steelwork requires compliance with EN 1090-2. Defines four Execution Classes (EXC1-4) with increasing quality requirements.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "eb3d860a-fb67-4878-b9d8-9cd32b68af4a"
+  },
+  {
+    "term": "Execution Class (EXC)",
+    "definition": "A classification system in EN 1090-2 that defines the level of quality requirements for fabricating and erecting steel structures. EXC1 is the least demanding (simple, low-consequence structures); EXC4 is the most demanding (nuclear, special). The Execution Class affects requirements for welder qualification, NDT inspection, documentation, and traceability. Selected by the designer based on consequence class and usage.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "5ce5fcfa-6036-4815-a255-3176615375c1"
+  },
+  {
+    "term": "Non-Destructive Testing (NDT)",
+    "definition": "Inspection methods that evaluate the integrity of welds and materials without damaging the component. Includes visual inspection (VT), ultrasonic testing (UT), magnetic particle inspection (MPI), dye penetrant inspection (DPI), and radiographic testing (RT). Required extents and methods are specified in EN 1090-2 based on Execution Class and weld type. Critical for quality assurance in welded connections.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "a5aafb24-3437-4467-bbfd-a7823d7a3535"
+  },
+  {
+    "term": "Weld Procedure Specification (WPS)",
+    "definition": "A document specifying the parameters (process, filler material, joint geometry, preheat, heat input, post-weld heat treatment) to be used for a particular weld. The WPS is qualified by a Weld Procedure Qualification Record (WPQR) based on destructive testing of test welds. Required under EN ISO 15614-1 for structural welds in EN 1090-2 EXC2 and above.",
+    "category": "General Concepts",
+    "difficulty": "intermediate",
+    "id": "ddef2ca7-1caa-4b29-8c33-a6a180d78735"
   }
 ]
