@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { Flashcard } from "@/lib/types";
 import { loadProgress, saveProgress, markKnown, addXP } from "@/lib/storage";
 import DifficultyBadge from "./DifficultyBadge";
@@ -8,7 +8,6 @@ import { CATEGORY_ICONS } from "@/lib/types";
 interface Props { cards: Flashcard[]; category: string; }
 
 export default function FlashcardDeck({ cards, category }: Props) {
-  // Queue-based deck: "Got It" removes from front; "Review Again" moves to back.
   const [queue, setQueue]     = useState<Flashcard[]>([...cards]);
   const [total]               = useState(cards.length);
   const [flipped, setFlipped] = useState(false);
@@ -22,7 +21,10 @@ export default function FlashcardDeck({ cards, category }: Props) {
     setTimeout(() => setXpToast(null), 2200);
   };
 
-  const advance = useCallback((knew: boolean) => {
+  // advance closes over the current queue on every render.
+  // We store it in a ref so the keyboard handler (registered once) always
+  // calls the latest version without needing to re-register.
+  function advance(knew: boolean) {
     if (!card) return;
     if (knew) {
       const p = loadProgress();
@@ -31,29 +33,28 @@ export default function FlashcardDeck({ cards, category }: Props) {
     }
     setTimeout(() => {
       setFlipped(false);
-      setQueue((prev) => {
-        if (knew) {
-          // Remove from front — card is done
-          const next = prev.slice(1);
-          if (next.length === 0) setDone(true);
-          return next;
-        } else {
-          // Move front card to back — will be seen again
-          return [...prev.slice(1), prev[0]];
-        }
-      });
+      // Build the new queue directly from the current queue value (no stale closure)
+      const newQueue = knew
+        ? queue.slice(1)               // Got It  → remove card from front
+        : [...queue.slice(1), queue[0]]; // Review  → move card to back
+      setQueue(newQueue);
+      if (knew && newQueue.length === 0) setDone(true);
     }, 180);
-  }, [card]);
+  }
 
+  const advanceRef = useRef(advance);
+  advanceRef.current = advance; // always up-to-date
+
+  // Register keyboard handler once; use the ref so it sees the latest advance
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
-      if (e.key === "ArrowRight") advance(true);
-      if (e.key === "ArrowLeft")  advance(false);
+      if (e.key === "ArrowRight") advanceRef.current(true);
+      if (e.key === "ArrowLeft")  advanceRef.current(false);
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [advance]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (done) return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", padding: "80px 0" }} className="animate-slide-up">
