@@ -2473,7 +2473,7 @@
   },
   {
     "term": "IDEA StatiCa Detail",
-    "definition": "The IDEA StatiCa product for concrete detail design. It uses the Compatible Stress Field Method (CSFM) to analyse and code-check discontinuity regions in reinforced concrete - corbels, dapped ends, pile caps, wall openings, coupling beams, and other areas where beam theory does not apply.",
+    "definition": "The IDEA StatiCa product family for reinforced concrete detail design using the Compatible Stress Field Method (CSFM). Two variants exist: Detail 2D analyses discontinuity regions modelled as plane-stress problems (corbels, dapped ends, wall openings, standard pile caps); Detail 3D extends the same CSFM approach to fully three-dimensional D-regions (hammerhead piers, 3D pile caps, L-wall junctions) where a 2D simplification would be inaccurate. Both produce code-check reports to EN 1992 or ACI 318.",
     "category": "Concrete Detail Design",
     "difficulty": "beginner",
     "id": "9842669d-ddfc-45d5-b965-df6523fb44a4"
@@ -2585,21 +2585,21 @@
   },
   {
     "term": "Connection Designer",
-    "definition": "The engineer responsible for the detailed design of structural connections, specifying weld sizes, bolt grades and patterns, plate thicknesses, and checking all failure modes against the design code. In steelwork, connection design may be carried out by the fabricator's engineer, a specialist consultant, or the EOR. IDEA StatiCa Connection is the primary tool.",
+    "definition": "The engineer responsible for the detailed design of structural connections, specifying weld sizes, bolt grades and patterns, plate thicknesses, and checking all failure modes against the design code. IDEA StatiCa Connection is the primary calculation tool; IDEA StatiCa Checkbot is used to manage and batch-check every connection across the full project model. Connection design may be carried out by the fabricator's engineer, a specialist consultant, or the EOR.",
     "category": "User Roles",
     "difficulty": "beginner",
     "id": "981c0999-a98f-45c2-ab75-ab6ab9c29c76"
   },
   {
     "term": "Detailer",
-    "definition": "A draughtsperson or technician who produces the detailed fabrication and erection drawings from the engineer's design. In steelwork, the detailer works within the fabricator's team and interprets connection designs into full shop drawings. Increasingly uses 3D BIM software (Tekla, Revit, SDS/2) and exports models directly to IDEA StatiCa.",
+    "definition": "A draughtsperson or technician who produces the detailed fabrication and erection drawings from the engineer's design. In steelwork, the detailer works within the fabricator's team and interprets connection designs into full shop drawings. Increasingly uses 3D BIM software (Tekla, Revit, SDS/2) and exports models directly to IDEA StatiCa via the BIM link or Checkbot. The IDEA StatiCa Viewer allows the detailer to review the engineer's connection model and results without a full licence.",
     "category": "User Roles",
     "difficulty": "beginner",
     "id": "a2597406-2c82-4059-982b-fdbe86900896"
   },
   {
     "term": "Steel Fabricator",
-    "definition": "The company that manufactures structural steelwork in a workshop: cutting, drilling, welding, and priming members and connections to the engineer's drawings. The fabricator often has their own connection design team and may use IDEA StatiCa to optimise connections for ease of manufacture. Responsible for CE Marking under EN 1090 in Europe.",
+    "definition": "The company that manufactures structural steelwork in a workshop: cutting, drilling, welding, and priming members and connections to the engineer's drawings. The fabricator's team often carries out delegated connection design using IDEA StatiCa Connection and manages project-wide checks via Checkbot. In Europe, fabricators must hold CE Marking under EN 1090-2 and design connections to EN 1993-1-8. In the US, fabricators follow AISC 303 (Code of Standard Practice), AWS D1.1 (Structural Welding Code), RCSC (bolt tightening), and AISC 360 for connection resistance; AISC Certification is the equivalent quality mark. IDEA StatiCa Connection supports both code regimes in the same software.",
     "category": "User Roles",
     "difficulty": "beginner",
     "id": "c882c053-2298-4b6b-9106-f4c4c45d8bd4"
@@ -2634,14 +2634,14 @@
   },
   {
     "term": "Checker / Independent Verifier",
-    "definition": "An engineer - separate from the designer - who reviews calculations, drawings, and models to confirm the design is correct and code-compliant. In the UK, checking is a legal requirement for certain structures under Building Regulations. IDEA StatiCa's code-check outputs are structured to facilitate efficient third-party checking.",
+    "definition": "An engineer - separate from the designer - who reviews calculations, drawings, and models to confirm the design is correct and code-compliant. In the UK, checking is a legal requirement for certain structures under Building Regulations. IDEA StatiCa Checkbot provides a project-wide dashboard of connection check statuses, making it straightforward for a checker to open any connection model, review the CBFEM results, and sign off the code-check report. The free IDEA StatiCa Viewer allows reviewers to interrogate results without needing a full licence.",
     "category": "User Roles",
     "difficulty": "beginner",
     "id": "9f736674-01cf-4832-b2be-64ec863fa81d"
   },
   {
     "term": "BIM Coordinator",
-    "definition": "The team member responsible for managing the 3D digital model and ensuring consistency between disciplines (architecture, structure, MEP). For steelwork, the BIM coordinator oversees the Tekla or Revit model from which IDEA StatiCa Connection can import geometry directly via its BIM link, eliminating manual data re-entry.",
+    "definition": "The team member responsible for managing the 3D digital model and ensuring consistency between disciplines (architecture, structure, MEP). For steelwork, the BIM coordinator oversees the Tekla or Revit model from which IDEA StatiCa Connection imports geometry directly via the BIM link. IDEA StatiCa Checkbot sits between the BIM model and IDEA StatiCa, providing a connection management layer: all joints are listed, their check status is visible, and the coordinator can track which connections have been designed and approved.",
     "category": "User Roles",
     "difficulty": "beginner",
     "id": "8cbe42ad-3afe-4c86-9e95-938c077825f5"
@@ -3240,5 +3240,47 @@
     "category": "General Concepts",
     "difficulty": "intermediate",
     "id": "ddef2ca7-1caa-4b29-8c33-a6a180d78735"
+  },
+  {
+    "term": "IDEA StatiCa Checkbot",
+    "definition": "A free IDEA StatiCa application that acts as a connection management hub between structural analysis or BIM software and IDEA StatiCa Connection. It lists every joint in the imported model, shows its check status (not checked, passed, failed), and lets the user open any connection directly in IDEA StatiCa Connection for design or review. Checkbot is used by connection designers to track project-wide progress, by fabricators for QA, by BIM coordinators to manage the connection register, and by checkers/EOR to systematically review and sign off all connections on a project. No licence is required to view results via Checkbot.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "fc3bcb22-e904-4ba2-ada8-98de327f815d"
+  },
+  {
+    "term": "IDEA StatiCa Detail (2D)",
+    "definition": "The plane-stress mode of IDEA StatiCa Detail. Models a reinforced concrete discontinuity region as a 2D cross-section in the plane of the applied forces, using CSFM. Suitable for corbels, dapped end beams, deep beams, wall openings, standard pile caps, and any D-region where the structure and loading can be represented in a single plane. Faster to set up than 3D and directly applicable to the majority of everyday concrete detail design tasks. Outputs include principal stress flows, reinforcement utilisations, and a code-check report to EN 1992 or ACI 318.",
+    "category": "Concrete Detail Design",
+    "difficulty": "beginner",
+    "id": "8f73d7df-d07a-4684-98e3-0059e91a7f50"
+  },
+  {
+    "term": "IDEA StatiCa Detail (3D)",
+    "definition": "The fully three-dimensional mode of IDEA StatiCa Detail, applying CSFM in 3D solid elements. Required when the geometry or loading genuinely cannot be reduced to a 2D plane-stress model - for example a hammerhead bridge pier cap loaded from multiple directions, an L-shaped wall intersection, a 3D pile cap with asymmetric pile layout, or a complex precast node. Computationally more demanding than the 2D mode but eliminates the approximations inherent in 2D modelling of inherently 3D regions. Produces the same reinforcement utilisation and code-check outputs as Detail 2D, extended to the full 3D stress state.",
+    "category": "Concrete Detail Design",
+    "difficulty": "intermediate",
+    "id": "6c7d0b12-ebda-422d-8322-2fa29575bfb8"
+  },
+  {
+    "term": "IDEA StatiCa Viewer",
+    "definition": "A free, read-only application that allows anyone to open and inspect an IDEA StatiCa Connection or Detail model and its results without holding a paid licence. Engineers can share their .ideacon or .ideadet files with clients, fabricators, detailers, checkers, and EOR for review. The viewer shows the 3D connection geometry, applied loads, CBFEM or CSFM results, component utilisations, and the code-check report. It cannot modify the model or re-run the analysis. Removes the barrier to third-party review of IDEA StatiCa calculations.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "ae27216e-c3c4-47db-905e-fe207c87c628"
+  },
+  {
+    "term": "IDEA StatiCa Connection Library",
+    "definition": "A curated online and in-product database of pre-designed, code-checked connection models for common steel joint configurations - end plates, fin plates, base plates, moment connections, hollow section joints, and others. Engineers can download a library connection as a starting point, adapt the geometry and loads to their specific project, and re-run the code-check. Firms can also build and share their own internal connection libraries to standardise preferred details and reduce design time across teams and projects.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "b2f591b2-b504-464b-aaef-b1d86417b04d"
+  },
+  {
+    "term": "Parametric Templates (IDEA StatiCa)",
+    "definition": "Pre-built connection configurations within IDEA StatiCa Connection where the geometry is defined by named parameters - plate thickness, bolt diameter, number of bolt rows, weld throat, etc. - rather than fixed dimensions. The engineer selects the appropriate template (e.g. extended end plate, column base, welded T-stub), inputs the project-specific parameters, and IDEA StatiCa automatically builds the FE model and runs the code-check. Templates speed up routine design, ensure consistent modelling practice across a team, and can be saved to the Connection Library for reuse.",
+    "category": "Analysis & Software",
+    "difficulty": "beginner",
+    "id": "9823364d-7e71-4fbd-8f89-4ceaceb09acb"
   }
 ]

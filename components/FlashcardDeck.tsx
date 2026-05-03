@@ -8,12 +8,14 @@ import { CATEGORY_ICONS } from "@/lib/types";
 interface Props { cards: Flashcard[]; category: string; }
 
 export default function FlashcardDeck({ cards, category }: Props) {
-  const [index, setIndex]     = useState(0);
+  // Queue-based deck: "Got It" removes from front; "Review Again" moves to back.
+  const [queue, setQueue]     = useState<Flashcard[]>([...cards]);
+  const [total]               = useState(cards.length);
   const [flipped, setFlipped] = useState(false);
   const [done, setDone]       = useState(false);
   const [xpToast, setXpToast] = useState<string | null>(null);
 
-  const card = cards[index];
+  const card = queue[0];
 
   const showXP = (msg: string) => {
     setXpToast(msg);
@@ -29,10 +31,19 @@ export default function FlashcardDeck({ cards, category }: Props) {
     }
     setTimeout(() => {
       setFlipped(false);
-      if (index + 1 >= cards.length) setDone(true);
-      else setIndex((i) => i + 1);
+      setQueue((prev) => {
+        if (knew) {
+          // Remove from front — card is done
+          const next = prev.slice(1);
+          if (next.length === 0) setDone(true);
+          return next;
+        } else {
+          // Move front card to back — will be seen again
+          return [...prev.slice(1), prev[0]];
+        }
+      });
     }, 180);
-  }, [card, index, cards.length]);
+  }, [card]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -50,9 +61,9 @@ export default function FlashcardDeck({ cards, category }: Props) {
       <h2 style={{ fontFamily: "var(--font-barlow, 'Barlow Condensed', sans-serif)", fontSize: "28px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.05em", color: "#111827", margin: 0 }}>
         Deck Complete
       </h2>
-      <p style={{ color: "#6B7280", margin: 0 }}>You reviewed all {cards.length} cards in this deck.</p>
+      <p style={{ color: "#6B7280", margin: 0 }}>You reviewed all {total} cards in this deck.</p>
       <button
-        onClick={() => { setIndex(0); setDone(false); setFlipped(false); }}
+        onClick={() => { setQueue([...cards]); setDone(false); setFlipped(false); }}
         style={{ marginTop: "8px", padding: "10px 28px", background: "#F36E22", color: "#fff", fontWeight: 600, borderRadius: "8px", border: "none", cursor: "pointer", fontSize: "15px" }}>
         Start Again
       </button>
@@ -61,7 +72,8 @@ export default function FlashcardDeck({ cards, category }: Props) {
 
   if (!card) return null;
 
-  const progress = Math.round((index / cards.length) * 100);
+  const known    = total - queue.length;
+  const progress = Math.round((known / total) * 100);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", width: "100%", maxWidth: "640px", margin: "0 auto" }}>
@@ -69,8 +81,8 @@ export default function FlashcardDeck({ cards, category }: Props) {
       {/* Progress bar */}
       <div style={{ width: "100%" }}>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: "#6B7280", marginBottom: "6px" }}>
-          <span>{index + 1} of {cards.length}</span>
-          <span>{progress}% complete</span>
+          <span>{known} of {total} known · {queue.length} remaining</span>
+          <span>{progress}%</span>
         </div>
         <div style={{ height: "6px", background: "#E5E7EB", borderRadius: "999px", overflow: "hidden" }}>
           <div style={{ height: "100%", background: "#F36E22", borderRadius: "999px", width: `${progress}%`, transition: "width 0.5s ease" }} />
