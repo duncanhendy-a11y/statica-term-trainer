@@ -21,6 +21,12 @@ export function filterCards(cards: Flashcard[], category: string | null, difficu
   );
 }
 
+function trimOption(text: string, max = 140): string {
+  if (text.length <= max) return text;
+  const cut = text.lastIndexOf(" ", max);
+  return (cut > 80 ? text.slice(0, cut) : text.slice(0, max)) + "…";
+}
+
 export function buildQuizOptions(
   correct: Flashcard,
   allCards: Flashcard[]
@@ -31,8 +37,8 @@ export function buildQuizOptions(
   if (pool.length < 2) pool = allCards.filter((c) => c.id !== correct.id);
   const shuffled = [...pool].sort(() => Math.random() - 0.5).slice(0, 2);
   const opts = [
-    { id: "correct", text: correct.definition, isCorrect: true },
-    ...shuffled.map((c, i) => ({ id: `wrong-${i}`, text: c.definition, isCorrect: false })),
+    { id: "correct", text: trimOption(correct.definition), isCorrect: true },
+    ...shuffled.map((c, i) => ({ id: `wrong-${i}`, text: trimOption(c.definition), isCorrect: false })),
   ];
   return opts.sort(() => Math.random() - 0.5);
 }
