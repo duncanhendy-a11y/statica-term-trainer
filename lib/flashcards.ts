@@ -21,10 +21,12 @@ export function filterCards(cards: Flashcard[], category: string | null, difficu
   );
 }
 
-function trimOption(text: string, max = 140): string {
-  if (text.length <= max) return text;
-  const cut = text.lastIndexOf(" ", max);
-  return (cut > 80 ? text.slice(0, cut) : text.slice(0, max)) + "…";
+function trimOption(text: string): string {
+  // Use the first sentence only -- always a complete, meaningful statement.
+  const match = text.match(/^[^.!?]+[.!?]/);
+  if (match) return match[0].trim();
+  // No sentence-ending punctuation found (rare): return as-is.
+  return text;
 }
 
 export function buildQuizOptions(
