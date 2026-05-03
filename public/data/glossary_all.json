@@ -2017,7 +2017,7 @@
   {
     "id": "c11c8819-b71b-41af-bb5f-2d9e6bbe81af",
     "term": "REST",
-    "definition": "Abbreviation for Representational State Transfer. As in 'REST APIs'.",
+    "definition": "Representational State Transfer. An architectural style for building web APIs that communicate over HTTP using standard methods (GET, POST, PUT, DELETE). A REST API exposes data and actions as URLs (endpoints); clients send requests and receive responses, typically formatted as JSON. In the IDEA StatiCa context, the REST API allows external software (scripts, analysis tools, custom workflows) to create connection models, set loads, run calculations, and retrieve results programmatically - without opening the IDEA StatiCa user interface. Used by firms that want to automate repetitive connection checks or integrate IDEA StatiCa into their own design pipelines.",
     "category": "Analysis & Software",
     "difficulty": "beginner",
     "source": "statica_glossary"
@@ -3282,5 +3282,12 @@
     "category": "Analysis & Software",
     "difficulty": "beginner",
     "id": "9823364d-7e71-4fbd-8f89-4ceaceb09acb"
+  },
+  {
+    "id": "3974b902-3ada-4661-94d7-a3d2036f2290",
+    "term": "IDEA StatiCa Section BETA",
+    "definition": "A new IDEA StatiCa application (currently in Beta, available free of charge to all users) for designing and code-checking reinforced concrete cross-sections at Ultimate Limit State. Performs capacity checks (N-My-Mz interaction), shear, torsion, and combined interaction checks for arbitrary section shapes and reinforcement layouts. Built on a finite element calculation core - a technical step forward from the legacy RCS application, which it is intended to eventually replace. Currently supports EN 1992-1-1:2023 (second-generation Eurocode 2) only - making it the first IDEA StatiCa product to implement the new code ahead of the March 2028 withdrawal of the first-generation Eurocode. Every code check is presented with the full equation, substituted numerical values, and the relevant code clause reference - visible in both the interactive check view and the exported report. Follows the same five-tab workflow as Connection and Detail (Project, Design, Check, Report, Materials). Positioned for engineers currently using Excel spreadsheets for RC section design who need to transition to the new Eurocode generation.",
+    "category": "Analysis & Software",
+    "difficulty": "intermediate"
   }
 ]
