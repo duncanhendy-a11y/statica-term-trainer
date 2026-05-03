@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { Flashcard } from "@/lib/types";
 import { buildQuizOptions } from "@/lib/flashcards";
 import { loadProgress, saveProgress, recordQuizResult, addXP, earnBadge } from "@/lib/storage";
@@ -9,12 +9,12 @@ import DifficultyBadge from "./DifficultyBadge";
 interface Props { cards: Flashcard[]; allCards: Flashcard[]; category: string; }
 
 export default function QuizDeck({ cards, allCards, category }: Props) {
-  const [index, setIndex]       = useState(0);
-  const [options, setOptions]   = useState(() => buildQuizOptions(cards[0], allCards));
-  const [selected, setSelected] = useState<string | null>(null);
-  const [score, setScore]       = useState({ correct: 0, total: 0 });
-  const [done, setDone]         = useState(false);
-  const [xpToast, setXpToast]  = useState<string | null>(null);
+  const [index, setIndex]      = useState(0);
+  const [options, setOptions]  = useState(() => buildQuizOptions(cards[0], allCards));
+  const [selected, setSelected]= useState<string | null>(null);
+  const [score, setScore]      = useState({ correct: 0, total: 0 });
+  const [done, setDone]        = useState(false);
+  const [xpToast, setXpToast] = useState<string | null>(null);
 
   const card = cards[index];
 
@@ -23,9 +23,13 @@ export default function QuizDeck({ cards, allCards, category }: Props) {
     setTimeout(() => setXpToast(null), 2200);
   };
 
-  const answer = useCallback((optId: string) => {
-    if (selected) return;
-    const opt = options.find((o) => o.id === optId)!;
+  // Plain functions — close over current state on every render.
+  // Refs keep the keyboard handler pointing at the latest version.
+
+  function answer(optId: string) {
+    if (selected || !optId) return;
+    const opt = options.find((o) => o.id === optId);
+    if (!opt) return;
     setSelected(optId);
     const correct = opt.isCorrect;
     setScore((s) => ({ correct: s.correct + (correct ? 1 : 0), total: s.total + 1 }));
@@ -33,36 +37,46 @@ export default function QuizDeck({ cards, allCards, category }: Props) {
     p = recordQuizResult(p, card.id, correct);
     p = addXP(p, correct ? 20 : 0);
     if (correct) showXP("+20 XP");
-    const catCards = allCards.filter((c) => c.category === card.category);
+    const catCards   = allCards.filter((c) => c.category === card.category);
     const catResults = catCards.map((c) => p.quizResults[c.id]).filter(Boolean);
-    const totalAtt  = catResults.reduce((s, r) => s + r.attempts, 0);
-    const totalCorr = catResults.reduce((s, r) => s + r.correct, 0);
-    if (totalAtt >= 5 && totalCorr / totalAtt >= 0.8) {
-      p = earnBadge(p, card.category);
-    }
+    const totalAtt   = catResults.reduce((s, r) => s + r.attempts, 0);
+    const totalCorr  = catResults.reduce((s, r) => s + r.correct, 0);
+    if (totalAtt >= 5 && totalCorr / totalAtt >= 0.8) p = earnBadge(p, card.category);
     saveProgress(p);
-  }, [selected, options, card, allCards]);
+  }
 
-  const next = useCallback(() => {
+  function next() {
     if (index + 1 >= cards.length) { setDone(true); return; }
     const nextCard = cards[index + 1];
     setOptions(buildQuizOptions(nextCard, allCards));
     setSelected(null);
     setIndex((i) => i + 1);
-  }, [index, cards, allCards]);
+  }
+
+  // Refs updated every render — keyboard handler registered once
+  const answerRef  = useRef(answer);
+  const nextRef    = useRef(next);
+  const selectedRef= useRef(selected);
+  const optionsRef = useRef(options);
+  answerRef.current  = answer;
+  nextRef.current    = next;
+  selectedRef.current= selected;
+  optionsRef.current = options;
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if (selected && (e.key === "Enter" || e.key === "ArrowRight")) next();
-      if (!selected) {
-        if (e.key === "1" || e.key === "a") answer(options[0]?.id);
-        if (e.key === "2" || e.key === "b") answer(options[1]?.id);
-        if (e.key === "3" || e.key === "c") answer(options[2]?.id);
+      if (selectedRef.current) {
+        if (e.key === "Enter" || e.key === "ArrowRight") nextRef.current();
+      } else {
+        const opts = optionsRef.current;
+        if (e.key === "1" || e.key === "a") answerRef.current(opts[0]?.id);
+        if (e.key === "2" || e.key === "b") answerRef.current(opts[1]?.id);
+        if (e.key === "3" || e.key === "c") answerRef.current(opts[2]?.id);
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [selected, next, answer, options]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const accuracy = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
 
@@ -102,7 +116,7 @@ export default function QuizDeck({ cards, allCards, category }: Props) {
     );
   }
 
-  const labels = ["A", "B", "C"];
+  const labels   = ["A", "B", "C"];
   const progress = Math.round((index / cards.length) * 100);
 
   return (
@@ -138,11 +152,8 @@ export default function QuizDeck({ cards, allCards, category }: Props) {
           const isCorrect  = opt.isCorrect;
           const revealed   = !!selected;
 
-          let bg = "#fff";
-          let borderColor = "#E5E7EB";
-          let textColor = "#374151";
-          let labelBg = "#F3F4F6";
-          let labelColor = "#6B7280";
+          let bg = "#fff", borderColor = "#E5E7EB", textColor = "#374151";
+          let labelBg = "#F3F4F6", labelColor = "#6B7280";
 
           if (revealed && isCorrect) {
             bg = "#F0FDF4"; borderColor = "#16A34A"; labelBg = "#16A34A"; labelColor = "#fff";
@@ -162,7 +173,7 @@ export default function QuizDeck({ cards, allCards, category }: Props) {
                 {labels[i]}
               </span>
               <span style={{ fontSize: "14px", lineHeight: "1.6", paddingTop: "3px", color: textColor, flex: 1 }}>{opt.text}</span>
-              {revealed && isCorrect  && <span style={{ marginLeft: "auto", flexShrink: 0, color: "#16A34A", fontWeight: 700 }}>✓</span>}
+              {revealed && isCorrect   && <span style={{ marginLeft: "auto", flexShrink: 0, color: "#16A34A", fontWeight: 700 }}>✓</span>}
               {revealed && isSelected && !isCorrect && <span style={{ marginLeft: "auto", flexShrink: 0, color: "#DC2626", fontWeight: 700 }}>✗</span>}
             </button>
           );

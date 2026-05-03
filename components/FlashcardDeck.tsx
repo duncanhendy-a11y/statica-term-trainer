@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useReducer, useEffect, useState, useRef } from "react";
 import type { Flashcard } from "@/lib/types";
 import { loadProgress, saveProgress, markKnown, addXP } from "@/lib/storage";
 import DifficultyBadge from "./DifficultyBadge";
@@ -7,55 +7,91 @@ import { CATEGORY_ICONS } from "@/lib/types";
 
 interface Props { cards: Flashcard[]; category: string; }
 
-export default function FlashcardDeck({ cards, category }: Props) {
-  const [queue, setQueue]     = useState<Flashcard[]>([...cards]);
-  const [total]               = useState(cards.length);
+// ── Reducer ─────────────────────────���───────────────��────────────────────────
+// All queue mutations go through the reducer so dispatch is always stable and
+// the reducer always receives the *latest* state — no stale-closure risk.
+
+type State = { queue: Flashcard[]; done: boolean };
+type Action =
+  | { type: "GOT_IT" }
+  | { type: "REVIEW_AGAIN" }
+  | { type: "RESET"; cards: Flashcard[] };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case "GOT_IT": {
+      const next = state.queue.slice(1);
+      return { queue: next, done: next.length === 0 };
+    }
+    case "REVIEW_AGAIN": {
+      if (state.queue.length === 0) return state;
+      // Move front card to back
+      return { queue: [...state.queue.slice(1), state.queue[0]], done: false };
+    }
+    case "RESET":
+      return { queue: [...action.cards], done: false };
+    default:
+      return state;
+  }
+}
+
+// ── Component ───────────────────────────────���──────────────────────────��──────
+export default function FlashcardDeck({ cards }: Props) {
+  const total = cards.length;
+
+  const [{ queue, done }, dispatch] = useReducer(reducer, {
+    queue: [...cards],
+    done: false,
+  });
   const [flipped, setFlipped] = useState(false);
-  const [done, setDone]       = useState(false);
   const [xpToast, setXpToast] = useState<string | null>(null);
 
-  const card = queue[0];
+  const card = queue[0] ?? null;
 
   const showXP = (msg: string) => {
     setXpToast(msg);
     setTimeout(() => setXpToast(null), 2200);
   };
 
-  // advance closes over the current queue on every render.
-  // We store it in a ref so the keyboard handler (registered once) always
-  // calls the latest version without needing to re-register.
-  function advance(knew: boolean) {
+  // Wait for the unflip animation (180 ms) then dispatch — dispatch itself is
+  // stable, so there is no stale closure on the queue state.
+  function gotIt() {
     if (!card) return;
-    if (knew) {
-      const p = loadProgress();
-      saveProgress(addXP(markKnown(p, card.id), 10));
-      showXP("+10 XP");
-    }
+    const p = loadProgress();
+    saveProgress(addXP(markKnown(p, card.id), 10));
+    showXP("+10 XP");
     setTimeout(() => {
       setFlipped(false);
-      // Build the new queue directly from the current queue value (no stale closure)
-      const newQueue = knew
-        ? queue.slice(1)               // Got It  → remove card from front
-        : [...queue.slice(1), queue[0]]; // Review  → move card to back
-      setQueue(newQueue);
-      if (knew && newQueue.length === 0) setDone(true);
+      dispatch({ type: "GOT_IT" });
     }, 180);
   }
 
-  const advanceRef = useRef(advance);
-  advanceRef.current = advance; // always up-to-date
+  function reviewAgain() {
+    if (!card) return;
+    setTimeout(() => {
+      setFlipped(false);
+      dispatch({ type: "REVIEW_AGAIN" });
+    }, 180);
+  }
 
-  // Register keyboard handler once; use the ref so it sees the latest advance
+  // Keep refs so the keyboard handler (registered once) always calls the
+  // latest function without needing to re-register on every render.
+  const gotItRef     = useRef(gotIt);
+  const reviewRef    = useRef(reviewAgain);
+  gotItRef.current   = gotIt;
+  reviewRef.current  = reviewAgain;
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
-      if (e.key === "ArrowRight") advanceRef.current(true);
-      if (e.key === "ArrowLeft")  advanceRef.current(false);
+      if (e.key === "ArrowRight") gotItRef.current();
+      if (e.key === "ArrowLeft")  reviewRef.current();
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Done screen ──────────────────────────────────────────────��──────────────
   if (done) return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", padding: "80px 0" }} className="animate-slide-up">
       <div style={{ fontSize: "64px" }}>✅</div>
@@ -64,7 +100,7 @@ export default function FlashcardDeck({ cards, category }: Props) {
       </h2>
       <p style={{ color: "#6B7280", margin: 0 }}>You reviewed all {total} cards in this deck.</p>
       <button
-        onClick={() => { setQueue([...cards]); setDone(false); setFlipped(false); }}
+        onClick={() => { dispatch({ type: "RESET", cards }); setFlipped(false); }}
         style={{ marginTop: "8px", padding: "10px 28px", background: "#F36E22", color: "#fff", fontWeight: 600, borderRadius: "8px", border: "none", cursor: "pointer", fontSize: "15px" }}>
         Start Again
       </button>
@@ -76,6 +112,7 @@ export default function FlashcardDeck({ cards, category }: Props) {
   const known    = total - queue.length;
   const progress = Math.round((known / total) * 100);
 
+  // ── Main deck view ────────────────────────────────────────────────────���─────
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px", width: "100%", maxWidth: "640px", margin: "0 auto" }}>
 
@@ -136,7 +173,7 @@ export default function FlashcardDeck({ cards, category }: Props) {
       {/* Action buttons */}
       <div style={{ display: "flex", gap: "12px", width: "100%" }}>
         <button
-          onClick={() => advance(false)}
+          onClick={reviewAgain}
           style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#fff", border: "1px solid #E5E7EB", color: "#6B7280", fontWeight: 500, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}
           onMouseEnter={e => { (e.target as HTMLElement).style.background = "#F3F4F6"; }}
           onMouseLeave={e => { (e.target as HTMLElement).style.background = "#fff"; }}>
@@ -150,7 +187,7 @@ export default function FlashcardDeck({ cards, category }: Props) {
           Flip Card
         </button>
         <button
-          onClick={() => advance(true)}
+          onClick={gotIt}
           style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#F36E22", border: "none", color: "#fff", fontWeight: 600, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}
           onMouseEnter={e => { (e.target as HTMLElement).style.background = "#C45A18"; }}
           onMouseLeave={e => { (e.target as HTMLElement).style.background = "#F36E22"; }}>
