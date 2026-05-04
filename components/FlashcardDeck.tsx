@@ -53,25 +53,21 @@ export default function FlashcardDeck({ cards }: Props) {
     setTimeout(() => setXpToast(null), 2200);
   };
 
-  // Wait for the unflip animation (180 ms) then dispatch — dispatch itself is
-  // stable, so there is no stale closure on the queue state.
+  // React 18 auto-batches these two setState calls into a single render,
+  // so no timeout is needed — both updates fire together immediately.
   function gotIt() {
     if (!card) return;
     const p = loadProgress();
     saveProgress(addXP(markKnown(p, card.id), 10));
     showXP("+10 XP");
-    setTimeout(() => {
-      setFlipped(false);
-      dispatch({ type: "GOT_IT" });
-    }, 180);
+    setFlipped(false);
+    dispatch({ type: "GOT_IT" });
   }
 
   function reviewAgain() {
     if (!card) return;
-    setTimeout(() => {
-      setFlipped(false);
-      dispatch({ type: "REVIEW_AGAIN" });
-    }, 180);
+    setFlipped(false);
+    dispatch({ type: "REVIEW_AGAIN" });
   }
 
   // Keep refs so the keyboard handler (registered once) always calls the
@@ -128,7 +124,7 @@ export default function FlashcardDeck({ cards }: Props) {
       </div>
 
       {/* Card flip */}
-      <div className="card-scene" style={{ width: "100%", height: "340px" }} onClick={() => setFlipped((f) => !f)}>
+      <div className="card-scene card-scene-deck" style={{ width: "100%" }} onClick={() => setFlipped((f) => !f)}>
         <div className={`card-inner ${flipped ? "flipped" : ""}`}>
 
           {/* Front */}
@@ -144,7 +140,7 @@ export default function FlashcardDeck({ cards }: Props) {
                 {card.term}
               </p>
             </div>
-            <p style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
+            <p className="kbd-hint" style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
               Click or press <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>Space</kbd> to reveal
             </p>
           </div>
@@ -162,7 +158,7 @@ export default function FlashcardDeck({ cards }: Props) {
                 {card.definition}
               </p>
             </div>
-            <p style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
+            <p className="kbd-hint" style={{ textAlign: "center", fontSize: "12px", color: "#9CA3AF", marginTop: "auto" }}>
               <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>→</kbd> Got It &nbsp;·&nbsp;
               <kbd style={{ padding: "2px 6px", background: "#F3F4F6", borderRadius: "4px", border: "1px solid #E5E7EB", color: "#6B7280", fontFamily: "monospace" }}>←</kbd> Review Again
             </p>
@@ -171,7 +167,7 @@ export default function FlashcardDeck({ cards }: Props) {
       </div>
 
       {/* Action buttons */}
-      <div style={{ display: "flex", gap: "12px", width: "100%" }}>
+      <div className="deck-buttons" style={{ display: "flex", gap: "12px", width: "100%" }}>
         <button
           onClick={reviewAgain}
           style={{ flex: 1, padding: "12px", borderRadius: "12px", background: "#fff", border: "1px solid #E5E7EB", color: "#6B7280", fontWeight: 500, cursor: "pointer", fontSize: "14px", transition: "all 0.15s" }}

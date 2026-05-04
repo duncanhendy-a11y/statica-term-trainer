@@ -69,6 +69,15 @@ body {
 }
 .card-face-back { transform: rotateY(180deg); }
 
+/* Responsive deck */
+.card-scene-deck { height: 340px; }
+@media (max-width: 480px) {
+  .card-scene-deck { height: 300px; }
+  .kbd-hint { display: none; }
+  .deck-buttons { gap: 8px; }
+  .deck-buttons button { font-size: 13px !important; padding: 10px 8px !important; }
+}
+
 .animate-slide-up { animation: slide-up 0.25s ease-out; }
 .animate-xp       { animation: xp-toast 2.2s ease-in-out forwards; }
 .animate-fade-in  { animation: fade-in 0.3s ease-out; }
